@@ -72,9 +72,11 @@ signal dds_data : std_logic_vector(13 downto 0);
 
 begin
 
-        -- 50 MHz clock
-        clock <= not (clock) after 10 ns;
-        CLOCK_50 <= clock;
+    -- 50 MHz clock
+    clock <= not (clock) after 10 ns;
+    CLOCK_50 <= clock;
+
+    KEY(0) <= not reset;
 
     process
     begin
@@ -98,12 +100,13 @@ begin
 
 DDS_i1 : dds_synthesizer
     PORT MAP (
-		clk_i	=> clock,
+		clk_i	=> FPGA_CLK_B_P,
 		rst_i   => reset,
 		ftw_i	=> x"028F5C28",
 		phase_i => x"0000",
 		ampl_o  => dds_data
 	);
+
 
 
 end Behavioral;

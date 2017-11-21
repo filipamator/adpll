@@ -1,0 +1,25 @@
+set_global_assignment -entity "LPF2" -library "lib_LPF2" -name IP_TOOL_NAME "altera_fir_compiler_ii"
+set_global_assignment -entity "LPF2" -library "lib_LPF2" -name IP_TOOL_VERSION "16.1"
+set_global_assignment -entity "LPF2" -library "lib_LPF2" -name IP_TOOL_ENV "mwpim"
+set_global_assignment -library "lib_LPF2" -name SPD_FILE [file join $::quartus(sip_path) "LPF2.spd"]
+
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/dspba_library_package.vhd"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/dspba_library.vhd"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/auk_dspip_math_pkg_hpfir.vhd"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/auk_dspip_lib_pkg_hpfir.vhd"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/auk_dspip_roundsat_hpfir.vhd"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/altera_avalon_sc_fifo.v"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/LPF2_rtl_core.vhd"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/LPF2_ast.vhd"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/LPF2.vhd"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/LPF2_nativelink.tcl"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/LPF2_msim.tcl"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/LPF2_tb.vhd"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/LPF2_mlab.m"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/LPF2_model.m"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/LPF2_coef_int.txt"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/LPF2_input.txt"]
+set_global_assignment -library "lib_LPF2" -name MISC_FILE [file join $::quartus(sip_path) "LPF2_sim/LPF2_param.txt"]

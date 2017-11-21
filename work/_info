@@ -1,0 +1,315 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Filip/ss_tx
+Eadpll_top
+Z0 w1511280895
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Filip/adpll
+Z5 8C:/Filip/adpll/adpll_top.vhd
+Z6 FC:/Filip/adpll/adpll_top.vhd
+l0
+L6
+V3J8kH5hmJ<Yb4SBl4LfGQ0
+!s100 ^X@o6Q2ld]Mb:eIO87c391
+Z7 OV;C;10.5c;63
+32
+Z8 !s110 1511282272
+!i10b 1
+Z9 !s108 1511282272.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/adpll_top.vhd|
+Z11 !s107 C:/Filip/adpll/adpll_top.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+R3
+DEx4 work 9 adpll_top 0 22 3J8kH5hmJ<Yb4SBl4LfGQ0
+l83
+L51
+VH;TT5g1BUcXi@16YS<8g21
+!s100 ^:<k]J]DjRVGBUi?FH9Bl0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eadpll_top_tb
+Z14 w1511280934
+R1
+R2
+R3
+R4
+Z15 8C:/Filip/adpll/adpll_top_tb.vhd
+Z16 FC:/Filip/adpll/adpll_top_tb.vhd
+l0
+L5
+V1OD2c?aa50h>_6dLOo42M1
+!s100 D1<FKfjAdHioAW5QV=B<>0
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/adpll_top_tb.vhd|
+Z18 !s107 C:/Filip/adpll/adpll_top_tb.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 12 adpll_top_tb 0 22 1OD2c?aa50h>_6dLOo42M1
+l126
+L8
+V@=oN_RCm[53IT2HLol?ib2
+!s100 fK@8A8>99f5RmPZiKIj6]0
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Eadpll_top_tester
+Z19 w1511282265
+Z20 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z21 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z22 DPx4 work 12 sine_lut_pkg 0 22 Q^AN>E>YT_mgO?_?`YQ^`0
+R1
+R2
+R3
+R4
+Z23 8C:/Filip/adpll/adpll_top_tester.vhd
+Z24 FC:/Filip/adpll/adpll_top_tester.vhd
+l0
+L8
+VHJ:jLNfT76^EAgRc[aZLO1
+!s100 UEzH<EFD2[NQDAkSNYCG70
+R7
+32
+R8
+!i10b 1
+R9
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/adpll_top_tester.vhd|
+Z26 !s107 C:/Filip/adpll/adpll_top_tester.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R20
+R21
+R22
+R1
+R2
+R3
+DEx4 work 16 adpll_top_tester 0 22 HJ:jLNfT76^EAgRc[aZLO1
+l73
+L51
+VinZShe68zmWeenYn=V0=<3
+!s100 ALQnOfS4<U<nb4m8HI=CR0
+R7
+32
+R8
+!i10b 1
+R9
+R25
+R26
+!i113 1
+R12
+R13
+Edds_synthesizer
+Z27 w1259917951
+R20
+R22
+Z28 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R21
+R2
+R3
+R4
+Z29 8C:/Filip/adpll/dds_synthesizer.vhd
+Z30 FC:/Filip/adpll/dds_synthesizer.vhd
+l0
+L52
+VC<C>D47DCB`la6VmBOl``3
+!s100 nCBXA;L>h4m[4bLaMlCm23
+R7
+32
+Z31 !s110 1511282273
+!i10b 1
+Z32 !s108 1511282273.000000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/dds_synthesizer.vhd|
+Z34 !s107 C:/Filip/adpll/dds_synthesizer.vhd|
+!i113 1
+R12
+R13
+Adds_synthesizer_arch
+R20
+R22
+R28
+R21
+R2
+R3
+Z35 DEx4 work 15 dds_synthesizer 0 22 C<C>D47DCB`la6VmBOl``3
+l79
+L66
+Z36 VYe;<L5XJXBgOd5T>E6A]`2
+Z37 !s100 [8dUE4Y?[d1nc11ehgjK;2
+R7
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R12
+R13
+Pdds_synthesizer_pkg
+R20
+R22
+R28
+R21
+R2
+R3
+R27
+R4
+R29
+R30
+l0
+L25
+V5[hfaj=0aXEfNB^ZU>ZLF3
+!s100 5Ie]Ml?]`DV2An>a44eB12
+R7
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R12
+R13
+Bbody
+Z38 DPx4 work 19 dds_synthesizer_pkg 0 22 5[hfaj=0aXEfNB^ZU>ZLF3
+R20
+R22
+R28
+R21
+R2
+R3
+l0
+L41
+Z39 V8B`:laDaPK0f677SH49:_1
+Z40 !s100 4`hi8a^PbB=QUHo1ka?_R1
+R7
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R12
+R13
+Epll_sysclk
+Z41 w1511273685
+R2
+R3
+R4
+Z42 8C:/Filip/adpll/pll_sysclk.vhd
+Z43 FC:/Filip/adpll/pll_sysclk.vhd
+l0
+L43
+VI@giCX8S?PA]Bi6kQVj=[2
+!s100 JFKcOLj9;HHFhkQiAJ6b^2
+R7
+32
+R31
+!i10b 1
+R9
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/pll_sysclk.vhd|
+Z45 !s107 C:/Filip/adpll/pll_sysclk.vhd|
+!i113 1
+R12
+R13
+Asyn
+R2
+R3
+DEx4 work 10 pll_sysclk 0 22 I@giCX8S?PA]Bi6kQVj=[2
+l148
+L56
+V6?2g]Po^9<=h6JnJ[a?@P0
+!s100 :GH65=XD6fm2Zn[T>8M8o0
+R7
+32
+R31
+!i10b 1
+R9
+R44
+R45
+!i113 1
+R12
+R13
+Psine_lut_pkg
+R20
+R21
+R2
+R3
+Z46 w1229985701
+R4
+Z47 8C:/Filip/adpll/sine_lut_16_x_14.vhd
+Z48 FC:/Filip/adpll/sine_lut_16_x_14.vhd
+l0
+L11
+VQ^AN>E>YT_mgO?_?`YQ^`0
+!s100 _dzO0z:Z;?helc9FVbGkW3
+R7
+32
+R31
+!i10b 1
+R32
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/sine_lut_16_x_14.vhd|
+Z50 !s107 C:/Filip/adpll/sine_lut_16_x_14.vhd|
+!i113 1
+R12
+R13
+Bbody
+R22
+R20
+R21
+R2
+R3
+l0
+L16407
+Vi_g]IoXJCm62QNgh]miKX3
+!s100 Nj3hB_VQ7EId`Ga1F?;S90
+R7
+32
+R31
+!i10b 1
+R32
+R49
+R50
+!i113 1
+R12
+R13

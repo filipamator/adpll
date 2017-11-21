@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Nov 21 14:38:54 2017
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : adpll
+Top-level Entity Name : adpll_top
+Family : Cyclone IV E
+Total logic elements : 0
+    Total combinational functions : 0
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 93
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

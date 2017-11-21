@@ -1,0 +1,53 @@
+C:/Filip/adpll/dds_synthesizer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Filip/adpll/dds_synthesizer.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package STD_LOGIC_SIGNED
+-- Loading package sine_lut_pkg
+-- Compiling package dds_synthesizer_pkg
+-- Compiling package body dds_synthesizer_pkg
+-- Loading package dds_synthesizer_pkg
+-- Compiling entity dds_synthesizer
+-- Compiling architecture dds_synthesizer_arch of dds_synthesizer
+
+} {} {}} C:/Filip/adpll/adpll_top.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Filip/adpll/adpll_top.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity adpll_top
+-- Compiling architecture Behavioral of adpll_top
+
+} {} {}} C:/Filip/adpll/adpll_top_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Filip/adpll/adpll_top_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity adpll_top_tb
+-- Compiling architecture Behavioral of adpll_top_tb
+
+} {} {}} C:/Filip/adpll/pll_sysclk.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Filip/adpll/pll_sysclk.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity pll_sysclk
+-- Compiling architecture SYN of pll_sysclk
+
+} {} {}} C:/Filip/adpll/sine_lut_16_x_14.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Filip/adpll/sine_lut_16_x_14.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling package sine_lut_pkg
+-- Compiling package body sine_lut_pkg
+-- Loading package sine_lut_pkg
+
+} {} {}}

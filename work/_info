@@ -9,27 +9,27 @@ z2
 cModel Technology
 dC:/Filip/ss_tx
 Eadpll_top
-Z0 w1511284025
+Z0 w1511480296
 Z1 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
 Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z3 DPx4 work 12 sine_lut_pkg 0 22 Q^AN>E>YT_mgO?_?`YQ^`0
 Z4 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z7 dC:/Filip/adpll
-Z8 8C:/Filip/adpll/adpll_top.vhd
-Z9 FC:/Filip/adpll/adpll_top.vhd
+Z7 dC:/Users/filip/Documents/GitHub/adpll
+Z8 8C:/Users/filip/Documents/GitHub/adpll/adpll_top.vhd
+Z9 FC:/Users/filip/Documents/GitHub/adpll/adpll_top.vhd
 l0
 L6
 VQLc>`Uc7RiOzRQz5jDjg03
 !s100 k_@NL1F8`O19SzGIbWP8V2
-Z10 OV;C;10.5c;63
+Z10 OV;C;10.5b;63
 32
-Z11 !s110 1511284423
+Z11 !s110 1511480315
 !i10b 1
-Z12 !s108 1511284423.000000
-Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/adpll_top.vhd|
-Z14 !s107 C:/Filip/adpll/adpll_top.vhd|
+Z12 !s108 1511480315.000000
+Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/adpll_top.vhd|
+Z14 !s107 C:/Users/filip/Documents/GitHub/adpll/adpll_top.vhd|
 !i113 1
 Z15 o-work work -2002 -explicit
 Z16 tExplicit 1 CvgOpt 0
@@ -41,10 +41,10 @@ R4
 R5
 R6
 DEx4 work 9 adpll_top 0 22 QLc>`Uc7RiOzRQz5jDjg03
-l133
+l164
 L51
-VIUioCOW>7^64NaPE6?ecB1
-!s100 d];8f410D=S?LA?z4zADz3
+VVW_kHjmBVI>kin7OKiLDg3
+!s100 bSC2kTRbQi>WBPPJMoORV3
 R10
 32
 R11
@@ -56,24 +56,24 @@ R14
 R15
 R16
 Eadpll_top_tb
-Z17 w1511280934
+Z17 w1511291108
 R4
 R5
 R6
 R7
-Z18 8C:/Filip/adpll/adpll_top_tb.vhd
-Z19 FC:/Filip/adpll/adpll_top_tb.vhd
+Z18 8C:/Users/filip/Documents/GitHub/adpll/adpll_top_tb.vhd
+Z19 FC:/Users/filip/Documents/GitHub/adpll/adpll_top_tb.vhd
 l0
 L5
 V1OD2c?aa50h>_6dLOo42M1
 !s100 D1<FKfjAdHioAW5QV=B<>0
 R10
 32
-R11
+Z20 !s110 1511480316
 !i10b 1
 R12
-Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/adpll_top_tb.vhd|
-Z21 !s107 C:/Filip/adpll/adpll_top_tb.vhd|
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/adpll_top_tb.vhd|
+Z22 !s107 C:/Users/filip/Documents/GitHub/adpll/adpll_top_tb.vhd|
 !i113 1
 R15
 R16
@@ -88,16 +88,16 @@ V@=oN_RCm[53IT2HLol?ib2
 !s100 fK@8A8>99f5RmPZiKIj6]0
 R10
 32
-R11
+R20
 !i10b 1
 R12
-R20
 R21
+R22
 !i113 1
 R15
 R16
 Eadpll_top_tester
-Z22 w1511284291
+Z23 w1511480310
 R1
 R2
 R3
@@ -105,19 +105,19 @@ R4
 R5
 R6
 R7
-Z23 8C:/Filip/adpll/adpll_top_tester.vhd
-Z24 FC:/Filip/adpll/adpll_top_tester.vhd
+Z24 8C:/Users/filip/Documents/GitHub/adpll/adpll_top_tester.vhd
+Z25 FC:/Users/filip/Documents/GitHub/adpll/adpll_top_tester.vhd
 l0
 L8
 VHJ:jLNfT76^EAgRc[aZLO1
 !s100 UEzH<EFD2[NQDAkSNYCG70
 R10
 32
-R11
+R20
 !i10b 1
-R12
-Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/adpll_top_tester.vhd|
-Z26 !s107 C:/Filip/adpll/adpll_top_tester.vhd|
+Z26 !s108 1511480316.000000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/adpll_top_tester.vhd|
+Z28 !s107 C:/Users/filip/Documents/GitHub/adpll/adpll_top_tester.vhd|
 !i113 1
 R15
 R16
@@ -131,58 +131,58 @@ R6
 DEx4 work 16 adpll_top_tester 0 22 HJ:jLNfT76^EAgRc[aZLO1
 l73
 L51
-V=C:h:caUiI5G^>9TGbgLj0
-!s100 LLj_cm1djGPD;A_z[WG?12
+VS^REcXnMJF[G6CTJ2Wki42
+!s100 =Nd`<X4ZDgZzJ`lL>VQi]0
 R10
 32
-R11
+R20
 !i10b 1
-R12
-R25
 R26
+R27
+R28
 !i113 1
 R15
 R16
 valtera_avalon_sc_fifo
-Z27 !s110 1511284424
+Z29 !s110 1511480317
 !i10b 1
 !s100 4mK@em][G=j]om3zJIhOc0
-I_z63N9Ici71`18eQSOQHU2
+I^1YjI5AJ^i766SeGXKmOV0
 VDg1SIo80bB@j0V0VzS_@n1
 R7
-Z28 w1493934632
-8C:/Filip/adpll/LPF2_sim/altera_avalon_sc_fifo.v
-FC:/Filip/adpll/LPF2_sim/altera_avalon_sc_fifo.v
+R17
+8C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/altera_avalon_sc_fifo.v
+FC:/Users/filip/Documents/GitHub/adpll/LPF2_sim/altera_avalon_sc_fifo.v
 L0 21
-OV;L;10.5c;63
+OV;L;10.5b;63
 r1
 !s85 0
 31
-Z29 !s108 1511284424.000000
-!s107 C:/Filip/adpll/LPF2_sim/altera_avalon_sc_fifo.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Filip/adpll/LPF2_sim/altera_avalon_sc_fifo.v|
+Z30 !s108 1511480317.000000
+!s107 C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/altera_avalon_sc_fifo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/altera_avalon_sc_fifo.v|
 !i113 1
 o-work work
 tCvgOpt 0
 Eauk_dspip_avalon_streaming_controller_hpfir
-R28
+R17
 R2
 R5
 R6
 R7
-Z30 8C:/Filip/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd
-Z31 FC:/Filip/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd
+Z31 8C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd
+Z32 FC:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd
 l0
 L41
 VZR^ZDg2SZVVcR31oo[=Pl3
 !s100 ORMaER9G]`b[YkFGoXo<C3
 R10
 32
-R27
-!i10b 1
 R29
-Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd|
-Z33 !s107 C:/Filip/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd|
+!i10b 1
+R30
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd|
+Z34 !s107 C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd|
 !i113 1
 R15
 R16
@@ -197,43 +197,43 @@ Vf67=TRSK@Vglb0jXGNF8d2
 !s100 MWO51>Fz`WN=CIY16D1gH2
 R10
 32
-R27
-!i10b 1
 R29
-R32
+!i10b 1
+R30
 R33
+R34
 !i113 1
 R15
 R16
 Eauk_dspip_avalon_streaming_sink_hpfir
-R28
-Z34 DPx9 altera_mf 20 altera_mf_components 0 22 4]ei75FfJK3XdlefaIo2c1
-Z35 DPx4 work 24 auk_dspip_math_pkg_hpfir 0 22 PN=W:KSHbi=NI`=b16ZfT2
-Z36 DPx4 work 23 auk_dspip_lib_pkg_hpfir 0 22 63_fiUOkED34TV=dIL=MM3
+R17
+Z35 DPx9 altera_mf 20 altera_mf_components 0 22 m2K6F5NmQKkFhQa^^]15g3
+Z36 DPx4 work 24 auk_dspip_math_pkg_hpfir 0 22 PN=W:KSHbi=NI`=b16ZfT2
+Z37 DPx4 work 23 auk_dspip_lib_pkg_hpfir 0 22 63_fiUOkED34TV=dIL=MM3
 R4
 R5
 R6
 R7
-Z37 8C:/Filip/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd
-Z38 FC:/Filip/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd
+Z38 8C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd
+Z39 FC:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd
 l0
 L56
 V2zXE_2GHE5]8Phl0`<[o20
 !s100 0WO5KznO2MM4IEKTLL4ea1
 R10
 32
-R27
-!i10b 1
 R29
-Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd|
-Z40 !s107 C:/Filip/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd|
+!i10b 1
+R30
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd|
+Z41 !s107 C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd|
 !i113 1
 R15
 R16
 Artl
-R34
 R35
 R36
+R37
 R4
 R5
 R6
@@ -244,41 +244,41 @@ VLU][7a[?lIo_`zEl;Glm70
 !s100 aKlIFR2DezO>78LXQeZZW1
 R10
 32
-R27
-!i10b 1
 R29
-R39
+!i10b 1
+R30
 R40
+R41
 !i113 1
 R15
 R16
 Eauk_dspip_avalon_streaming_source_hpfir
-R28
+R17
+R36
 R35
-R34
 R4
 R5
 R6
 R7
-Z41 8C:/Filip/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd
-Z42 FC:/Filip/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd
+Z42 8C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd
+Z43 FC:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd
 l0
 L70
 VPl8<knjk9aMIj@=RBnTS12
 !s100 z_E>RhDjTK@iSkAe6<CzM1
 R10
 32
-R27
-!i10b 1
 R29
-Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd|
-Z44 !s107 C:/Filip/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd|
+!i10b 1
+R30
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd|
+Z45 !s107 C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd|
 !i113 1
 R15
 R16
 Artl
+R36
 R35
-R34
 R4
 R5
 R6
@@ -289,34 +289,34 @@ Vk0ibUPclboNiadE[h4?PF3
 !s100 9_^:d_>A;JGb2ekO`XAiL1
 R10
 32
-R27
-!i10b 1
 R29
-R43
+!i10b 1
+R30
 R44
+R45
 !i113 1
 R15
 R16
 Pauk_dspip_lib_pkg_hpfir
-R35
+R36
 R4
 R5
 R6
-R28
+R17
 R7
-8C:/Filip/adpll/LPF2_sim/auk_dspip_lib_pkg_hpfir.vhd
-FC:/Filip/adpll/LPF2_sim/auk_dspip_lib_pkg_hpfir.vhd
+8C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_lib_pkg_hpfir.vhd
+FC:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_lib_pkg_hpfir.vhd
 l0
 L22
 V63_fiUOkED34TV=dIL=MM3
 !s100 f?>LI6^Y:?0:4C>aOS6?X2
 R10
 32
-R27
-!i10b 1
 R29
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/LPF2_sim/auk_dspip_lib_pkg_hpfir.vhd|
-!s107 C:/Filip/adpll/LPF2_sim/auk_dspip_lib_pkg_hpfir.vhd|
+!i10b 1
+R30
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_lib_pkg_hpfir.vhd|
+!s107 C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_lib_pkg_hpfir.vhd|
 !i113 1
 R15
 R16
@@ -324,10 +324,10 @@ Pauk_dspip_math_pkg_hpfir
 R4
 R5
 R6
-R28
+R17
 R7
-Z45 8C:/Filip/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd
-Z46 FC:/Filip/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd
+Z46 8C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd
+Z47 FC:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd
 l0
 L54
 VPN=W:KSHbi=NI`=b16ZfT2
@@ -335,16 +335,16 @@ VPN=W:KSHbi=NI`=b16ZfT2
 R10
 32
 b1
-R27
-!i10b 1
 R29
-Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd|
-Z48 !s107 C:/Filip/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd|
+!i10b 1
+R30
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd|
+Z49 !s107 C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd|
 !i113 1
 R15
 R16
 Bbody
-R35
+R36
 R4
 R5
 R6
@@ -354,33 +354,33 @@ VbLE=UbkJ5_BG<g_kZ1R7<1
 !s100 EDZNSThdcYV1lkL7HbnIz0
 R10
 32
-R27
-!i10b 1
 R29
-R47
+!i10b 1
+R30
 R48
+R49
 !i113 1
 R15
 R16
 Eauk_dspip_roundsat_hpfir
-R28
+R17
 R4
 R5
 R6
 R7
-Z49 8C:/Filip/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd
-Z50 FC:/Filip/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd
+Z50 8C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd
+Z51 FC:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd
 l0
 L39
 VaQ4fk>P`?JJd;:h@cC^``3
 !s100 S`Ha]KjQXV0CDDgljgCX;0
 R10
 32
-Z51 !s110 1511284425
+R29
 !i10b 1
-Z52 !s108 1511284425.000000
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd|
-Z54 !s107 C:/Filip/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd|
+R30
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd|
+Z53 !s107 C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd|
 !i113 1
 R15
 R16
@@ -395,43 +395,88 @@ VQ^:8iJn;5CMlAN6[98[WS3
 !s100 SAz6VWg0=:KiPPFk<lih43
 R10
 32
-R51
+R29
 !i10b 1
+R30
 R52
 R53
-R54
+!i113 1
+R15
+R16
+Eaverage2
+Z54 w1503829056
+R2
+R1
+R4
+R5
+R6
+R7
+Z55 8C:/Users/filip/Documents/GitHub/adpll/sample_avg.vhd
+Z56 FC:/Users/filip/Documents/GitHub/adpll/sample_avg.vhd
+l0
+L80
+VK9iJM1DMf>VV:_11f``A<3
+!s100 kHIc@bi99T5:E`e^lj5LO2
+R10
+32
+Z57 !s110 1511480318
+!i10b 1
+Z58 !s108 1511480318.000000
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/sample_avg.vhd|
+Z60 !s107 C:/Users/filip/Documents/GitHub/adpll/sample_avg.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R2
+R1
+R4
+R5
+R6
+DEx4 work 8 average2 0 22 K9iJM1DMf>VV:_11f``A<3
+l100
+L95
+V6ORf4HbifO@bVYOGQ`keW1
+!s100 2VSBVDHSD:JI_cJ<2Z]_@3
+R10
+32
+R57
+!i10b 1
+R58
+R59
+R60
 !i113 1
 R15
 R16
 Edds_synthesizer
-Z55 w1259917951
+R17
 R1
 R3
-Z56 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z61 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R2
 R5
 R6
 R7
-Z57 8C:/Filip/adpll/dds_synthesizer.vhd
-Z58 FC:/Filip/adpll/dds_synthesizer.vhd
+Z62 8C:/Users/filip/Documents/GitHub/adpll/dds_synthesizer.vhd
+Z63 FC:/Users/filip/Documents/GitHub/adpll/dds_synthesizer.vhd
 l0
 L52
 VC<C>D47DCB`la6VmBOl``3
 !s100 nCBXA;L>h4m[4bLaMlCm23
 R10
 32
-R27
+R20
 !i10b 1
-R29
-Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/dds_synthesizer.vhd|
-Z60 !s107 C:/Filip/adpll/dds_synthesizer.vhd|
+R26
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/dds_synthesizer.vhd|
+Z65 !s107 C:/Users/filip/Documents/GitHub/adpll/dds_synthesizer.vhd|
 !i113 1
 R15
 R16
 Adds_synthesizer_arch
 R1
 R3
-R56
+R61
 R2
 R5
 R6
@@ -442,36 +487,36 @@ VYe;<L5XJXBgOd5T>E6A]`2
 !s100 [8dUE4Y?[d1nc11ehgjK;2
 R10
 32
-R27
+R20
 !i10b 1
-R29
-R59
-R60
+R26
+R64
+R65
 !i113 1
 R15
 R16
 Pdds_synthesizer_pkg
 R1
 R3
-R56
+R61
 R2
 R5
 R6
-R55
+R17
 R7
-R57
-R58
+R62
+R63
 l0
 L25
 V5[hfaj=0aXEfNB^ZU>ZLF3
 !s100 5Ie]Ml?]`DV2An>a44eB12
 R10
 32
-R27
+R20
 !i10b 1
-R29
-R59
-R60
+R26
+R64
+R65
 !i113 1
 R15
 R16
@@ -479,7 +524,7 @@ Bbody
 DPx4 work 19 dds_synthesizer_pkg 0 22 5[hfaj=0aXEfNB^ZU>ZLF3
 R1
 R3
-R56
+R61
 R2
 R5
 R6
@@ -489,38 +534,38 @@ V8B`:laDaPK0f677SH49:_1
 !s100 4`hi8a^PbB=QUHo1ka?_R1
 R10
 32
-R27
+R20
 !i10b 1
-R29
-R59
-R60
+R26
+R64
+R65
 !i113 1
 R15
 R16
 Edspba_delay
-R28
-Z61 DPx4 work 21 dspba_library_package 0 22 A2bDKJiV;=N=F0hTB[>gZ1
+R17
+Z66 DPx4 work 21 dspba_library_package 0 22 A2bDKJiV;=N=F0hTB[>gZ1
 R5
 R6
 R7
-Z62 8C:/Filip/adpll/LPF2_sim/dspba_library.vhd
-Z63 FC:/Filip/adpll/LPF2_sim/dspba_library.vhd
+Z67 8C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/dspba_library.vhd
+Z68 FC:/Users/filip/Documents/GitHub/adpll/LPF2_sim/dspba_library.vhd
 l0
 L17
 V7<XHHG]54LUdPk9WY[Dnb2
 !s100 ^TiG3k=nd2oZ:zDO86VNb1
 R10
 32
-R51
+R57
 !i10b 1
-R52
-Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/LPF2_sim/dspba_library.vhd|
-Z65 !s107 C:/Filip/adpll/LPF2_sim/dspba_library.vhd|
+R58
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/dspba_library.vhd|
+Z70 !s107 C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/dspba_library.vhd|
 !i113 1
 R15
 R16
 Adelay
-R61
+R66
 R5
 R6
 DEx4 work 11 dspba_delay 0 22 7<XHHG]54LUdPk9WY[Dnb2
@@ -530,60 +575,60 @@ VBak>ZnmdG`JQCHmJdnQa?3
 !s100 j]g:M?2k]LeVG21D9S<fR1
 R10
 32
-R51
+R57
 !i10b 1
-R52
-R64
-R65
+R58
+R69
+R70
 !i113 1
 R15
 R16
 Pdspba_library_package
 R5
 R6
-R28
+R17
 R7
-8C:/Filip/adpll/LPF2_sim/dspba_library_package.vhd
-FC:/Filip/adpll/LPF2_sim/dspba_library_package.vhd
+8C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/dspba_library_package.vhd
+FC:/Users/filip/Documents/GitHub/adpll/LPF2_sim/dspba_library_package.vhd
 l0
 L16
 VA2bDKJiV;=N=F0hTB[>gZ1
 !s100 Kkg3D5QbeHdNM2YFz@ZF=2
 R10
 32
-R51
+R57
 !i10b 1
-R52
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/LPF2_sim/dspba_library_package.vhd|
-!s107 C:/Filip/adpll/LPF2_sim/dspba_library_package.vhd|
+R58
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/dspba_library_package.vhd|
+!s107 C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/dspba_library_package.vhd|
 !i113 1
 R15
 R16
 Edspba_sync_reg
-R28
-R61
+R17
+R66
 R4
 R5
 R6
 R7
-R62
-R63
+R67
+R68
 l0
 L91
 VgX?[;OFRkY9GF;6MGAElW1
 !s100 LBWk;n`f_bk?X_QJICA5i3
 R10
 32
-R51
+R57
 !i10b 1
-R52
-R64
-R65
+R58
+R69
+R70
 !i113 1
 R15
 R16
 Async_reg
-R61
+R66
 R4
 R5
 R6
@@ -594,56 +639,101 @@ VkA9SfV2R;XI4VR]^lGIo[1
 !s100 EMlEXT<EU621V40LT:5fK3
 R10
 32
-R51
+R57
 !i10b 1
-R52
-R64
-R65
+R58
+R69
+R70
+!i113 1
+R15
+R16
+Elowpass
+Z71 w1495469295
+R2
+R1
+R4
+R5
+R6
+R7
+Z72 8C:/Users/filip/Documents/GitHub/adpll/Lowpass.vhd
+Z73 FC:/Users/filip/Documents/GitHub/adpll/Lowpass.vhd
+l0
+L9
+VHg4`<bOXSXgo<fWVJmJFG1
+!s100 34JCU3>ZY5XnEGfN4Xba52
+R10
+32
+R57
+!i10b 1
+R58
+Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/Lowpass.vhd|
+Z75 !s107 C:/Users/filip/Documents/GitHub/adpll/Lowpass.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R2
+R1
+R4
+R5
+R6
+Z76 DEx4 work 7 lowpass 0 22 Hg4`<bOXSXgo<fWVJmJFG1
+l36
+L20
+Z77 V^2o0IZ0<YSCen]Fd2Ue<V2
+Z78 !s100 4kS@2V[<5>QDZ^E]SPENe2
+R10
+32
+R57
+!i10b 1
+R58
+R74
+R75
 !i113 1
 R15
 R16
 Elpf2
-R28
-R35
-R4
+R17
 R36
+R4
+R37
 R5
 R6
 R7
-Z66 8C:/Filip/adpll/LPF2_sim/LPF2.vhd
-Z67 FC:/Filip/adpll/LPF2_sim/LPF2.vhd
+Z79 8C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2.vhd
+Z80 FC:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2.vhd
 l0
 L19
 VVl2o]hWc4_V`Xf]jC^62:1
 !s100 `GgQ;kncDGK?BQ2XLC<I50
 R10
 32
-R51
+R57
 !i10b 1
-R52
-Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/LPF2_sim/LPF2.vhd|
-Z69 !s107 C:/Filip/adpll/LPF2_sim/LPF2.vhd|
+R58
+Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2.vhd|
+Z82 !s107 C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2.vhd|
 !i113 1
 R15
 R16
 Asyn
-R35
-R4
 R36
+R4
+R37
 R5
 R6
-Z70 DEx4 work 4 lpf2 0 22 Vl2o]hWc4_V`Xf]jC^62:1
+Z83 DEx4 work 4 lpf2 0 22 Vl2o]hWc4_V`Xf]jC^62:1
 l56
 L33
 V?HF<LmiWTKWo]R7j=@UfM3
 !s100 SeWXienI<3G1ME3[N[g4d1
 R10
 32
-R51
+R57
 !i10b 1
-R52
-R68
-R69
+R58
+R81
+R82
 !i113 1
 R15
 R16
@@ -656,7 +746,7 @@ l38
 L24
 VS_Ce=:5Q5kii^A^EjVnz52
 !s100 7QT9Ue=[_J1U7dz=Kic8Y0
-R10
+OV;C;10.5c;63
 32
 !s110 1511284298
 !i10b 1
@@ -669,33 +759,34 @@ R16
 FC:/Filip/adpll/LPF2.vhd
 w1493934638
 8C:/Filip/adpll/LPF2.vhd
+dC:/Filip/adpll
 Elpf2_ast
-R28
-R35
+R17
 R36
+R37
 R4
 R5
 R6
 R7
-Z71 8C:/Filip/adpll/LPF2_sim/LPF2_ast.vhd
-Z72 FC:/Filip/adpll/LPF2_sim/LPF2_ast.vhd
+Z84 8C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_ast.vhd
+Z85 FC:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_ast.vhd
 l0
 L9
 VQW[>YU2P20dFWjHWQMU]O0
 !s100 lCS[9o]@3dFY7<Zla=QbN3
 R10
 32
-R51
+R57
 !i10b 1
-R52
-Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/LPF2_sim/LPF2_ast.vhd|
-Z74 !s107 C:/Filip/adpll/LPF2_sim/LPF2_ast.vhd|
+R58
+Z86 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_ast.vhd|
+Z87 !s107 C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_ast.vhd|
 !i113 1
 R15
 R16
 Astruct
-R35
 R36
+R37
 R4
 R5
 R6
@@ -706,91 +797,91 @@ VdelglOWA2lME2Ca>A?X^J1
 !s100 fmbZ8PKC]_6e9@f>__MPn1
 R10
 32
-R51
+R57
 !i10b 1
-R52
-R73
-R74
+R58
+R86
+R87
 !i113 1
 R15
 R16
 Elpf2_rtl_core
-R28
-Z75 DPx3 lpm 14 lpm_components 0 22 kjTnd8<zlR:2TTOz8o9AK2
-Z76 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 2`RY^MbbY];i][eF`[IeT2
-R34
-R61
-Z77 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+R17
+Z88 DPx3 lpm 14 lpm_components 0 22 0DgdZ0FA1O:[J5aQOXi891
+Z89 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3L]34bNSPL@[RD2AeKH]S3
+R35
+R66
+Z90 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
 R4
 R5
 R6
 R7
-Z78 8C:/Filip/adpll/LPF2_sim/LPF2_rtl_core.vhd
-Z79 FC:/Filip/adpll/LPF2_sim/LPF2_rtl_core.vhd
+Z91 8C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_rtl_core.vhd
+Z92 FC:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_rtl_core.vhd
 l0
 L36
 Vz]P^78@o3A?CFe?Tkf41E3
 !s100 ]Sj2fco0X>RMTQA?FXO=R1
 R10
 32
-R51
+R57
 !i10b 1
-R52
-Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/LPF2_sim/LPF2_rtl_core.vhd|
-Z81 !s107 C:/Filip/adpll/LPF2_sim/LPF2_rtl_core.vhd|
+R58
+Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_rtl_core.vhd|
+Z94 !s107 C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_rtl_core.vhd|
 !i113 1
 R15
 R16
 Anormal
-R75
-R76
-R34
-R61
-R77
+R88
+R89
+R35
+R66
+R90
 R4
 R5
 R6
-Z82 DEx4 work 13 lpf2_rtl_core 0 22 z]P^78@o3A?CFe?Tkf41E3
+DEx4 work 13 lpf2_rtl_core 0 22 z]P^78@o3A?CFe?Tkf41E3
 l127
 L49
-Z83 V3<kk=5`jJHV>0ni8]A2082
-Z84 !s100 2D024iji:>XAb?hM=df>D0
+V3<kk=5`jJHV>0ni8]A2082
+!s100 2D024iji:>XAb?hM=df>D0
 R10
 32
-R51
+R57
 !i10b 1
-R52
-R80
-R81
+R58
+R93
+R94
 !i113 1
 R15
 R16
 Elpf2_tb
-R28
+R17
 R4
 R5
 R6
 R7
-Z85 8C:/Filip/adpll/LPF2_sim/LPF2_tb.vhd
-Z86 FC:/Filip/adpll/LPF2_sim/LPF2_tb.vhd
+Z95 8C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_tb.vhd
+Z96 FC:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_tb.vhd
 l0
 L20
 VOLFBfY8E:eGda@EdmVmE20
 !s100 T@1T6;<<Of4]8UoiVKmkM1
 R10
 32
-R27
-!i10b 1
 R29
-Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/LPF2_sim/LPF2_tb.vhd|
-Z88 !s107 C:/Filip/adpll/LPF2_sim/LPF2_tb.vhd|
+!i10b 1
+R30
+Z97 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_tb.vhd|
+Z98 !s107 C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_tb.vhd|
 !i113 1
 R15
 R16
 Artl
-R35
 R36
-R70
+R37
+R83
 R4
 R5
 R6
@@ -801,34 +892,34 @@ VnnGQb4nX^U9o:l`VaOgTF1
 !s100 M_[Q>?A4@BllgI1gkPE613
 R10
 32
-R27
-!i10b 1
 R29
-R87
-R88
+!i10b 1
+R30
+R97
+R98
 !i113 1
 R15
 R16
 Emultphasedet
-Z89 w1491561219
+R17
 R1
 R2
 R5
 R6
 R7
-Z90 8C:/Filip/adpll/MultPhaseDet.vhd
-Z91 FC:/Filip/adpll/MultPhaseDet.vhd
+Z99 8C:/Users/filip/Documents/GitHub/adpll/MultPhaseDet.vhd
+Z100 FC:/Users/filip/Documents/GitHub/adpll/MultPhaseDet.vhd
 l0
 L8
 VM^FSzh`9^hBodFi9`hzTB2
 !s100 2GY?ER2J;8k>D?CJ0YYDn1
 R10
 32
-R27
+R20
 !i10b 1
-R29
-Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/MultPhaseDet.vhd|
-Z93 !s107 C:/Filip/adpll/MultPhaseDet.vhd|
+R26
+Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/MultPhaseDet.vhd|
+Z102 !s107 C:/Users/filip/Documents/GitHub/adpll/MultPhaseDet.vhd|
 !i113 1
 R15
 R16
@@ -844,32 +935,32 @@ V^06m:jE@DOZO]K5fL1<DG0
 !s100 M8<6>^EbNgKk9iz5FIKcV0
 R10
 32
-R27
+R20
 !i10b 1
-R29
-R92
-R93
+R26
+R101
+R102
 !i113 1
 R15
 R16
 Epll_sysclk
-Z94 w1511273685
+Z103 w1511478742
 R5
 R6
 R7
-Z95 8C:/Filip/adpll/pll_sysclk.vhd
-Z96 FC:/Filip/adpll/pll_sysclk.vhd
+Z104 8C:/Users/filip/Documents/GitHub/adpll/pll_sysclk.vhd
+Z105 FC:/Users/filip/Documents/GitHub/adpll/pll_sysclk.vhd
 l0
 L43
 VI@giCX8S?PA]Bi6kQVj=[2
 !s100 JFKcOLj9;HHFhkQiAJ6b^2
 R10
 32
-R11
+R20
 !i10b 1
-R12
-Z97 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/pll_sysclk.vhd|
-Z98 !s107 C:/Filip/adpll/pll_sysclk.vhd|
+R26
+Z106 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/pll_sysclk.vhd|
+Z107 !s107 C:/Users/filip/Documents/GitHub/adpll/pll_sysclk.vhd|
 !i113 1
 R15
 R16
@@ -879,15 +970,60 @@ R6
 DEx4 work 10 pll_sysclk 0 22 I@giCX8S?PA]Bi6kQVj=[2
 l148
 L56
-V6?2g]Po^9<=h6JnJ[a?@P0
-!s100 :GH65=XD6fm2Zn[T>8M8o0
+Vd0@fCl8B4lF^l?[G=ka7]3
+!s100 ]bVzZ_1^K3RTVL`TF_lLW3
 R10
 32
-R11
+R20
 !i10b 1
-R12
-R97
-R98
+R26
+R106
+R107
+!i113 1
+R15
+R16
+Esample_avg
+R54
+R2
+R1
+R4
+R5
+R6
+R7
+R55
+R56
+l0
+L7
+VMZ28BcE<LP39@F[WPXQUc3
+!s100 OCb@M1zLGd=;i9]gBFJaf2
+R10
+32
+R57
+!i10b 1
+R58
+R59
+R60
+!i113 1
+R15
+R16
+Abehavioral
+R2
+R1
+R4
+R5
+R6
+DEx4 work 10 sample_avg 0 22 MZ28BcE<LP39@F[WPXQUc3
+l45
+L23
+VGe`4MF6bMHD2`UJJQ`?zU2
+!s100 NIWIc;m<eG<KbERP_[KQE0
+R10
+32
+R57
+!i10b 1
+R58
+R59
+R60
 !i113 1
 R15
 R16
@@ -896,21 +1032,21 @@ R1
 R2
 R5
 R6
-Z99 w1229985701
+R17
 R7
-Z100 8C:/Filip/adpll/sine_lut_16_x_14.vhd
-Z101 FC:/Filip/adpll/sine_lut_16_x_14.vhd
+Z108 8C:/Users/filip/Documents/GitHub/adpll/sine_lut_16_x_14.vhd
+Z109 FC:/Users/filip/Documents/GitHub/adpll/sine_lut_16_x_14.vhd
 l0
 L11
 VQ^AN>E>YT_mgO?_?`YQ^`0
 !s100 _dzO0z:Z;?helc9FVbGkW3
 R10
 32
-R11
+R29
 !i10b 1
-R12
-Z102 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Filip/adpll/sine_lut_16_x_14.vhd|
-Z103 !s107 C:/Filip/adpll/sine_lut_16_x_14.vhd|
+R30
+Z110 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/filip/Documents/GitHub/adpll/sine_lut_16_x_14.vhd|
+Z111 !s107 C:/Users/filip/Documents/GitHub/adpll/sine_lut_16_x_14.vhd|
 !i113 1
 R15
 R16
@@ -926,11 +1062,11 @@ Vi_g]IoXJCm62QNgh]miKX3
 !s100 Nj3hB_VQ7EId`Ga1F?;S90
 R10
 32
-R27
+R29
 !i10b 1
-R12
-R102
-R103
+R30
+R110
+R111
 !i113 1
 R15
 R16

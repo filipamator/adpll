@@ -68,7 +68,7 @@ architecture Behavioral of adpll_top_tester is
 
 signal clock : std_logic := '0';
 signal reset : std_logic := '0';
-signal dds_data : std_logic_vector(13 downto 0);
+signal dds_data : std_logic_vector(13 downto 0) := (others => '0');
 
 begin
 
@@ -100,9 +100,9 @@ begin
 
 DDS_i1 : dds_synthesizer
     PORT MAP (
-		clk_i	=> FPGA_CLK_B_P,
+		clk_i	=> clock,
 		rst_i   => reset,
-		ftw_i	=> x"028F5C28",
+		ftw_i	=> x"3645A1CA",	-- 10.6 MHz
 		phase_i => x"0000",
 		ampl_o  => dds_data
 	);

@@ -1,0 +1,25 @@
+set_global_assignment -entity "lpf1" -library "lib_lpf1" -name IP_TOOL_NAME "altera_fir_compiler_ii"
+set_global_assignment -entity "lpf1" -library "lib_lpf1" -name IP_TOOL_VERSION "16.1"
+set_global_assignment -entity "lpf1" -library "lib_lpf1" -name IP_TOOL_ENV "mwpim"
+set_global_assignment -library "lib_lpf1" -name SPD_FILE [file join $::quartus(sip_path) "lpf1.spd"]
+
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/dspba_library_package.vhd"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/dspba_library.vhd"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/auk_dspip_math_pkg_hpfir.vhd"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/auk_dspip_lib_pkg_hpfir.vhd"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/auk_dspip_avalon_streaming_source_hpfir.vhd"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/auk_dspip_roundsat_hpfir.vhd"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/altera_avalon_sc_fifo.v"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/lpf1_rtl_core.vhd"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/lpf1_ast.vhd"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/lpf1.vhd"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/lpf1_nativelink.tcl"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/lpf1_msim.tcl"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/lpf1_tb.vhd"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/lpf1_mlab.m"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/lpf1_model.m"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/lpf1_coef_int.txt"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/lpf1_input.txt"]
+set_global_assignment -library "lib_lpf1" -name MISC_FILE [file join $::quartus(sip_path) "lpf1_sim/lpf1_param.txt"]

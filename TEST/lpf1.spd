@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="lpf1_sim/dspba_library_package.vhd" type="VHDL" />
+ <file path="lpf1_sim/dspba_library.vhd" type="VHDL" />
+ <file path="lpf1_sim/auk_dspip_math_pkg_hpfir.vhd" type="VHDL" />
+ <file path="lpf1_sim/auk_dspip_lib_pkg_hpfir.vhd" type="VHDL" />
+ <file
+   path="lpf1_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd"
+   type="VHDL" />
+ <file path="lpf1_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd" type="VHDL" />
+ <file
+   path="lpf1_sim/auk_dspip_avalon_streaming_source_hpfir.vhd"
+   type="VHDL" />
+ <file path="lpf1_sim/auk_dspip_roundsat_hpfir.vhd" type="VHDL" />
+ <file path="lpf1_sim/altera_avalon_sc_fifo.v" type="VERILOG" />
+ <file path="lpf1_sim/lpf1_rtl_core.vhd" type="VHDL" />
+ <file path="lpf1_sim/lpf1_ast.vhd" type="VHDL" />
+ <file path="lpf1_sim/lpf1.vhd" type="VHDL" />
+ <file path="lpf1_sim/lpf1_nativelink.tcl" type="OTHER" />
+ <file path="lpf1_sim/lpf1_msim.tcl" type="OTHER" />
+ <file path="lpf1_sim/lpf1_tb.vhd" type="VHDL" />
+ <file path="lpf1_sim/lpf1_mlab.m" type="OTHER" />
+ <file path="lpf1_sim/lpf1_model.m" type="OTHER" />
+ <file path="lpf1_sim/lpf1_coef_int.txt" type="OTHER" />
+ <file path="lpf1_sim/lpf1_input.txt" type="OTHER" />
+ <file path="lpf1_sim/lpf1_param.txt" type="OTHER" />
+ <topLevel name="lpf1" />
+ <deviceFamily name="cycloneive" />
+</simPackage>

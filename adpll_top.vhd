@@ -107,6 +107,32 @@ component LPF2 is
 	);
 end component LPF2;
 
+component sample_avg is
+	GENERIC (
+				d_width		: natural := 16;
+                stage       : natural := 4
+	);
+	PORT (
+				clk			: IN STD_LOGIC;
+				data_in_en	: IN STD_LOGIC;
+				reset_n		: IN STD_LOGIC;
+				data_in		: IN STD_LOGIC_VECTOR(d_width-1 DOWNTO 0);
+				data_out	: OUT STD_LOGIC_VECTOR(d_width-1 DOWNTO 0);
+				ce			: OUT STD_LOGIC
+	);	
+end component sample_avg;
+
+component Lowpass is
+	GENERIC (
+				LOOPF_WIDTH  : natural
+		);
+	Port ( 	CLK 			 : in STD_LOGIC;
+				RST 			 : in STD_LOGIC;
+				FILTER_IN_EN : IN STD_LOGIC;
+				FILTER_IN 	 : in STD_LOGIC_VECTOR (17 downto 0);
+				FILTER_OUT 	 : out STD_LOGIC_VECTOR (LOOPF_WIDTH-1 downto 0));
+end component Lowpass;
+
 
 -----------------------------
 ------- SIGNALS -------------
@@ -124,11 +150,16 @@ SIGNAL sys_clk_270deg 		: STD_LOGIC;
 SIGNAL s_adc_a_data			: STD_LOGIC_VECTOR(13 DOWNTO 0);
 SIGNAL s_adc_b_data			: STD_LOGIC_VECTOR(13 DOWNTO 0);
 	
-SIGNAL s_vco_sin			: STD_LOGIC_VECTOR(13 DOWNTO 0);
+SIGNAL s_vco_sin			: STD_LOGIC_VECTOR(13 DOWNTO 0) := (others => '0');
 	
-SIGNAL s_mixer_sin	: STD_LOGIC_VECTOR(27 DOWNTO 0);
-SIGNAL s_mixer_cos	: STD_LOGIC_VECTOR(27 DOWNTO 0);
-
+SIGNAL s_mixer_sin			: STD_LOGIC_VECTOR(27 DOWNTO 0)  := (others => '0');
+SIGNAL s_mixer_cos			: STD_LOGIC_VECTOR(27 DOWNTO 0)  := (others => '0');
+SIGNAL s_mixer_sin_fil		: STD_LOGIC_VECTOR(31 DOWNTO 0)  := (others => '0');
+SIGNAL s_mixer_sin_fil_avg		: STD_LOGIC_VECTOR(17 DOWNTO 0)  := (others => '0');
+SIGNAL s_mixer_sin_fil_avg_en	: STD_LOGIC;
+SIGNAL s_loopfilter				: std_logic_vector(29 DOWNTO 0) := (others => '0');
+SIGNAL s_ftw_nco				: std_logic_vector(31 downto 0)  := (others => '0');
+signal s_nco_offset				: std_logic_vector(31 downto 0)  := (others => '0');
 
 begin
 
@@ -147,8 +178,8 @@ begin
 	ADB_OE			<= '0';
 	ADB_SPI_CS		<= '1';
 
-
-
+	s_nco_offset <= x"36C8B439";		-- 10.7 MHz at 50 MHz
+	s_ftw_nco <= std_logic_vector(signed(s_nco_offset) + signed(s_loopfilter));
 
 -------------------
 	PROCESS (sys_clk)
@@ -194,8 +225,36 @@ LPFSin : LPF2
 		reset_n => reset_n,
 		ast_sink_valid => '1',
 		ast_sink_data => s_mixer_sin(27 DOWNTO 12),
-		ast_source_data => open
+		ast_source_data => s_mixer_sin_fil
 	);
+
+sample_avg_i1 : sample_avg
+	generic map (
+				d_width => 18,
+                stage 	=> 3
+	)
+	port map (
+				clk			=> sys_clk,
+				data_in_en	=> '1',
+				reset_n		=> reset_n,
+				data_in		=> s_mixer_sin_fil(31 downto 14),
+				data_out	=> s_mixer_sin_fil_avg,
+				ce			=> s_mixer_sin_fil_avg_en
+	);	
+
+LPFPLL : Lowpass 
+	GENERIC MAP (
+		LOOPF_WIDTH => 30
+	)
+	PORT MAP (
+		CLK => sys_clk,
+		RST => reset,
+		FILTER_IN_EN => s_mixer_sin_fil_avg_en,
+		FILTER_IN => s_mixer_sin_fil_avg,
+		FILTER_OUT => s_loopfilter
+	);
+
+	
 
 
 pll_sysclk_i1 : pll_sysclk
@@ -213,7 +272,7 @@ VCO_SIN_i1 : dds_synthesizer
     PORT MAP (
 		clk_i	=> sys_clk,
 		rst_i   => reset,
-		ftw_i	=> x"028F5C28",
+		ftw_i	=> s_ftw_nco, -- x"028F5C28",
 		phase_i => x"0000",
 		ampl_o  => s_vco_sin
 	);

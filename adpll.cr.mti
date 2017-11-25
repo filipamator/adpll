@@ -1,4 +1,22 @@
-pll_sysclk.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/pll_sysclk.vhd
+D:/FPGA/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity auk_dspip_roundsat_hpfir
+-- Compiling architecture beh of auk_dspip_roundsat_hpfir
+
+} {} {}} D:/FPGA/adpll/LPF2_sim/auk_dspip_lib_pkg_hpfir.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/auk_dspip_lib_pkg_hpfir.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package auk_dspip_math_pkg_hpfir
+-- Compiling package auk_dspip_lib_pkg_hpfir
+
+} {} {}} pll_sysclk.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/pll_sysclk.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -6,7 +24,98 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity pll_sysclk
 -- Compiling architecture SYN of pll_sysclk
 
-} {} {}} C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/dspba_library.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/dspba_library.vhd
+} {} {}} MultPhaseDet.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/MultPhaseDet.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling entity MultPhaseDet
+-- Compiling architecture Behavioral of MultPhaseDet
+
+} {} {}} D:/FPGA/adpll/LPF2_sim/dspba_library_package.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/dspba_library_package.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package dspba_library_package
+
+} {} {}} D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd {2 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package altera_mf_components
+-- Loading package auk_dspip_math_pkg_hpfir
+-- Compiling entity auk_dspip_avalon_streaming_source_hpfir
+-- Compiling architecture rtl of auk_dspip_avalon_streaming_source_hpfir
+** Warning: D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(122): Nonresolved signal 'count_finished' may have multiple sources.
+  Drivers:
+    D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(217):Conditional signal assignment line__216
+    D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(206):Conditional signal assignment line__205
+** Warning: D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(123): Nonresolved signal 'count_started' may have multiple sources.
+  Drivers:
+    D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(219):Conditional signal assignment line__218
+    D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(210):Conditional signal assignment line__209
+
+} {} {}} D:/FPGA/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package auk_dspip_math_pkg_hpfir
+-- Compiling package body auk_dspip_math_pkg_hpfir
+-- Loading package auk_dspip_math_pkg_hpfir
+
+} {} {}} D:/FPGA/adpll/LPF2_sim/LPF2_ast.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/LPF2_ast.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package auk_dspip_math_pkg_hpfir
+-- Loading package auk_dspip_lib_pkg_hpfir
+-- Compiling entity LPF2_ast
+-- Compiling architecture struct of LPF2_ast
+
+} {} {}} D:/FPGA/adpll/LPF2_sim/LPF2_rtl_core.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/LPF2_rtl_core.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package dspba_library_package
+-- Loading package altera_mf_components
+-- Loading package altera_lnsim_components
+-- Loading package LPM_COMPONENTS
+-- Compiling entity LPF2_rtl_core
+-- Compiling architecture normal of LPF2_rtl_core
+
+} {} {}} D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd {2 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package auk_dspip_math_pkg_hpfir
+-- Loading package auk_dspip_lib_pkg_hpfir
+-- Loading package altera_mf_components
+-- Compiling entity auk_dspip_avalon_streaming_sink_hpfir
+-- Compiling architecture rtl of auk_dspip_avalon_streaming_sink_hpfir
+** Warning: D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(113): Nonresolved signal 'sink_next_state' may have multiple sources.
+  Drivers:
+    D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(272):Process sink_comb_update_2
+       Driven at:
+          D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(279)
+    D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(177):Process sink_comb_update_1
+       Driven at:
+          D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(183)
+
+} {} {}} D:/FPGA/adpll/LPF2_sim/dspba_library.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/dspba_library.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -18,74 +127,20 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity dspba_sync_reg
 -- Compiling architecture sync_reg of dspba_sync_reg
 
-} {} {}} LPF2_sim/altera_avalon_sc_fifo.v {1 {vlog -work work -stats=none C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/altera_avalon_sc_fifo.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module altera_avalon_sc_fifo
-
-Top level modules:
-	altera_avalon_sc_fifo
-
-} {} {}} MultPhaseDet.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/MultPhaseDet.vhd
+} {} {}} sample_avg.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/sample_avg.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
 -- Loading package std_logic_arith
 -- Loading package STD_LOGIC_SIGNED
--- Compiling entity MultPhaseDet
--- Compiling architecture Behavioral of MultPhaseDet
+-- Compiling entity sample_avg
+-- Compiling architecture Behavioral of sample_avg
+-- Compiling entity average2
+-- Compiling architecture Behavioral of average2
 
-} {} {}} C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity auk_dspip_roundsat_hpfir
--- Compiling architecture beh of auk_dspip_roundsat_hpfir
-
-} {} {}} C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling package auk_dspip_math_pkg_hpfir
--- Compiling package body auk_dspip_math_pkg_hpfir
--- Loading package auk_dspip_math_pkg_hpfir
-
-} {} {}} C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_ast.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_ast.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package auk_dspip_math_pkg_hpfir
--- Loading package auk_dspip_lib_pkg_hpfir
--- Compiling entity LPF2_ast
--- Compiling architecture struct of LPF2_ast
-
-} {} {}} LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package auk_dspip_math_pkg_hpfir
--- Loading package auk_dspip_lib_pkg_hpfir
--- Loading package altera_mf_components
--- Compiling entity auk_dspip_avalon_streaming_sink_hpfir
--- Compiling architecture rtl of auk_dspip_avalon_streaming_sink_hpfir
-** Warning: C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(113): Nonresolved signal 'sink_next_state' may have multiple sources.
-  Drivers:
-    C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(272):Process sink_comb_update_2
-       Driven at:
-          C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(279)
-    C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(177):Process sink_comb_update_1
-       Driven at:
-          C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(183)
-
-} {} {}} lowpass.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/Lowpass.vhd
+} {} {}} Lowpass.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/Lowpass.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -96,27 +151,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity Lowpass
 -- Compiling architecture Behavioral of Lowpass
 
-} {} {}} C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_lib_pkg_hpfir.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_lib_pkg_hpfir.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package auk_dspip_math_pkg_hpfir
--- Compiling package auk_dspip_lib_pkg_hpfir
-
-} {} {}} sine_lut_16_x_12.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/sine_lut_16_x_12.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_SIGNED
--- Compiling package sine_lut_pkg
--- Compiling package body sine_lut_pkg
--- Loading package sine_lut_pkg
-
-} {} {}} dds_synthesizer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/dds_synthesizer.vhd
+} {} {}} dds_synthesizer.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/dds_synthesizer.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -131,45 +166,16 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity dds_synthesizer
 -- Compiling architecture dds_synthesizer_arch of dds_synthesizer
 
-} {} {}} C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/dspba_library_package.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/dspba_library_package.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling package dspba_library_package
-
-} {} {}} C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd
+} {} {}} adpll_top_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/adpll_top_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Loading package altera_mf_components
--- Loading package auk_dspip_math_pkg_hpfir
--- Compiling entity auk_dspip_avalon_streaming_source_hpfir
--- Compiling architecture rtl of auk_dspip_avalon_streaming_source_hpfir
-** Warning: C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(122): Nonresolved signal 'count_finished' may have multiple sources.
-  Drivers:
-    C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(217):Conditional signal assignment line__216
-    C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(206):Conditional signal assignment line__205
-** Warning: C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(123): Nonresolved signal 'count_started' may have multiple sources.
-  Drivers:
-    C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(219):Conditional signal assignment line__218
-    C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(210):Conditional signal assignment line__209
+-- Compiling entity adpll_top_tb
+-- Compiling architecture Behavioral of adpll_top_tb
 
-} {} {}} LPF2_sim/LPF2_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_tb.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity LPF2_tb
--- Compiling architecture rtl of LPF2_tb
--- Loading package auk_dspip_math_pkg_hpfir
--- Loading package auk_dspip_lib_pkg_hpfir
--- Loading entity LPF2
-
-} {} {}} sine_lut_16_x_14.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/sine_lut_16_x_14.vhd
+} {} {}} sine_lut_16_x_14.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/sine_lut_16_x_14.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -180,16 +186,27 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling package body sine_lut_pkg
 -- Loading package sine_lut_pkg
 
-} {} {}} adpll_top_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/adpll_top_tb.vhd
+} {} {}} D:/FPGA/adpll/LPF2_sim/LPF2.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/LPF2.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity adpll_top_tb
--- Compiling architecture Behavioral of adpll_top_tb
+-- Loading package auk_dspip_math_pkg_hpfir
+-- Loading package auk_dspip_lib_pkg_hpfir
+-- Compiling entity LPF2
+-- Compiling architecture syn of LPF2
 
-} {} {}} adpll_top_tester.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/adpll_top_tester.vhd
+} {} {}} D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity auk_dspip_avalon_streaming_controller_hpfir
+-- Compiling architecture struct of auk_dspip_avalon_streaming_controller_hpfir
+
+} {} {}} adpll_top_tester.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/adpll_top_tester.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -201,63 +218,11 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity adpll_top_tester
 -- Compiling architecture Behavioral of adpll_top_tester
 
-} {} {}} C:/Users/filip/Documents/GitHub/adpll/sample_avg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/sample_avg.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_SIGNED
--- Compiling entity sample_avg
--- Compiling architecture Behavioral of sample_avg
--- Compiling entity average2
--- Compiling architecture Behavioral of average2
+} {} {}} D:/FPGA/adpll/LPF2_sim/altera_avalon_sc_fifo.v {1 {vlog -work work -stats=none D:/FPGA/adpll/LPF2_sim/altera_avalon_sc_fifo.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module altera_avalon_sc_fifo
 
-} {} {}} C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package auk_dspip_math_pkg_hpfir
--- Loading package auk_dspip_lib_pkg_hpfir
--- Compiling entity LPF2
--- Compiling architecture syn of LPF2
-
-} {} {}} adpll_top.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/adpll_top.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_SIGNED
--- Loading package sine_lut_pkg
--- Compiling entity adpll_top
--- Compiling architecture Behavioral of adpll_top
-
-} {} {}} C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_rtl_core.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/LPF2_rtl_core.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package MATH_REAL
--- Loading package dspba_library_package
--- Loading package altera_mf_components
--- Loading package altera_lnsim_components
--- Loading package LPM_COMPONENTS
--- Compiling entity LPF2_rtl_core
--- Compiling architecture normal of LPF2_rtl_core
-
-} {} {}} LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/filip/Documents/GitHub/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Compiling entity auk_dspip_avalon_streaming_controller_hpfir
--- Compiling architecture struct of auk_dspip_avalon_streaming_controller_hpfir
+Top level modules:
+	altera_avalon_sc_fifo
 
 } {} {}}

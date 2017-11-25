@@ -4,12 +4,6 @@ use ieee.numeric_std.ALL;
 use work.sine_lut_pkg.all;
 
 entity adpll_top is
-	GENERIC (
-		FTW_WIDTH    	: natural := 35;			-- 35
-		LOOPF_WIDTH		: natural := 30;			-- 30
-		DDS_CLOCK		: natural := 50_000_000;	-- 50e6
-		DDS_REF_FREQ	: natural := 50_000_000		-- 5e6
-	);
 	PORT (	
 				CLOCK_50			: IN STD_LOGIC;
 				
@@ -115,29 +109,28 @@ end component LPF2;
 
 component sample_avg is
 	GENERIC (
-		d_width		: natural := 16;
-        stage       : natural := 4
+				d_width		: natural := 16;
+                stage       : natural := 4
 	);
 	PORT (
-		clk			: IN STD_LOGIC;
-		data_in_en	: IN STD_LOGIC;
-		reset_n		: IN STD_LOGIC;
-		data_in		: IN STD_LOGIC_VECTOR(d_width-1 DOWNTO 0);
-		data_out	: OUT STD_LOGIC_VECTOR(d_width-1 DOWNTO 0);
-		ce			: OUT STD_LOGIC
+				clk			: IN STD_LOGIC;
+				data_in_en	: IN STD_LOGIC;
+				reset_n		: IN STD_LOGIC;
+				data_in		: IN STD_LOGIC_VECTOR(d_width-1 DOWNTO 0);
+				data_out	: OUT STD_LOGIC_VECTOR(d_width-1 DOWNTO 0);
+				ce			: OUT STD_LOGIC
 	);	
 end component sample_avg;
 
 component Lowpass is
 	GENERIC (
-		LOOPF_WIDTH  : natural
+				LOOPF_WIDTH  : natural
 		);
-	Port ( 	
-		CLK 			 : in STD_LOGIC;
-		RST 			 : in STD_LOGIC;
-		FILTER_IN_EN : IN STD_LOGIC;
-		FILTER_IN 	 : in STD_LOGIC_VECTOR (17 downto 0);
-		FILTER_OUT 	 : out STD_LOGIC_VECTOR (LOOPF_WIDTH-1 downto 0));
+	Port ( 	CLK 			 : in STD_LOGIC;
+				RST 			 : in STD_LOGIC;
+				FILTER_IN_EN : IN STD_LOGIC;
+				FILTER_IN 	 : in STD_LOGIC_VECTOR (17 downto 0);
+				FILTER_OUT 	 : out STD_LOGIC_VECTOR (LOOPF_WIDTH-1 downto 0));
 end component Lowpass;
 
 
@@ -157,22 +150,16 @@ SIGNAL sys_clk_270deg 		: STD_LOGIC;
 SIGNAL s_adc_a_data			: STD_LOGIC_VECTOR(13 DOWNTO 0)  := (others => '0');
 SIGNAL s_adc_b_data			: STD_LOGIC_VECTOR(13 DOWNTO 0)  := (others => '0');
 	
-SIGNAL s_rf_in				: STD_LOGIC_VECTOR(13 DOWNTO 0) := (others => '0');
 SIGNAL s_vco_sin			: STD_LOGIC_VECTOR(13 DOWNTO 0) := (others => '0');
-SIGNAL s_vco_cos			: STD_LOGIC_VECTOR(13 DOWNTO 0) := (others => '0');
 	
 SIGNAL s_mixer_sin			: STD_LOGIC_VECTOR(27 DOWNTO 0)  := (others => '0');
 SIGNAL s_mixer_cos			: STD_LOGIC_VECTOR(27 DOWNTO 0)  := (others => '0');
 SIGNAL s_mixer_sin_fil		: STD_LOGIC_VECTOR(31 DOWNTO 0)  := (others => '0');
-SIGNAL s_mixer_cos_fil		: STD_LOGIC_VECTOR(31 DOWNTO 0)  := (others => '0');
 SIGNAL s_mixer_sin_fil_avg		: STD_LOGIC_VECTOR(17 DOWNTO 0)  := (others => '0');
 SIGNAL s_mixer_sin_fil_avg_en	: STD_LOGIC;
-
-
-
-SIGNAL s_loopfilter				: std_logic_vector(LOOPF_WIDTH-1 DOWNTO 0) := (others => '0');
-SIGNAL s_ftw_nco				: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
-signal s_nco_offset				: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
+SIGNAL s_loopfilter				: std_logic_vector(29 DOWNTO 0) := (others => '0');
+SIGNAL s_ftw_nco				: std_logic_vector(31 downto 0)  := (others => '0');
+signal s_nco_offset				: std_logic_vector(31 downto 0)  := (others => '0');
 
 begin
 
@@ -191,8 +178,8 @@ begin
 	ADB_OE			<= '0';
 	ADB_SPI_CS		<= '1';
 
-	s_nco_offset <= "00011001100110011001100110011001101";
-	s_ftw_nco <= std_logic_vector(signed(s_nco_offset) + signed(s_loopfilter));
+	s_nco_offset <= x"36C8B439";		-- 10.7 MHz at 50 MHz
+	s_ftw_nco <= std_logic_vector(signed(s_nco_offset));-- + signed(s_loopfilter));
 
 -------------------
 	PROCESS (sys_clk)
@@ -223,137 +210,51 @@ begin
 
 
 
-
-
-
-RF_IN : dds_synthesizer
-	GENERIC MAP (
-		ftw_width => 35
-	)
-	PORT MAP (
-		clk_i	=> sys_clk,
-		rst_i 	=> reset,
-		ftw_i	=> "00011001100110011011101100100111100",
-		phase_i	=>  x"0000",
---		phase_i =>  phasemod16,
-		ampl_o 	=> s_rf_in
-	);
-	
-	
-NCOSin : dds_synthesizer
-	GENERIC MAP (
-		ftw_width => 35
-	)
-	PORT MAP (
-		clk_i	=> sys_clk,
-		rst_i 	=> reset,
-		ftw_i	=> s_ftw_nco,
-		phase_i => x"0000",
-		ampl_o 	=> s_vco_sin
-	);
-
-
-NCOCos : dds_synthesizer
-	GENERIC MAP (
-		ftw_width => 35
-	)
-	PORT MAP (
-		clk_i	=> sys_clk,
-		rst_i 	=> reset,
-		ftw_i	=> s_ftw_nco,
---		phase_i => x"0000",
-		phase_i => x"4009",
-		ampl_o 	=> s_vco_cos
-	);
-	
--- DDSPM : dds_synthesizer
--- 	PORT MAP (
--- 		clk_i	=> sys_clk,
--- 		rst_i => reset,
--- 		ftw_i	=> x"000D1B71",	-- 10 kHz @ 50 MHz and 32 bits
--- --		ftw_i	=> x"014F8B",	-- 1 kHz
--- 		phase_i => x"0000",
--- 		ampl_o => phasemod
--- 	);
-	
-		
-
 MixerSin : MultPhaseDet 
-	PORT MAP 
-	(
-		REF 	=> s_rf_in,
-		VCO 	=> s_vco_sin,
-		SOUT 	=> s_mixer_sin
-	);
+		PORT MAP 
+		(
+			REF => s_adc_a_data,
+			VCO => s_vco_sin,
+			SOUT => s_mixer_sin
+		);
 
 
 LPFSin : LPF2
 	PORT MAP (
-		clk 		=> sys_clk,
-		reset_n 	=> reset_n,
+		clk => sys_clk,
+		reset_n => reset_n,
 		ast_sink_valid => '1',
-		ast_sink_data 	=> s_mixer_sin(27 DOWNTO 12),
+		ast_sink_data => s_mixer_sin(27 DOWNTO 12),
+--		ast_source_valid => s_mixer_sin_fil_en 
 		ast_source_data => s_mixer_sin_fil
 	);
 
-
 sample_avg_i1 : sample_avg
-	GENERIC MAP(
-		d_width	=> 18,
-    	stage 	=> 6
+	generic map (
+				d_width => 18,
+                stage 	=> 3
 	)
-	PORT map (
-		clk			=>	sys_clk,
-		data_in_en	=>	'1',
-		reset_n		=> reset_n,
-		data_in		=> s_mixer_sin_fil(31 downto 14),
-		data_out	=> s_mixer_sin_fil_avg,
-		ce			=> s_mixer_sin_fil_avg_en
+	port map (
+				clk			=> sys_clk,
+				data_in_en	=> '1',
+				reset_n		=> reset_n,
+				data_in		=> s_mixer_sin_fil(31 downto 14),
+				data_out	=> s_mixer_sin_fil_avg,
+				ce			=> s_mixer_sin_fil_avg_en
 	);	
 
-	
-	
 LPFPLL : Lowpass 
 	GENERIC MAP (
-		LOOPF_WIDTH => LOOPF_WIDTH
+		LOOPF_WIDTH => 30
 	)
 	PORT MAP (
-		CLK 			=> sys_clk,
-		RST 			=> reset,
-		FILTER_IN_EN 	=> s_mixer_sin_fil_avg_en,
-		FILTER_IN 		=> s_mixer_sin_fil_avg,
-		FILTER_OUT 		=> s_loopfilter
+		CLK => sys_clk,
+		RST => reset,
+		FILTER_IN_EN => s_mixer_sin_fil_avg_en,
+		FILTER_IN => s_mixer_sin_fil_avg,
+		FILTER_OUT => s_loopfilter
 	);
 
-	
-
-MixerCos : MultPhaseDet 
-		PORT MAP 
-		(
-			REF => s_rf_in,
-			VCO => s_vco_cos,
-			SOUT => s_mixer_cos
-		);
-	
-	
-LPFCos : LPF2
-	PORT MAP (
-		clk 		=> sys_clk,
-		reset_n 	=> reset_n,
-		ast_sink_valid => '1',
-		ast_sink_data 	=> s_mixer_cos(27 DOWNTO 12),
-		ast_source_data => s_mixer_cos_fil
-	);
-	
-
--- taninst1 : atan 
--- 	PORT MAP (
--- 		sys_clk => sys_clk,
--- 		i_q => fphase_cos,
--- 		i_i => fphase_sin,
--- 		result => s_tan
--- 	);
-	
 	
 
 
@@ -365,6 +266,16 @@ pll_sysclk_i1 : pll_sysclk
 		c2		=> sys_clk_180deg,
 		c3		=> sys_clk_270deg,
 		locked	=> open
+	);
+
+
+VCO_SIN_i1 : dds_synthesizer
+    PORT MAP (
+		clk_i	=> sys_clk,
+		rst_i   => reset,
+		ftw_i	=> s_ftw_nco, -- x"028F5C28",
+		phase_i => x"0000",
+		ampl_o  => s_vco_sin
 	);
 
 

@@ -168,11 +168,13 @@ SIGNAL s_mixer_cos_fil		: STD_LOGIC_VECTOR(31 DOWNTO 0)  := (others => '0');
 SIGNAL s_mixer_sin_fil_avg		: STD_LOGIC_VECTOR(17 DOWNTO 0)  := (others => '0');
 SIGNAL s_mixer_sin_fil_avg_en	: STD_LOGIC;
 
-
+SIGNAL s_phasemod				: STD_LOGIC_VECTOR(13 DOWNTO 0) := (others => '0');
+SIGNAL s_ftw_phasemod			: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
 
 SIGNAL s_loopfilter				: std_logic_vector(LOOPF_WIDTH-1 DOWNTO 0) := (others => '0');
 SIGNAL s_ftw_nco				: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
 signal s_nco_offset				: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
+
 
 begin
 
@@ -192,7 +194,8 @@ begin
 	ADB_SPI_CS		<= '1';
 
 	s_nco_offset <= "00011001100110011001100110011001101";
-	s_ftw_nco <= std_logic_vector(signed(s_nco_offset) + signed(s_loopfilter));
+	s_ftw_nco <= std_logic_vector(signed(s_nco_offset) + signed(s_loopfilter) + signed(s_phasemod)   );
+	s_ftw_phasemod<="00000000000000010100111110001011010"; 
 
 -------------------
 	PROCESS (sys_clk)
@@ -240,7 +243,7 @@ RF_IN : dds_synthesizer
 	);
 	
 	
-NCOSin : dds_synthesizer
+VCOSin : dds_synthesizer
 	GENERIC MAP (
 		ftw_width => 35
 	)
@@ -253,7 +256,7 @@ NCOSin : dds_synthesizer
 	);
 
 
-NCOCos : dds_synthesizer
+VCOCos : dds_synthesizer
 	GENERIC MAP (
 		ftw_width => 35
 	)
@@ -266,15 +269,17 @@ NCOCos : dds_synthesizer
 		ampl_o 	=> s_vco_cos
 	);
 	
--- DDSPM : dds_synthesizer
--- 	PORT MAP (
--- 		clk_i	=> sys_clk,
--- 		rst_i => reset,
--- 		ftw_i	=> x"000D1B71",	-- 10 kHz @ 50 MHz and 32 bits
--- --		ftw_i	=> x"014F8B",	-- 1 kHz
--- 		phase_i => x"0000",
--- 		ampl_o => phasemod
--- 	);
+DDSPhaseMod : dds_synthesizer
+	GENERIC MAP (
+		ftw_width => 35
+	)
+	PORT MAP (
+		clk_i	=> sys_clk,
+		rst_i => reset,
+		ftw_i	=> s_ftw_phasemod,	-- 1 kHz @ 50 MHz and 35 bits
+		phase_i => x"0000",
+		ampl_o => s_phasemod
+	);
 	
 		
 

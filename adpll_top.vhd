@@ -140,6 +140,15 @@ component Lowpass is
 		FILTER_OUT 	 : out STD_LOGIC_VECTOR (LOOPF_WIDTH-1 downto 0));
 end component Lowpass;
 
+component rc is
+	Port ( 	
+                i_clock		 : in STD_LOGIC;
+				i_reset	     : in STD_LOGIC;
+				i_data_en    : IN STD_LOGIC;
+				i_data 	     : in STD_LOGIC_VECTOR (31 downto 0);
+				o_data 	     : out STD_LOGIC_VECTOR (31 downto 0)
+        );
+end component rc;
 
 -----------------------------
 ------- SIGNALS -------------
@@ -175,6 +184,7 @@ SIGNAL s_loopfilter				: std_logic_vector(LOOPF_WIDTH-1 DOWNTO 0) := (others => 
 SIGNAL s_ftw_nco				: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
 signal s_nco_offset				: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
 
+signal s_rc						: std_logic_vector(31 downto 0);
 
 begin
 
@@ -292,6 +302,18 @@ MixerSin : MultPhaseDet
 	);
 
 
+s_rc <= std_logic_vector ( resize ( signed(s_mixer_sin), 32) );
+
+rc_i1 : rc
+	port map ( 	
+        i_clock		=> sys_clk,
+		i_reset		=> reset,
+		i_data_en	=> '1',
+		i_data		=> s_rc,
+		o_data 		=> open
+    );
+
+
 LPFSin : LPF2
 	PORT MAP (
 		clk 		=> sys_clk,
@@ -300,6 +322,7 @@ LPFSin : LPF2
 		ast_sink_data 	=> s_mixer_sin(27 DOWNTO 12),
 		ast_source_data => s_mixer_sin_fil
 	);
+
 
 
 sample_avg_i1 : sample_avg

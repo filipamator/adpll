@@ -1,0 +1,8 @@
+set_global_assignment -name IP_TOOL_NAME "ALTFP_CONVERT"
+set_global_assignment -name IP_TOOL_VERSION "16.1"
+set_global_assignment -name IP_GENERATED_DEVICE_FAMILY "{Cyclone IV E}"
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "fp_int32.vhd"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "fp_int32.bsf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "fp_int32_inst.vhd"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "fp_int32.inc"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "fp_int32.cmp"]

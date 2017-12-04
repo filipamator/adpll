@@ -81,6 +81,66 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity LPF2_ast
 -- Compiling architecture struct of LPF2_ast
 
+} {} {}} D:/FPGA/adpll/math/fp_add.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/math/fp_add.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fp_add_altbarrel_shift_35e
+-- Compiling architecture RTL of fp_add_altbarrel_shift_35e
+-- Compiling entity fp_add_altbarrel_shift_olb
+-- Compiling architecture RTL of fp_add_altbarrel_shift_olb
+-- Compiling entity fp_add_altpriority_encoder_3e8
+-- Compiling architecture RTL of fp_add_altpriority_encoder_3e8
+-- Compiling entity fp_add_altpriority_encoder_6e8
+-- Compiling architecture RTL of fp_add_altpriority_encoder_6e8
+-- Compiling entity fp_add_altpriority_encoder_be8
+-- Compiling architecture RTL of fp_add_altpriority_encoder_be8
+-- Compiling entity fp_add_altpriority_encoder_3v7
+-- Compiling architecture RTL of fp_add_altpriority_encoder_3v7
+-- Compiling entity fp_add_altpriority_encoder_6v7
+-- Compiling architecture RTL of fp_add_altpriority_encoder_6v7
+-- Compiling entity fp_add_altpriority_encoder_bv7
+-- Compiling architecture RTL of fp_add_altpriority_encoder_bv7
+-- Compiling entity fp_add_altpriority_encoder_r08
+-- Compiling architecture RTL of fp_add_altpriority_encoder_r08
+-- Compiling entity fp_add_altpriority_encoder_rf8
+-- Compiling architecture RTL of fp_add_altpriority_encoder_rf8
+-- Compiling entity fp_add_altpriority_encoder_qb6
+-- Compiling architecture RTL of fp_add_altpriority_encoder_qb6
+-- Compiling entity fp_add_altpriority_encoder_nh8
+-- Compiling architecture RTL of fp_add_altpriority_encoder_nh8
+-- Compiling entity fp_add_altpriority_encoder_qh8
+-- Compiling architecture RTL of fp_add_altpriority_encoder_qh8
+-- Compiling entity fp_add_altpriority_encoder_vh8
+-- Compiling architecture RTL of fp_add_altpriority_encoder_vh8
+-- Compiling entity fp_add_altpriority_encoder_fj8
+-- Compiling architecture RTL of fp_add_altpriority_encoder_fj8
+-- Compiling entity fp_add_altpriority_encoder_n28
+-- Compiling architecture RTL of fp_add_altpriority_encoder_n28
+-- Compiling entity fp_add_altpriority_encoder_q28
+-- Compiling architecture RTL of fp_add_altpriority_encoder_q28
+-- Compiling entity fp_add_altpriority_encoder_v28
+-- Compiling architecture RTL of fp_add_altpriority_encoder_v28
+-- Compiling entity fp_add_altpriority_encoder_f48
+-- Compiling architecture RTL of fp_add_altpriority_encoder_f48
+-- Compiling entity fp_add_altpriority_encoder_e48
+-- Compiling architecture RTL of fp_add_altpriority_encoder_e48
+-- Compiling entity fp_add_altfp_add_sub_7jj
+-- Compiling architecture RTL of fp_add_altfp_add_sub_7jj
+-- Compiling entity fp_add
+-- Compiling architecture RTL of fp_add
+
+} {} {}} D:/FPGA/adpll/math/fp_mult.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/math/fp_mult.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fp_mult_altfp_mult_v9o
+-- Compiling architecture RTL of fp_mult_altfp_mult_v9o
+-- Compiling entity fp_mult
+-- Compiling architecture RTL of fp_mult
+
 } {} {}} D:/FPGA/adpll/LPF2_sim/LPF2_rtl_core.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/LPF2_rtl_core.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -166,6 +226,36 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity dds_synthesizer
 -- Compiling architecture dds_synthesizer_arch of dds_synthesizer
 
+} {} {}} D:/FPGA/adpll/math/int32_fp.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/math/int32_fp.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity int32_fp_altbarrel_shift_tvf
+-- Compiling architecture RTL of int32_fp_altbarrel_shift_tvf
+-- Compiling entity int32_fp_altpriority_encoder_3e8
+-- Compiling architecture RTL of int32_fp_altpriority_encoder_3e8
+-- Compiling entity int32_fp_altpriority_encoder_6e8
+-- Compiling architecture RTL of int32_fp_altpriority_encoder_6e8
+-- Compiling entity int32_fp_altpriority_encoder_be8
+-- Compiling architecture RTL of int32_fp_altpriority_encoder_be8
+-- Compiling entity int32_fp_altpriority_encoder_rf8
+-- Compiling architecture RTL of int32_fp_altpriority_encoder_rf8
+-- Compiling entity int32_fp_altpriority_encoder_3v7
+-- Compiling architecture RTL of int32_fp_altpriority_encoder_3v7
+-- Compiling entity int32_fp_altpriority_encoder_6v7
+-- Compiling architecture RTL of int32_fp_altpriority_encoder_6v7
+-- Compiling entity int32_fp_altpriority_encoder_bv7
+-- Compiling architecture RTL of int32_fp_altpriority_encoder_bv7
+-- Compiling entity int32_fp_altpriority_encoder_r08
+-- Compiling architecture RTL of int32_fp_altpriority_encoder_r08
+-- Compiling entity int32_fp_altpriority_encoder_qb6
+-- Compiling architecture RTL of int32_fp_altpriority_encoder_qb6
+-- Compiling entity int32_fp_altfp_convert_nfn
+-- Compiling architecture RTL of int32_fp_altfp_convert_nfn
+-- Compiling entity int32_fp
+-- Compiling architecture RTL of int32_fp
+
 } {} {}} sine_lut_16_x_14.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/sine_lut_16_x_14.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -218,11 +308,73 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity LPF2
 -- Compiling architecture syn of LPF2
 
+} {} {}} D:/FPGA/adpll/math/fp_sub.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/math/fp_sub.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fp_sub_altbarrel_shift_35e
+-- Compiling architecture RTL of fp_sub_altbarrel_shift_35e
+-- Compiling entity fp_sub_altbarrel_shift_olb
+-- Compiling architecture RTL of fp_sub_altbarrel_shift_olb
+-- Compiling entity fp_sub_altpriority_encoder_3e8
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_3e8
+-- Compiling entity fp_sub_altpriority_encoder_6e8
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_6e8
+-- Compiling entity fp_sub_altpriority_encoder_be8
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_be8
+-- Compiling entity fp_sub_altpriority_encoder_3v7
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_3v7
+-- Compiling entity fp_sub_altpriority_encoder_6v7
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_6v7
+-- Compiling entity fp_sub_altpriority_encoder_bv7
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_bv7
+-- Compiling entity fp_sub_altpriority_encoder_r08
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_r08
+-- Compiling entity fp_sub_altpriority_encoder_rf8
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_rf8
+-- Compiling entity fp_sub_altpriority_encoder_qb6
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_qb6
+-- Compiling entity fp_sub_altpriority_encoder_nh8
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_nh8
+-- Compiling entity fp_sub_altpriority_encoder_qh8
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_qh8
+-- Compiling entity fp_sub_altpriority_encoder_vh8
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_vh8
+-- Compiling entity fp_sub_altpriority_encoder_fj8
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_fj8
+-- Compiling entity fp_sub_altpriority_encoder_n28
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_n28
+-- Compiling entity fp_sub_altpriority_encoder_q28
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_q28
+-- Compiling entity fp_sub_altpriority_encoder_v28
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_v28
+-- Compiling entity fp_sub_altpriority_encoder_f48
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_f48
+-- Compiling entity fp_sub_altpriority_encoder_e48
+-- Compiling architecture RTL of fp_sub_altpriority_encoder_e48
+-- Compiling entity fp_sub_altfp_add_sub_8kj
+-- Compiling architecture RTL of fp_sub_altfp_add_sub_8kj
+-- Compiling entity fp_sub
+-- Compiling architecture RTL of fp_sub
+
 } {} {}} D:/FPGA/adpll/LPF2_sim/altera_avalon_sc_fifo.v {1 {vlog -work work -stats=none D:/FPGA/adpll/LPF2_sim/altera_avalon_sc_fifo.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module altera_avalon_sc_fifo
 
 Top level modules:
 	altera_avalon_sc_fifo
+
+} {} {}} adpll_top.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/adpll_top.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Loading package sine_lut_pkg
+-- Compiling entity adpll_top
+-- Compiling architecture Behavioral of adpll_top
 
 } {} {}}

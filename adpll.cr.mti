@@ -60,6 +60,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
     D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(219):Conditional signal assignment line__218
     D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(210):Conditional signal assignment line__209
 
+} {} {}} D:/FPGA/adpll/rc.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/rc.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity rc
+-- Compiling architecture Behavioral of rc
+
 } {} {}} D:/FPGA/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -175,18 +184,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
        Driven at:
           D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(183)
 
-} {} {}} D:/FPGA/adpll/LPF2_sim/dspba_library.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/dspba_library.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package dspba_library_package
--- Compiling entity dspba_delay
--- Compiling architecture delay of dspba_delay
--- Loading package NUMERIC_STD
--- Compiling entity dspba_sync_reg
--- Compiling architecture sync_reg of dspba_sync_reg
-
 } {} {}} sample_avg.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/sample_avg.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -200,16 +197,17 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity average2
 -- Compiling architecture Behavioral of average2
 
-} {} {}} Lowpass.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/Lowpass.vhd
+} {} {}} D:/FPGA/adpll/LPF2_sim/dspba_library.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/dspba_library.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
+-- Loading package dspba_library_package
+-- Compiling entity dspba_delay
+-- Compiling architecture delay of dspba_delay
 -- Loading package NUMERIC_STD
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_SIGNED
--- Compiling entity Lowpass
--- Compiling architecture Behavioral of Lowpass
+-- Compiling entity dspba_sync_reg
+-- Compiling architecture sync_reg of dspba_sync_reg
 
 } {} {}} dds_synthesizer.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/dds_synthesizer.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -225,6 +223,26 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package dds_synthesizer_pkg
 -- Compiling entity dds_synthesizer
 -- Compiling architecture dds_synthesizer_arch of dds_synthesizer
+
+} {} {}} adpll_top_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/adpll_top_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity adpll_top_tb
+-- Compiling architecture Behavioral of adpll_top_tb
+
+} {} {}} sine_lut_16_x_14.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/sine_lut_16_x_14.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling package sine_lut_pkg
+-- Compiling package body sine_lut_pkg
+-- Loading package sine_lut_pkg
 
 } {} {}} D:/FPGA/adpll/math/int32_fp.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/math/int32_fp.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -256,25 +274,25 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity int32_fp
 -- Compiling architecture RTL of int32_fp
 
-} {} {}} sine_lut_16_x_14.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/sine_lut_16_x_14.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_SIGNED
--- Compiling package sine_lut_pkg
--- Compiling package body sine_lut_pkg
--- Loading package sine_lut_pkg
-
-} {} {}} adpll_top_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/adpll_top_tb.vhd
+} {} {}} D:/FPGA/adpll/LPF2_sim/LPF2.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/LPF2.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity adpll_top_tb
--- Compiling architecture Behavioral of adpll_top_tb
+-- Loading package auk_dspip_math_pkg_hpfir
+-- Loading package auk_dspip_lib_pkg_hpfir
+-- Compiling entity LPF2
+-- Compiling architecture syn of LPF2
+
+} {} {}} D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity auk_dspip_avalon_streaming_controller_hpfir
+-- Compiling architecture struct of auk_dspip_avalon_streaming_controller_hpfir
 
 } {} {}} adpll_top_tester.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/adpll_top_tester.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -288,25 +306,12 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity adpll_top_tester
 -- Compiling architecture Behavioral of adpll_top_tester
 
-} {} {}} D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Compiling entity auk_dspip_avalon_streaming_controller_hpfir
--- Compiling architecture struct of auk_dspip_avalon_streaming_controller_hpfir
+} {} {}} D:/FPGA/adpll/LPF2_sim/altera_avalon_sc_fifo.v {1 {vlog -work work -stats=none D:/FPGA/adpll/LPF2_sim/altera_avalon_sc_fifo.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module altera_avalon_sc_fifo
 
-} {} {}} D:/FPGA/adpll/LPF2_sim/LPF2.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/LPF2_sim/LPF2.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package auk_dspip_math_pkg_hpfir
--- Loading package auk_dspip_lib_pkg_hpfir
--- Compiling entity LPF2
--- Compiling architecture syn of LPF2
+Top level modules:
+	altera_avalon_sc_fifo
 
 } {} {}} D:/FPGA/adpll/math/fp_sub.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/math/fp_sub.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -357,13 +362,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling architecture RTL of fp_sub_altfp_add_sub_8kj
 -- Compiling entity fp_sub
 -- Compiling architecture RTL of fp_sub
-
-} {} {}} D:/FPGA/adpll/LPF2_sim/altera_avalon_sc_fifo.v {1 {vlog -work work -stats=none D:/FPGA/adpll/LPF2_sim/altera_avalon_sc_fifo.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module altera_avalon_sc_fifo
-
-Top level modules:
-	altera_avalon_sc_fifo
 
 } {} {}} adpll_top.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/adpll_top.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016

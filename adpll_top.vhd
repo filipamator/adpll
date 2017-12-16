@@ -5,7 +5,7 @@ use work.sine_lut_pkg.all;
 
 entity adpll_top is
 	GENERIC (
-		FTW_WIDTH    	: natural := 35;			-- 35
+		FTW_WIDTH    	: natural := 32;			-- 35
 		LOOPF_WIDTH		: natural := 30;			-- 30
 		DDS_CLOCK		: natural := 50_000_000;	-- 50e6
 		DDS_REF_FREQ	: natural := 50_000_000		-- 5e6
@@ -203,9 +203,9 @@ begin
 	ADB_OE			<= '0';
 	ADB_SPI_CS		<= '1';
 
-	s_nco_offset <= "00011001100110011001100110011001101";
-	s_ftw_nco <= std_logic_vector(signed(s_nco_offset) + signed(s_loopfilter) + signed(s_phasemod)   );
-	s_ftw_phasemod<="00000000000000010100111110001011010"; 
+	s_nco_offset <= x"36C8B439";		-- 10.7 MHz
+	s_ftw_nco <= std_logic_vector(signed(s_nco_offset) + signed(s_loopfilter));
+	s_ftw_phasemod <= x"00000000"; 
 
 -------------------
 	PROCESS (sys_clk)
@@ -241,12 +241,12 @@ begin
 
 RF_IN : dds_synthesizer
 	GENERIC MAP (
-		ftw_width => 35
+		ftw_width => 32
 	)
 	PORT MAP (
 		clk_i	=> sys_clk,
 		rst_i 	=> reset,
-		ftw_i	=> "00011001100110011011101100100111100",
+		ftw_i	=> x"36C8B439",		-- 10.7 MHz
 		phase_i	=>  x"0000",
 --		phase_i =>  phasemod16,
 		ampl_o 	=> s_rf_in
@@ -255,7 +255,7 @@ RF_IN : dds_synthesizer
 	
 VCOSin : dds_synthesizer
 	GENERIC MAP (
-		ftw_width => 35
+		ftw_width => 32
 	)
 	PORT MAP (
 		clk_i	=> sys_clk,
@@ -268,7 +268,7 @@ VCOSin : dds_synthesizer
 
 VCOCos : dds_synthesizer
 	GENERIC MAP (
-		ftw_width => 35
+		ftw_width => 32
 	)
 	PORT MAP (
 		clk_i	=> sys_clk,
@@ -281,7 +281,7 @@ VCOCos : dds_synthesizer
 	
 DDSPhaseMod : dds_synthesizer
 	GENERIC MAP (
-		ftw_width => 35
+		ftw_width => 32
 	)
 	PORT MAP (
 		clk_i	=> sys_clk,
@@ -328,7 +328,7 @@ LPFSin : LPF2
 sample_avg_i1 : sample_avg
 	GENERIC MAP(
 		d_width	=> 18,
-    	stage 	=> 6
+    	stage 	=> 6			-- average over 2^6=64 samples
 	)
 	PORT map (
 		clk			=>	sys_clk,

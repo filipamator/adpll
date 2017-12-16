@@ -1,8 +1,7 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
--- use ieee.std_logic_arith.ALL;
 use IEEE.numeric_std.all;
-use IEEE.STD_LOGIC_SIGNED.ALL;
+
 
 
 
@@ -24,11 +23,8 @@ architecture Behavioral of Lowpass is
 	signal LAST_OUTPUT 		: STD_LOGIC_VECTOR (LOOPF_WIDTH-1 downto 0) := (others => '0');
 	signal CURRENT_OUTPUT 	: STD_LOGIC_VECTOR (LOOPF_WIDTH-1 downto 0) := (others => '0');
 
-	SIGNAL temp : STD_LOGIC_VECTOR (LOOPF_WIDTH-1 downto 0) := (others => '0');
+	SIGNAL temp : STD_LOGIC_VECTOR (29 downto 0) := (others => '0');
 
-
-	-- To dzialajacego filtra
-	-- SIGNAL temp : STD_LOGIC_VECTOR (27 downto 0) := (others => '0');
 
 	
 	signal COUNT : STD_LOGIC := '0';
@@ -51,21 +47,12 @@ begin
 				LAST_INPUT <= CURRENT_INPUT;
 				LAST_OUTPUT <= CURRENT_OUTPUT;
 
+				-- 1569 z - 676.7
 
-				 
-				--temp <= "10111111001101" * CURRENT_INPUT - "10001010001101" * LAST_INPUT - LAST_OUTPUT;
+				temp <= std_logic_vector("1011010101" * signed(CURRENT_INPUT) - "1010011101" * signed(LAST_INPUT) - signed(LAST_OUTPUT));
+			    --temp <=  std_logic_vector(x"0621" * signed(CURRENT_INPUT) - x"02A4" * signed(LAST_INPUT) - signed(LAST_OUTPUT));
 				
-				
-				-- Ko=0.011, Kd=8192, bw=10kHz, z=0.707, Ts=1/(781250)
-				-- a1= -1
-				-- b0= 725.3026
-				-- b1= -669.2253
-				-- temp must have 26 bits
-				
-				--				725										669
-			    temp <= "1011010101" * CURRENT_INPUT - "1010011101" * LAST_INPUT - LAST_OUTPUT;
-				
-				CURRENT_OUTPUT <= temp;
+				CURRENT_OUTPUT <= std_logic_vector ( resize(signed(temp),30) );
 
 		 END IF;
 

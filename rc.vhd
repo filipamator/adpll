@@ -131,13 +131,17 @@ begin
                             s_a1 <= x"00000000";
 
                             s_xn <= s_data_fp;              -- integer to float conversion -- 6 clock cycles
-                            s_xn1 <= x"00000000";
-                            s_yn1 <= x"00000000";
+                            -- s_xn1 <= x"00000000";
+                            -- s_yn1 <= x"00000000";
 
 
                             -- s_mult1 = s_b0 * s_xn
                             -- s_mult2 = s_b1 * s_xn1
                             -- s_mult3 = s_a1 * s_yn1
+
+                        when 7 =>
+
+                            s_xn1 <= s_xn;
 
                         when 12 =>
 

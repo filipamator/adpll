@@ -25,12 +25,18 @@ Signals from top:
 - Output of the loop filter - used to steer VCO frequency
 - Calculated frequency of the VCO (type 'real')
 
+
 ![Simulation](https://raw.githubusercontent.com/filipamator/adpll/master/Simulation.png)
+
 
 As you see after 100us PLL is locked at the reference frequency. 
 
 
 
+
+Here is the structure of the design (RTL preview from Quartus):
+
+![Simulation](https://raw.githubusercontent.com/filipamator/adpll/master/RTL_PREVIEW.png)
 
 
 

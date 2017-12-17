@@ -99,7 +99,7 @@ SIGNAL temp			: STD_LOGIC_VECTOR(d_width-1 DOWNTO 0);
 
 begin
     data_out <= temp;
-    PROCESS (clk)
+    PROCESS (clk,reset_n)
     BEGIN
         IF (reset_N='0') THEN
             counter <= 0;
@@ -117,7 +117,7 @@ begin
         END IF;
     END PROCESS;
         
-    PROCESS (clk)
+    PROCESS (clk,reset_N)
     BEGIN
         IF (reset_N='0') THEN
             sample <= (others => '0');

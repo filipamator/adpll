@@ -209,6 +209,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity dspba_sync_reg
 -- Compiling architecture sync_reg of dspba_sync_reg
 
+} {} {}} Lowpass.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/Lowpass.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Lowpass
+-- Compiling architecture Behavioral of Lowpass
+
 } {} {}} dds_synthesizer.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/dds_synthesizer.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -362,17 +371,5 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling architecture RTL of fp_sub_altfp_add_sub_8kj
 -- Compiling entity fp_sub
 -- Compiling architecture RTL of fp_sub
-
-} {} {}} adpll_top.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/FPGA/adpll/adpll_top.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_SIGNED
--- Loading package sine_lut_pkg
--- Compiling entity adpll_top
--- Compiling architecture Behavioral of adpll_top
 
 } {} {}}

@@ -1,5 +1,5 @@
-Analysis & Synthesis report for adpll
-Tue Nov 21 14:38:54 2017
+Analysis & Elaboration report for adpll
+Sun Dec 17 12:57:57 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -7,20 +7,42 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis IP Cores Summary
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: pll_sysclk:pll_sysclk_i1|altpll:altpll_component
- 11. altpll Parameter Settings by Entity Instance
- 12. Port Connectivity Checks: "pll_sysclk:pll_sysclk_i1"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration IP Cores Summary
+  5. Source assignments for LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst
+  6. Source assignments for LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core
+  7. Parameter Settings for User Entity Instance: Top-level Entity: |adpll_top
+  8. Parameter Settings for User Entity Instance: dds_synthesizer:RF_IN
+  9. Parameter Settings for User Entity Instance: dds_synthesizer:VCOSin
+ 10. Parameter Settings for User Entity Instance: dds_synthesizer:VCOCos
+ 11. Parameter Settings for User Entity Instance: dds_synthesizer:DDSPhaseMod
+ 12. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst
+ 13. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink
+ 14. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_source_hpfir:source
+ 15. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:d_u0_m0_wo0_compute_q_11
+ 16. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:u0_m0_wo0_cma0_delay
+ 17. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_roundsat_hpfir:\real_passthrough:gen_outp_blk:0:outp_blk
+ 18. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1
+ 19. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:0:REG0
+ 20. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:1:REG0
+ 21. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:2:REG0
+ 22. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:3:REG0
+ 23. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:4:REG0
+ 24. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:5:REG0
+ 25. Parameter Settings for User Entity Instance: Lowpass:LPFPLL
+ 26. Parameter Settings for User Entity Instance: pll_sysclk:pll_sysclk_i1|altpll:altpll_component
+ 27. altpll Parameter Settings by Entity Instance
+ 28. Analysis & Elaboration Settings
+ 29. Port Connectivity Checks: "pll_sysclk:pll_sysclk_i1"
+ 30. Port Connectivity Checks: "sample_avg:sample_avg_i1"
+ 31. Port Connectivity Checks: "LPF2:LPFSin"
+ 32. Port Connectivity Checks: "MultPhaseDet:MixerSin"
+ 33. Port Connectivity Checks: "dds_synthesizer:DDSPhaseMod"
+ 34. Port Connectivity Checks: "dds_synthesizer:VCOCos"
+ 35. Port Connectivity Checks: "dds_synthesizer:VCOSin"
+ 36. Port Connectivity Checks: "dds_synthesizer:RF_IN"
+ 37. Analysis & Elaboration Messages
 
 
 
@@ -45,112 +67,23 @@ agreement for further details.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
+; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 21 14:38:54 2017       ;
+; Analysis & Elaboration Status      ; Successful - Sun Dec 17 12:57:57 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; adpll                                       ;
 ; Top-level Entity Name              ; adpll_top                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 93                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                        ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                     ; Setting            ; Default Value      ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; adpll_top          ; adpll              ;
-; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
-; Maximum processors allowed for parallel compilation                        ; All                ;                    ;
-; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
-; Verilog Show LMF Mapping Messages                                          ; Off                ;                    ;
-; Verilog Version                                                            ; SystemVerilog_2005 ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
-; Use smart compilation                                                      ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                                ; Off                ; Off                ;
-; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
-; Preserve fewer node names                                                  ; On                 ; On                 ;
-; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
-; State Machine Processing                                                   ; Auto               ; Auto               ;
-; Safe State Machine                                                         ; Off                ; Off                ;
-; Extract Verilog State Machines                                             ; On                 ; On                 ;
-; Extract VHDL State Machines                                                ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
-; Parallel Synthesis                                                         ; On                 ; On                 ;
-; DSP Block Balancing                                                        ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                 ; On                 ;
-; Power-Up Don't Care                                                        ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
-; Remove Duplicate Registers                                                 ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
-; Optimization Technique                                                     ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                         ; 70                 ; 70                 ;
-; Auto Carry Chains                                                          ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
-; Auto ROM Replacement                                                       ; On                 ; On                 ;
-; Auto RAM Replacement                                                       ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
-; Strict RAM Replacement                                                     ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
-; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                      ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
-; Report Parameter Settings                                                  ; On                 ; On                 ;
-; Report Source Assignments                                                  ; On                 ; On                 ;
-; Report Connectivity Checks                                                 ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
-; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                          ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
-; Clock MUX Protection                                                       ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
-; Block Design Naming                                                        ; Auto               ; Auto               ;
-; SDC constraint protection                                                  ; Off                ; Off                ;
-; Synthesis Effort                                                           ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -169,65 +102,8 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                 ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                             ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-; adpll_top.vhd                    ; yes             ; User VHDL File               ; C:/Filip/adpll/adpll_top.vhd                                             ;         ;
-; pll_sysclk.vhd                   ; yes             ; User Wizard-Generated File   ; C:/Filip/adpll/pll_sysclk.vhd                                            ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altpll.tdf        ;         ;
-; aglobal161.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/aglobal161.inc    ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/stratixii_pll.inc ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/cycloneii_pll.inc ;         ;
-; db/pll_sysclk_altpll.v           ; yes             ; Auto-Generated Megafunction  ; C:/Filip/adpll/db/pll_sysclk_altpll.v                                    ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-
-
-+-------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                       ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-;                                             ;                     ;
-; Total combinational functions               ; 0                   ;
-; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 0                   ;
-;     -- 3 input functions                    ; 0                   ;
-;     -- <=2 input functions                  ; 0                   ;
-;                                             ;                     ;
-; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 0                   ;
-;     -- arithmetic mode                      ; 0                   ;
-;                                             ;                     ;
-; Total registers                             ; 0                   ;
-;     -- Dedicated logic registers            ; 0                   ;
-;     -- I/O registers                        ; 0                   ;
-;                                             ;                     ;
-; I/O pins                                    ; 93                  ;
-;                                             ;                     ;
-; Embedded Multiplier 9-bit elements          ; 0                   ;
-;                                             ;                     ;
-; Maximum fan-out node                        ; FPGA_CLK_B_N~output ;
-; Maximum fan-out                             ; 1                   ;
-; Total fan-out                               ; 99                  ;
-; Average fan-out                             ; 0.52                ;
-+---------------------------------------------+---------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |adpll_top                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 93   ; 0            ; |adpll_top          ; adpll_top   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
 +-----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                 ;
+; Analysis & Elaboration IP Cores Summary                                                                               ;
 +--------+--------------+---------+--------------+--------------+-------------------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                     ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+-------------------------------------+-----------------+
@@ -235,19 +111,582 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-------------------------------------+-----------------+
 
 
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
++-----------------------------------------------------------------------------------------+
+; Source assignments for LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst ;
++-----------------+-------+------+--------------------------------------------------------+
+; Assignment      ; Value ; From ; To                                                     ;
++-----------------+-------+------+--------------------------------------------------------+
+; MESSAGE_DISABLE ; 15400 ; -    ; -                                                      ;
+; MESSAGE_DISABLE ; 14130 ; -    ; -                                                      ;
+; MESSAGE_DISABLE ; 12020 ; -    ; -                                                      ;
+; MESSAGE_DISABLE ; 12030 ; -    ; -                                                      ;
+; MESSAGE_DISABLE ; 12010 ; -    ; -                                                      ;
+; MESSAGE_DISABLE ; 12110 ; -    ; -                                                      ;
+; MESSAGE_DISABLE ; 14320 ; -    ; -                                                      ;
+; MESSAGE_DISABLE ; 13410 ; -    ; -                                                      ;
+; MESSAGE_DISABLE ; 10036 ; -    ; -                                                      ;
++-----------------+-------+------+--------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core ;
++-----------------------------------------+--------+------+-----------------------------------------------------------------------------------+
+; Assignment                              ; Value  ; From ; To                                                                                ;
++-----------------------------------------+--------+------+-----------------------------------------------------------------------------------+
+; PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ; ON     ; -    ; -                                                                                 ;
+; AUTO_SHIFT_REGISTER_RECOGNITION         ; OFF    ; -    ; -                                                                                 ;
+; MESSAGE_DISABLE                         ; 10036  ; -    ; -                                                                                 ;
+; MESSAGE_DISABLE                         ; 10037  ; -    ; -                                                                                 ;
+; MESSAGE_DISABLE                         ; 14130  ; -    ; -                                                                                 ;
+; MESSAGE_DISABLE                         ; 14320  ; -    ; -                                                                                 ;
+; MESSAGE_DISABLE                         ; 15400  ; -    ; -                                                                                 ;
+; MESSAGE_DISABLE                         ; 14130  ; -    ; -                                                                                 ;
+; MESSAGE_DISABLE                         ; 10036  ; -    ; -                                                                                 ;
+; MESSAGE_DISABLE                         ; 12020  ; -    ; -                                                                                 ;
+; MESSAGE_DISABLE                         ; 12030  ; -    ; -                                                                                 ;
+; MESSAGE_DISABLE                         ; 12010  ; -    ; -                                                                                 ;
+; MESSAGE_DISABLE                         ; 12110  ; -    ; -                                                                                 ;
+; MESSAGE_DISABLE                         ; 14320  ; -    ; -                                                                                 ;
+; MESSAGE_DISABLE                         ; 13410  ; -    ; -                                                                                 ;
+; MESSAGE_DISABLE                         ; 113007 ; -    ; -                                                                                 ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][15]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][14]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][13]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][12]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][11]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][10]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][9]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][8]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][7]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][6]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][5]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][4]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][3]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[0][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][15]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][14]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][13]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][12]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][11]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][10]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][9]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][8]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][7]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][6]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][5]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][4]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][3]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[1][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][15]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][14]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][13]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][12]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][11]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][10]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][9]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][8]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][7]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][6]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][5]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][4]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][3]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[2][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][15]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][14]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][13]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][12]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][11]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][10]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][9]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][8]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][7]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][6]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][5]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][4]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][3]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[3][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][15]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][14]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][13]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][12]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][11]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][10]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][9]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][8]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][7]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][6]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][5]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][4]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][3]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[4][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][15]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][14]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][13]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][12]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][11]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][10]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][9]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][8]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][7]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][6]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][5]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][4]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][3]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[5][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][15]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][14]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][13]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][12]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][11]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][10]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][9]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][8]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][7]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][6]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][5]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][4]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][3]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[6][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][15]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][14]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][13]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][12]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][11]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][10]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][9]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][8]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][7]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][6]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][5]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][4]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][3]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[7][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][15]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][14]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][13]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][12]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][11]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][10]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][9]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][8]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][7]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][6]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][5]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][4]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][3]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[8][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][15]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][14]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][13]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][12]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][11]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][10]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][9]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][8]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][7]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][6]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][5]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][4]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][3]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[9][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][15]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][14]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][13]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][12]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][11]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][10]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][9]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][8]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][7]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][6]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][5]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][4]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][3]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][2]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][1]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[10][0]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][15]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][14]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][13]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][12]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][11]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][10]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][9]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][8]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][7]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][6]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][5]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][4]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][3]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][2]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][1]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[11][0]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][15]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][14]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][13]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][12]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][11]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][10]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][9]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][8]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][7]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][6]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][5]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][4]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][3]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][2]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][1]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[12][0]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][15]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][14]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][13]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][12]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][11]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][10]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][9]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][8]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][7]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][6]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][5]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][4]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][3]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][2]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][1]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[13][0]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][15]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][14]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][13]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][12]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][11]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][10]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][9]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][8]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][7]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][6]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][5]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][4]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][3]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][2]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][1]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[14][0]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][15]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][14]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][13]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][12]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][11]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][10]                                                         ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][9]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][8]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][7]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][6]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][5]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][4]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][3]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][2]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][1]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_a0[15][0]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[0][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[0][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[0][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[1][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[1][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[1][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[2][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[2][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[2][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[3][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[3][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[3][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[4][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[4][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[4][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[5][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[5][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[5][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[6][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[6][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[6][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[7][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[7][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[7][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[8][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[8][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[8][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[9][2]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[9][1]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[9][0]                                                           ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[10][2]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[10][1]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[10][0]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[11][2]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[11][1]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[11][0]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[12][2]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[12][1]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[12][0]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[13][2]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[13][1]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[13][0]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[14][2]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[14][1]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[14][0]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[15][2]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[15][1]                                                          ;
+; PRESERVE_REGISTER                       ; on     ; -    ; u0_m0_wo0_cma0_c0[15][0]                                                          ;
++-----------------------------------------+--------+------+-----------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |adpll_top ;
++----------------+----------+-----------------------------------------------+
+; Parameter Name ; Value    ; Type                                          ;
++----------------+----------+-----------------------------------------------+
+; SIMULATION     ; 0        ; Signed Integer                                ;
+; FTW_WIDTH      ; 32       ; Signed Integer                                ;
+; LOOPF_WIDTH    ; 30       ; Signed Integer                                ;
+; DDS_CLOCK      ; 50000000 ; Signed Integer                                ;
++----------------+----------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dds_synthesizer:RF_IN ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; ftw_width      ; 32    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dds_synthesizer:VCOSin ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; ftw_width      ; 32    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dds_synthesizer:VCOCos ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; ftw_width      ; 32    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dds_synthesizer:DDSPhaseMod ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; ftw_width      ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst ;
++---------------------+-----------+-----------------------------------------------------------------------------+
+; Parameter Name      ; Value     ; Type                                                                        ;
++---------------------+-----------+-----------------------------------------------------------------------------+
+; INWIDTH             ; 16        ; Signed Integer                                                              ;
+; OUT_WIDTH_UNTRIMMED ; 36        ; Signed Integer                                                              ;
+; BANKINWIDTH         ; 0         ; Signed Integer                                                              ;
+; REM_LSB_BIT_g       ; 1         ; Signed Integer                                                              ;
+; REM_LSB_TYPE_g      ; trunc     ; String                                                                      ;
+; REM_MSB_BIT_g       ; 3         ; Signed Integer                                                              ;
+; REM_MSB_TYPE_g      ; trunc     ; String                                                                      ;
+; PHYSCHANIN          ; 1         ; Signed Integer                                                              ;
+; PHYSCHANOUT         ; 1         ; Signed Integer                                                              ;
+; CHANSPERPHYIN       ; 1         ; Signed Integer                                                              ;
+; CHANSPERPHYOUT      ; 1         ; Signed Integer                                                              ;
+; OUTPUTFIFODEPTH     ; 4         ; Signed Integer                                                              ;
+; USE_PACKETS         ; 0         ; Signed Integer                                                              ;
+; MODE_WIDTH          ; 0         ; Signed Integer                                                              ;
+; ENABLE_BACKPRESSURE ; false     ; Enumerated                                                                  ;
+; LOG2_CHANSPERPHYOUT ; 1         ; Signed Integer                                                              ;
+; NUMCHANS            ; 1         ; Signed Integer                                                              ;
+; DEVICE_FAMILY       ; Cyclone V ; String                                                                      ;
+; COMPLEX_CONST       ; 1         ; Signed Integer                                                              ;
++---------------------+-----------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink ;
++-----------------+-------+--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name  ; Value ; Type                                                                                                                           ;
++-----------------+-------+--------------------------------------------------------------------------------------------------------------------------------+
+; width_g         ; 16    ; Signed Integer                                                                                                                 ;
+; data_width      ; 16    ; Signed Integer                                                                                                                 ;
+; data_port_count ; 1     ; Signed Integer                                                                                                                 ;
+; packet_size_g   ; 1     ; Signed Integer                                                                                                                 ;
++-----------------+-------+--------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_source_hpfir:source ;
++-----------------------+-------+------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name        ; Value ; Type                                                                                                                         ;
++-----------------------+-------+------------------------------------------------------------------------------------------------------------------------------+
+; width_g               ; 32    ; Signed Integer                                                                                                               ;
+; data_width            ; 32    ; Signed Integer                                                                                                               ;
+; data_port_count       ; 1     ; Signed Integer                                                                                                               ;
+; packet_size_g         ; 1     ; Signed Integer                                                                                                               ;
+; fifo_depth_g          ; 4     ; Signed Integer                                                                                                               ;
+; have_counter_g        ; false ; Enumerated                                                                                                                   ;
+; counter_limit_g       ; 1     ; Signed Integer                                                                                                               ;
+; use_packets           ; 0     ; Signed Integer                                                                                                               ;
+; enable_backpressure_g ; false ; Enumerated                                                                                                                   ;
++-----------------------+-------+------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:d_u0_m0_wo0_compute_q_11 ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                                                                                                                                ;
+; depth          ; 1     ; Signed Integer                                                                                                                                                                ;
+; reset_high     ; '1'   ; Enumerated                                                                                                                                                                    ;
+; reset_kind     ; ASYNC ; String                                                                                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:u0_m0_wo0_cma0_delay ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                                                                      ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; width          ; 36    ; Signed Integer                                                                                                                                                            ;
+; depth          ; 0     ; Signed Integer                                                                                                                                                            ;
+; reset_high     ; '1'   ; Enumerated                                                                                                                                                                ;
+; reset_kind     ; ASYNC ; String                                                                                                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_roundsat_hpfir:\real_passthrough:gen_outp_blk:0:outp_blk ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; in_width_g     ; 36    ; Signed Integer                                                                                                                                          ;
+; rem_lsb_bit_g  ; 1     ; Signed Integer                                                                                                                                          ;
+; rem_lsb_type_g ; trunc ; String                                                                                                                                                  ;
+; rem_msb_bit_g  ; 3     ; Signed Integer                                                                                                                                          ;
+; rem_msb_type_g ; trunc ; String                                                                                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; d_width        ; 18    ; Signed Integer                               ;
+; stage          ; 6     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:0:REG0 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; d_width        ; 18    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:1:REG0 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; d_width        ; 18    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:2:REG0 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; d_width        ; 18    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:3:REG0 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; d_width        ; 18    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:4:REG0 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; d_width        ; 18    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:5:REG0 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; d_width        ; 18    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lowpass:LPFPLL ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; loopf_width    ; 30    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------------------+
@@ -289,10 +728,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CLK6_MULTIPLY_BY              ; 0                            ; Untyped                        ;
 ; CLK5_MULTIPLY_BY              ; 1                            ; Untyped                        ;
 ; CLK4_MULTIPLY_BY              ; 1                            ; Untyped                        ;
-; CLK3_MULTIPLY_BY              ; 2                            ; Signed Integer                 ;
-; CLK2_MULTIPLY_BY              ; 2                            ; Signed Integer                 ;
-; CLK1_MULTIPLY_BY              ; 2                            ; Signed Integer                 ;
-; CLK0_MULTIPLY_BY              ; 2                            ; Signed Integer                 ;
+; CLK3_MULTIPLY_BY              ; 1                            ; Signed Integer                 ;
+; CLK2_MULTIPLY_BY              ; 1                            ; Signed Integer                 ;
+; CLK1_MULTIPLY_BY              ; 1                            ; Signed Integer                 ;
+; CLK0_MULTIPLY_BY              ; 1                            ; Signed Integer                 ;
 ; CLK9_DIVIDE_BY                ; 0                            ; Untyped                        ;
 ; CLK8_DIVIDE_BY                ; 0                            ; Untyped                        ;
 ; CLK7_DIVIDE_BY                ; 0                            ; Untyped                        ;
@@ -309,9 +748,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CLK6_PHASE_SHIFT              ; 0                            ; Untyped                        ;
 ; CLK5_PHASE_SHIFT              ; 0                            ; Untyped                        ;
 ; CLK4_PHASE_SHIFT              ; 0                            ; Untyped                        ;
-; CLK3_PHASE_SHIFT              ; 7500                         ; Untyped                        ;
-; CLK2_PHASE_SHIFT              ; 5000                         ; Untyped                        ;
-; CLK1_PHASE_SHIFT              ; 2500                         ; Untyped                        ;
+; CLK3_PHASE_SHIFT              ; 15000                        ; Untyped                        ;
+; CLK2_PHASE_SHIFT              ; 10000                        ; Untyped                        ;
+; CLK1_PHASE_SHIFT              ; 5000                         ; Untyped                        ;
 ; CLK0_PHASE_SHIFT              ; 0                            ; Untyped                        ;
 ; CLK5_TIME_DELAY               ; 0                            ; Untyped                        ;
 ; CLK4_TIME_DELAY               ; 0                            ; Untyped                        ;
@@ -641,91 +1080,323 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+--------------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; adpll_top          ; adpll              ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                        ; All                ;                    ;
+; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
+; Verilog Show LMF Mapping Messages                                          ; Off                ;                    ;
+; Verilog Version                                                            ; SystemVerilog_2005 ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "pll_sysclk:pll_sysclk_i1"                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
-; c0     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; c1     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; c2     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; c3     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; locked ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 93                          ;
-; cycloneiii_io_obuf    ; 6                           ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
++------------------------------------------------------+
+; Port Connectivity Checks: "sample_avg:sample_avg_i1" ;
++------------+-------+----------+----------------------+
+; Port       ; Type  ; Severity ; Details              ;
++------------+-------+----------+----------------------+
+; data_in_en ; Input ; Info     ; Stuck at VCC         ;
++------------+-------+----------+----------------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LPF2:LPFSin"                                                                                          ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                   ; Type   ; Severity ; Details                                                                             ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; ast_sink_valid         ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ast_sink_error         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ast_source_data[13..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ast_source_valid       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ast_source_error       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MultPhaseDet:MixerSin"                                                                     ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; sout[11..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dds_synthesizer:DDSPhaseMod"                                                           ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; ftw_i   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; phase_i ; Input  ; Info     ; Stuck at GND                                                                        ;
+; phase_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ampl_o  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dds_synthesizer:VCOCos"                                                                       ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; phase_i[13..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; phase_i[2..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; phase_i[15]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; phase_i[14]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; phase_i[3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; phase_i[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; phase_o        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ampl_o         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dds_synthesizer:VCOSin"                                                                ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; phase_i ; Input  ; Info     ; Stuck at GND                                                                        ;
+; phase_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dds_synthesizer:RF_IN"                                                                         ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; ftw_i[28..27]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ftw_i[24..23]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ftw_i[20..19]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ftw_i[16..15]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ftw_i[13..11]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ftw_i[9..8]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ftw_i[2..0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ftw_i[31..29]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ftw_i[26..25]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ftw_i[22..21]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ftw_i[18..17]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ftw_i[7..6]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ftw_i[4..3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ftw_i[14]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ftw_i[10]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ftw_i[5]        ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; phase_i[15..14] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; phase_i[12..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; phase_i[13]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; phase_o         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Tue Nov 21 14:38:41 2017
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off adpll -c adpll
+    Info: Processing started: Sun Dec 17 12:57:46 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off adpll -c adpll --analysis_and_elaboration
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 0 entities, in source file sine_lut_16_x_14.vhd
+    Info (12022): Found design unit 1: sine_lut_pkg File: D:/FPGA/adpll/sine_lut_16_x_14.vhd Line: 11
+    Info (12022): Found design unit 2: sine_lut_pkg-body File: D:/FPGA/adpll/sine_lut_16_x_14.vhd Line: 16407
+Info (12021): Found 4 design units, including 2 entities, in source file sample_avg.vhd
+    Info (12022): Found design unit 1: sample_avg-Behavioral File: D:/FPGA/adpll/sample_avg.vhd Line: 23
+    Info (12022): Found design unit 2: average2-Behavioral File: D:/FPGA/adpll/sample_avg.vhd Line: 95
+    Info (12023): Found entity 1: sample_avg File: D:/FPGA/adpll/sample_avg.vhd Line: 7
+    Info (12023): Found entity 2: average2 File: D:/FPGA/adpll/sample_avg.vhd Line: 80
+Info (12021): Found 2 design units, including 1 entities, in source file rc.vhd
+    Info (12022): Found design unit 1: rc-Behavioral File: D:/FPGA/adpll/rc.vhd Line: 16
+    Info (12023): Found entity 1: rc File: D:/FPGA/adpll/rc.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file multphasedet.vhd
+    Info (12022): Found design unit 1: MultPhaseDet-Behavioral File: D:/FPGA/adpll/MultPhaseDet.vhd Line: 16
+    Info (12023): Found entity 1: MultPhaseDet File: D:/FPGA/adpll/MultPhaseDet.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file lpf2.vhd
+    Info (12022): Found design unit 1: LPF2-rtl File: D:/FPGA/adpll/LPF2.vhd Line: 24
+    Info (12023): Found entity 1: LPF2 File: D:/FPGA/adpll/LPF2.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file lpf2.vhd
+    Info (12022): Found design unit 1: LPF2-rtl File: D:/FPGA/adpll/LPF2.vhd Line: 24
+    Info (12023): Found entity 1: LPF2 File: D:/FPGA/adpll/LPF2.vhd Line: 11
+Info (12021): Found 1 design units, including 0 entities, in source file lpf2/dspba_library_package.vhd
+    Info (12022): Found design unit 1: dspba_library_package (lpf2) File: D:/FPGA/adpll/LPF2/dspba_library_package.vhd Line: 16
+Info (12021): Found 4 design units, including 2 entities, in source file lpf2/dspba_library.vhd
+    Info (12022): Found design unit 1: dspba_delay-delay File: D:/FPGA/adpll/LPF2/dspba_library.vhd Line: 33
+    Info (12022): Found design unit 2: dspba_sync_reg-sync_reg File: D:/FPGA/adpll/LPF2/dspba_library.vhd Line: 115
+    Info (12023): Found entity 1: dspba_delay File: D:/FPGA/adpll/LPF2/dspba_library.vhd Line: 17
+    Info (12023): Found entity 2: dspba_sync_reg File: D:/FPGA/adpll/LPF2/dspba_library.vhd Line: 91
+Info (12021): Found 2 design units, including 0 entities, in source file lpf2/auk_dspip_math_pkg_hpfir.vhd
+    Info (12022): Found design unit 1: auk_dspip_math_pkg_hpfir (lpf2) File: D:/FPGA/adpll/LPF2/auk_dspip_math_pkg_hpfir.vhd Line: 54
+    Info (12022): Found design unit 2: auk_dspip_math_pkg_hpfir-body File: D:/FPGA/adpll/LPF2/auk_dspip_math_pkg_hpfir.vhd Line: 131
+Info (12021): Found 1 design units, including 0 entities, in source file lpf2/auk_dspip_lib_pkg_hpfir.vhd
+    Info (12022): Found design unit 1: auk_dspip_lib_pkg_hpfir (lpf2) File: D:/FPGA/adpll/LPF2/auk_dspip_lib_pkg_hpfir.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file lpf2/auk_dspip_avalon_streaming_controller_hpfir.vhd
+    Info (12022): Found design unit 1: auk_dspip_avalon_streaming_controller_hpfir-struct File: D:/FPGA/adpll/LPF2/auk_dspip_avalon_streaming_controller_hpfir.vhd Line: 64
+    Info (12023): Found entity 1: auk_dspip_avalon_streaming_controller_hpfir File: D:/FPGA/adpll/LPF2/auk_dspip_avalon_streaming_controller_hpfir.vhd Line: 41
+Info (12021): Found 2 design units, including 1 entities, in source file lpf2/auk_dspip_avalon_streaming_sink_hpfir.vhd
+    Info (12022): Found design unit 1: auk_dspip_avalon_streaming_sink_hpfir-rtl File: D:/FPGA/adpll/LPF2/auk_dspip_avalon_streaming_sink_hpfir.vhd Line: 106
+    Info (12023): Found entity 1: auk_dspip_avalon_streaming_sink_hpfir File: D:/FPGA/adpll/LPF2/auk_dspip_avalon_streaming_sink_hpfir.vhd Line: 56
+Info (12021): Found 2 design units, including 1 entities, in source file lpf2/auk_dspip_avalon_streaming_source_hpfir.vhd
+    Info (12022): Found design unit 1: auk_dspip_avalon_streaming_source_hpfir-rtl File: D:/FPGA/adpll/LPF2/auk_dspip_avalon_streaming_source_hpfir.vhd Line: 109
+    Info (12023): Found entity 1: auk_dspip_avalon_streaming_source_hpfir File: D:/FPGA/adpll/LPF2/auk_dspip_avalon_streaming_source_hpfir.vhd Line: 70
+Info (12021): Found 2 design units, including 1 entities, in source file lpf2/auk_dspip_roundsat_hpfir.vhd
+    Info (12022): Found design unit 1: auk_dspip_roundsat_hpfir-beh File: D:/FPGA/adpll/LPF2/auk_dspip_roundsat_hpfir.vhd Line: 57
+    Info (12023): Found entity 1: auk_dspip_roundsat_hpfir File: D:/FPGA/adpll/LPF2/auk_dspip_roundsat_hpfir.vhd Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file lpf2/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo File: D:/FPGA/adpll/LPF2/altera_avalon_sc_fifo.v Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file lpf2/lpf2_0002_rtl_core.vhd
+    Info (12022): Found design unit 1: LPF2_0002_rtl_core-normal File: D:/FPGA/adpll/LPF2/LPF2_0002_rtl_core.vhd Line: 49
+    Info (12023): Found entity 1: LPF2_0002_rtl_core File: D:/FPGA/adpll/LPF2/LPF2_0002_rtl_core.vhd Line: 36
+Info (12021): Found 2 design units, including 1 entities, in source file lpf2/lpf2_0002_ast.vhd
+    Info (12022): Found design unit 1: LPF2_0002_ast-struct File: D:/FPGA/adpll/LPF2/LPF2_0002_ast.vhd Line: 55
+    Info (12023): Found entity 1: LPF2_0002_ast File: D:/FPGA/adpll/LPF2/LPF2_0002_ast.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file lpf2/lpf2_0002.vhd
+    Info (12022): Found design unit 1: LPF2_0002-syn File: D:/FPGA/adpll/LPF2/LPF2_0002.vhd Line: 33
+    Info (12023): Found entity 1: LPF2_0002 File: D:/FPGA/adpll/LPF2/LPF2_0002.vhd Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file lowpass.vhd
+    Info (12022): Found design unit 1: Lowpass-Behavioral File: D:/FPGA/adpll/Lowpass.vhd Line: 19
+    Info (12023): Found entity 1: Lowpass File: D:/FPGA/adpll/Lowpass.vhd Line: 8
+Info (12021): Found 4 design units, including 1 entities, in source file dds_synthesizer.vhd
+    Info (12022): Found design unit 1: dds_synthesizer_pkg File: D:/FPGA/adpll/dds_synthesizer.vhd Line: 25
+    Info (12022): Found design unit 2: dds_synthesizer_pkg-body File: D:/FPGA/adpll/dds_synthesizer.vhd Line: 41
+    Info (12022): Found design unit 3: dds_synthesizer-dds_synthesizer_arch File: D:/FPGA/adpll/dds_synthesizer.vhd Line: 66
+    Info (12023): Found entity 1: dds_synthesizer File: D:/FPGA/adpll/dds_synthesizer.vhd Line: 52
 Info (12021): Found 2 design units, including 1 entities, in source file adpll_top.vhd
-    Info (12022): Found design unit 1: adpll_top-Behavioral File: C:/Filip/adpll/adpll_top.vhd Line: 51
-    Info (12023): Found entity 1: adpll_top File: C:/Filip/adpll/adpll_top.vhd Line: 6
+    Info (12022): Found design unit 1: adpll_top-Behavioral File: D:/FPGA/adpll/adpll_top.vhd Line: 58
+    Info (12023): Found entity 1: adpll_top File: D:/FPGA/adpll/adpll_top.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file pll_sysclk.vhd
-    Info (12022): Found design unit 1: pll_sysclk-SYN File: C:/Filip/adpll/pll_sysclk.vhd Line: 56
-    Info (12023): Found entity 1: pll_sysclk File: C:/Filip/adpll/pll_sysclk.vhd Line: 43
+    Info (12022): Found design unit 1: pll_sysclk-SYN File: D:/FPGA/adpll/pll_sysclk.vhd Line: 56
+    Info (12023): Found entity 1: pll_sysclk File: D:/FPGA/adpll/pll_sysclk.vhd Line: 43
 Info (12127): Elaborating entity "adpll_top" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at adpll_top.vhd(25): used implicit default value for signal "ADA_OE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Filip/adpll/adpll_top.vhd Line: 25
-Warning (10541): VHDL Signal Declaration warning at adpll_top.vhd(26): used implicit default value for signal "ADB_OE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Filip/adpll/adpll_top.vhd Line: 26
-Warning (10541): VHDL Signal Declaration warning at adpll_top.vhd(35): used implicit default value for signal "ADA_SPI_CS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Filip/adpll/adpll_top.vhd Line: 35
-Warning (10541): VHDL Signal Declaration warning at adpll_top.vhd(36): used implicit default value for signal "ADB_SPI_CS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Filip/adpll/adpll_top.vhd Line: 36
-Warning (10541): VHDL Signal Declaration warning at adpll_top.vhd(39): used implicit default value for signal "DA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Filip/adpll/adpll_top.vhd Line: 39
-Warning (10541): VHDL Signal Declaration warning at adpll_top.vhd(40): used implicit default value for signal "DB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Filip/adpll/adpll_top.vhd Line: 40
-Warning (10036): Verilog HDL or VHDL warning at adpll_top.vhd(73): object "sys_clk" assigned a value but never read File: C:/Filip/adpll/adpll_top.vhd Line: 73
-Warning (10036): Verilog HDL or VHDL warning at adpll_top.vhd(74): object "sys_clk_90deg" assigned a value but never read File: C:/Filip/adpll/adpll_top.vhd Line: 74
-Warning (10036): Verilog HDL or VHDL warning at adpll_top.vhd(75): object "sys_clk_180deg" assigned a value but never read File: C:/Filip/adpll/adpll_top.vhd Line: 75
-Warning (10036): Verilog HDL or VHDL warning at adpll_top.vhd(76): object "sys_clk_270deg" assigned a value but never read File: C:/Filip/adpll/adpll_top.vhd Line: 76
-Info (12128): Elaborating entity "pll_sysclk" for hierarchy "pll_sysclk:pll_sysclk_i1" File: C:/Filip/adpll/adpll_top.vhd Line: 82
-Info (12128): Elaborating entity "altpll" for hierarchy "pll_sysclk:pll_sysclk_i1|altpll:altpll_component" File: C:/Filip/adpll/pll_sysclk.vhd Line: 163
-Info (12130): Elaborated megafunction instantiation "pll_sysclk:pll_sysclk_i1|altpll:altpll_component" File: C:/Filip/adpll/pll_sysclk.vhd Line: 163
-Info (12133): Instantiated megafunction "pll_sysclk:pll_sysclk_i1|altpll:altpll_component" with the following parameter: File: C:/Filip/adpll/pll_sysclk.vhd Line: 163
+Warning (10036): Verilog HDL or VHDL warning at adpll_top.vhd(154): object "sys_clk_90deg" assigned a value but never read File: D:/FPGA/adpll/adpll_top.vhd Line: 154
+Warning (10036): Verilog HDL or VHDL warning at adpll_top.vhd(163): object "s_vco_cos" assigned a value but never read File: D:/FPGA/adpll/adpll_top.vhd Line: 163
+Warning (10036): Verilog HDL or VHDL warning at adpll_top.vhd(172): object "s_phasemod" assigned a value but never read File: D:/FPGA/adpll/adpll_top.vhd Line: 172
+Warning (10492): VHDL Process Statement warning at adpll_top.vhd(241): signal "ADA_DCO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/FPGA/adpll/adpll_top.vhd Line: 241
+Info (12128): Elaborating entity "dds_synthesizer" for hierarchy "dds_synthesizer:RF_IN" File: D:/FPGA/adpll/adpll_top.vhd Line: 260
+Info (12128): Elaborating entity "MultPhaseDet" for hierarchy "MultPhaseDet:MixerSin" File: D:/FPGA/adpll/adpll_top.vhd Line: 314
+Info (12128): Elaborating entity "LPF2" for hierarchy "LPF2:LPFSin" File: D:/FPGA/adpll/adpll_top.vhd Line: 324
+Info (12128): Elaborating entity "LPF2_0002" for hierarchy "LPF2:LPFSin|LPF2_0002:lpf2_inst" File: D:/FPGA/adpll/LPF2.vhd Line: 40
+Warning (10036): Verilog HDL or VHDL warning at LPF2_0002.vhd(54): object "coeff_in_read_sig" assigned a value but never read File: D:/FPGA/adpll/LPF2/LPF2_0002.vhd Line: 54
+Info (12128): Elaborating entity "LPF2_0002_ast" for hierarchy "LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst" File: D:/FPGA/adpll/LPF2/LPF2_0002.vhd Line: 62
+Warning (10541): VHDL Signal Declaration warning at LPF2_0002_ast.vhd(208): used implicit default value for signal "core_channel_out_core" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/FPGA/adpll/LPF2/LPF2_0002_ast.vhd Line: 208
+Info (12128): Elaborating entity "auk_dspip_avalon_streaming_sink_hpfir" for hierarchy "LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink" File: D:/FPGA/adpll/LPF2/LPF2_0002_ast.vhd Line: 89
+Info (12128): Elaborating entity "auk_dspip_avalon_streaming_source_hpfir" for hierarchy "LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_source_hpfir:source" File: D:/FPGA/adpll/LPF2/LPF2_0002_ast.vhd Line: 109
+Info (12128): Elaborating entity "auk_dspip_avalon_streaming_controller_hpfir" for hierarchy "LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_controller_hpfir:intf_ctrl" File: D:/FPGA/adpll/LPF2/LPF2_0002_ast.vhd Line: 137
+Info (12128): Elaborating entity "LPF2_0002_rtl_core" for hierarchy "LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core" File: D:/FPGA/adpll/LPF2/LPF2_0002_ast.vhd Line: 218
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:d_u0_m0_wo0_compute_q_11" File: D:/FPGA/adpll/LPF2/LPF2_0002_rtl_core.vhd Line: 131
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:u0_m0_wo0_cma0_delay" File: D:/FPGA/adpll/LPF2/LPF2_0002_rtl_core.vhd Line: 344
+Info (12128): Elaborating entity "auk_dspip_roundsat_hpfir" for hierarchy "LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_roundsat_hpfir:\real_passthrough:gen_outp_blk:0:outp_blk" File: D:/FPGA/adpll/LPF2/LPF2_0002_ast.vhd Line: 244
+Info (12128): Elaborating entity "sample_avg" for hierarchy "sample_avg:sample_avg_i1" File: D:/FPGA/adpll/adpll_top.vhd Line: 335
+Info (12128): Elaborating entity "average2" for hierarchy "sample_avg:sample_avg_i1|average2:\GEN_REG:0:REG0" File: D:/FPGA/adpll/sample_avg.vhd Line: 56
+Info (12128): Elaborating entity "Lowpass" for hierarchy "Lowpass:LPFPLL" File: D:/FPGA/adpll/adpll_top.vhd Line: 351
+Info (12128): Elaborating entity "pll_sysclk" for hierarchy "pll_sysclk:pll_sysclk_i1" File: D:/FPGA/adpll/adpll_top.vhd Line: 395
+Info (12128): Elaborating entity "altpll" for hierarchy "pll_sysclk:pll_sysclk_i1|altpll:altpll_component" File: D:/FPGA/adpll/pll_sysclk.vhd Line: 163
+Info (12130): Elaborated megafunction instantiation "pll_sysclk:pll_sysclk_i1|altpll:altpll_component" File: D:/FPGA/adpll/pll_sysclk.vhd Line: 163
+Info (12133): Instantiated megafunction "pll_sysclk:pll_sysclk_i1|altpll:altpll_component" with the following parameter: File: D:/FPGA/adpll/pll_sysclk.vhd Line: 163
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "1"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
-    Info (12134): Parameter "clk0_multiply_by" = "2"
+    Info (12134): Parameter "clk0_multiply_by" = "1"
     Info (12134): Parameter "clk0_phase_shift" = "0"
     Info (12134): Parameter "clk1_divide_by" = "1"
     Info (12134): Parameter "clk1_duty_cycle" = "50"
-    Info (12134): Parameter "clk1_multiply_by" = "2"
-    Info (12134): Parameter "clk1_phase_shift" = "2500"
+    Info (12134): Parameter "clk1_multiply_by" = "1"
+    Info (12134): Parameter "clk1_phase_shift" = "5000"
     Info (12134): Parameter "clk2_divide_by" = "1"
     Info (12134): Parameter "clk2_duty_cycle" = "50"
-    Info (12134): Parameter "clk2_multiply_by" = "2"
-    Info (12134): Parameter "clk2_phase_shift" = "5000"
+    Info (12134): Parameter "clk2_multiply_by" = "1"
+    Info (12134): Parameter "clk2_phase_shift" = "10000"
     Info (12134): Parameter "clk3_divide_by" = "1"
     Info (12134): Parameter "clk3_duty_cycle" = "50"
-    Info (12134): Parameter "clk3_multiply_by" = "2"
-    Info (12134): Parameter "clk3_phase_shift" = "7500"
+    Info (12134): Parameter "clk3_multiply_by" = "1"
+    Info (12134): Parameter "clk3_phase_shift" = "15000"
     Info (12134): Parameter "compensate_clock" = "CLK0"
     Info (12134): Parameter "inclk0_input_frequency" = "20000"
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
@@ -777,117 +1448,12 @@ Info (12133): Instantiated megafunction "pll_sysclk:pll_sysclk_i1|altpll:altpll_
     Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_sysclk_altpll.v
-    Info (12023): Found entity 1: pll_sysclk_altpll File: C:/Filip/adpll/db/pll_sysclk_altpll.v Line: 30
-Info (12128): Elaborating entity "pll_sysclk_altpll" for hierarchy "pll_sysclk:pll_sysclk_i1|altpll:altpll_component|pll_sysclk_altpll:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following PLL node(s):
-        Warning (14320): Synthesized away node "pll_sysclk:pll_sysclk_i1|altpll:altpll_component|pll_sysclk_altpll:auto_generated|wire_pll1_clk[0]" File: C:/Filip/adpll/db/pll_sysclk_altpll.v Line: 81
-Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "FPGA_CLK_B_N" has no driver File: C:/Filip/adpll/adpll_top.vhd Line: 14
-    Warning (13040): bidirectional pin "FPGA_CLK_B_P" has no driver File: C:/Filip/adpll/adpll_top.vhd Line: 15
-    Warning (13040): bidirectional pin "FPGA_CLK_A_N" has no driver File: C:/Filip/adpll/adpll_top.vhd Line: 16
-    Warning (13040): bidirectional pin "FPGA_CLK_A_P" has no driver File: C:/Filip/adpll/adpll_top.vhd Line: 17
-    Warning (13040): bidirectional pin "AD_SCLK" has no driver File: C:/Filip/adpll/adpll_top.vhd Line: 31
-    Warning (13040): bidirectional pin "AD_SDIO" has no driver File: C:/Filip/adpll/adpll_top.vhd Line: 33
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ADA_OE" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 25
-    Warning (13410): Pin "ADB_OE" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 26
-    Warning (13410): Pin "ADA_SPI_CS" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 35
-    Warning (13410): Pin "ADB_SPI_CS" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 36
-    Warning (13410): Pin "DA[0]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 39
-    Warning (13410): Pin "DA[1]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 39
-    Warning (13410): Pin "DA[2]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 39
-    Warning (13410): Pin "DA[3]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 39
-    Warning (13410): Pin "DA[4]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 39
-    Warning (13410): Pin "DA[5]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 39
-    Warning (13410): Pin "DA[6]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 39
-    Warning (13410): Pin "DA[7]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 39
-    Warning (13410): Pin "DA[8]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 39
-    Warning (13410): Pin "DA[9]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 39
-    Warning (13410): Pin "DA[10]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 39
-    Warning (13410): Pin "DA[11]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 39
-    Warning (13410): Pin "DA[12]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 39
-    Warning (13410): Pin "DA[13]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 39
-    Warning (13410): Pin "DB[0]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 40
-    Warning (13410): Pin "DB[1]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 40
-    Warning (13410): Pin "DB[2]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 40
-    Warning (13410): Pin "DB[3]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 40
-    Warning (13410): Pin "DB[4]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 40
-    Warning (13410): Pin "DB[5]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 40
-    Warning (13410): Pin "DB[6]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 40
-    Warning (13410): Pin "DB[7]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 40
-    Warning (13410): Pin "DB[8]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 40
-    Warning (13410): Pin "DB[9]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 40
-    Warning (13410): Pin "DB[10]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 40
-    Warning (13410): Pin "DB[11]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 40
-    Warning (13410): Pin "DB[12]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 40
-    Warning (13410): Pin "DB[13]" is stuck at GND File: C:/Filip/adpll/adpll_top.vhd Line: 40
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 55 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Filip/adpll/adpll_top.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[10]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[11]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[12]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[13]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[14]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[15]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[16]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[17]" File: C:/Filip/adpll/adpll_top.vhd Line: 10
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Filip/adpll/adpll_top.vhd Line: 11
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Filip/adpll/adpll_top.vhd Line: 11
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Filip/adpll/adpll_top.vhd Line: 11
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Filip/adpll/adpll_top.vhd Line: 11
-    Warning (15610): No output dependent on input pin "ADA_DCO" File: C:/Filip/adpll/adpll_top.vhd Line: 19
-    Warning (15610): No output dependent on input pin "ADB_DCO" File: C:/Filip/adpll/adpll_top.vhd Line: 20
-    Warning (15610): No output dependent on input pin "ADA_D[0]" File: C:/Filip/adpll/adpll_top.vhd Line: 22
-    Warning (15610): No output dependent on input pin "ADA_D[1]" File: C:/Filip/adpll/adpll_top.vhd Line: 22
-    Warning (15610): No output dependent on input pin "ADA_D[2]" File: C:/Filip/adpll/adpll_top.vhd Line: 22
-    Warning (15610): No output dependent on input pin "ADA_D[3]" File: C:/Filip/adpll/adpll_top.vhd Line: 22
-    Warning (15610): No output dependent on input pin "ADA_D[4]" File: C:/Filip/adpll/adpll_top.vhd Line: 22
-    Warning (15610): No output dependent on input pin "ADA_D[5]" File: C:/Filip/adpll/adpll_top.vhd Line: 22
-    Warning (15610): No output dependent on input pin "ADA_D[6]" File: C:/Filip/adpll/adpll_top.vhd Line: 22
-    Warning (15610): No output dependent on input pin "ADA_D[7]" File: C:/Filip/adpll/adpll_top.vhd Line: 22
-    Warning (15610): No output dependent on input pin "ADA_D[8]" File: C:/Filip/adpll/adpll_top.vhd Line: 22
-    Warning (15610): No output dependent on input pin "ADA_D[9]" File: C:/Filip/adpll/adpll_top.vhd Line: 22
-    Warning (15610): No output dependent on input pin "ADA_D[10]" File: C:/Filip/adpll/adpll_top.vhd Line: 22
-    Warning (15610): No output dependent on input pin "ADA_D[11]" File: C:/Filip/adpll/adpll_top.vhd Line: 22
-    Warning (15610): No output dependent on input pin "ADA_D[12]" File: C:/Filip/adpll/adpll_top.vhd Line: 22
-    Warning (15610): No output dependent on input pin "ADA_D[13]" File: C:/Filip/adpll/adpll_top.vhd Line: 22
-    Warning (15610): No output dependent on input pin "ADB_D[0]" File: C:/Filip/adpll/adpll_top.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ADB_D[1]" File: C:/Filip/adpll/adpll_top.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ADB_D[2]" File: C:/Filip/adpll/adpll_top.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ADB_D[3]" File: C:/Filip/adpll/adpll_top.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ADB_D[4]" File: C:/Filip/adpll/adpll_top.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ADB_D[5]" File: C:/Filip/adpll/adpll_top.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ADB_D[6]" File: C:/Filip/adpll/adpll_top.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ADB_D[7]" File: C:/Filip/adpll/adpll_top.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ADB_D[8]" File: C:/Filip/adpll/adpll_top.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ADB_D[9]" File: C:/Filip/adpll/adpll_top.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ADB_D[10]" File: C:/Filip/adpll/adpll_top.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ADB_D[11]" File: C:/Filip/adpll/adpll_top.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ADB_D[12]" File: C:/Filip/adpll/adpll_top.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ADB_D[13]" File: C:/Filip/adpll/adpll_top.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ADA_OR" File: C:/Filip/adpll/adpll_top.vhd Line: 28
-    Warning (15610): No output dependent on input pin "ADB_OR" File: C:/Filip/adpll/adpll_top.vhd Line: 29
-Info (21057): Implemented 93 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 55 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21060): Implemented 6 bidirectional pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 109 warnings
-    Info: Peak virtual memory: 694 megabytes
-    Info: Processing ended: Tue Nov 21 14:38:54 2017
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:26
+    Info (12023): Found entity 1: pll_sysclk_altpll File: D:/FPGA/adpll/db/pll_sysclk_altpll.v Line: 30
+Info (12128): Elaborating entity "pll_sysclk_altpll" for hierarchy "pll_sysclk:pll_sysclk_i1|altpll:altpll_component|pll_sysclk_altpll:auto_generated" File: d:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 742 megabytes
+    Info: Processing ended: Sun Dec 17 12:57:57 2017
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
 
 

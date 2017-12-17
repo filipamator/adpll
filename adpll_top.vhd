@@ -2,13 +2,14 @@ LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
 use ieee.numeric_std.ALL;
 use work.sine_lut_pkg.all;
+use IEEE.MATH_REAL.ALL;
 
 entity adpll_top is
 	GENERIC (
+		SIMULATION		: natural := 0;
 		FTW_WIDTH    	: natural := 32;			-- 35
 		LOOPF_WIDTH		: natural := 30;			-- 30
-		DDS_CLOCK		: natural := 50_000_000;	-- 50e6
-		DDS_REF_FREQ	: natural := 50_000_000		-- 5e6
+		DDS_CLOCK		: natural := 50_000_000		-- 50e6
 	);
 	PORT (	
 				CLOCK_50			: IN STD_LOGIC;
@@ -140,15 +141,6 @@ component Lowpass is
 		FILTER_OUT 	 : out STD_LOGIC_VECTOR (LOOPF_WIDTH-1 downto 0));
 end component Lowpass;
 
-component rc is
-	Port ( 	
-                i_clock		 : in STD_LOGIC;
-				i_reset	     : in STD_LOGIC;
-				i_data_en    : IN STD_LOGIC;
-				i_data 	     : in STD_LOGIC_VECTOR (31 downto 0);
-				o_data 	     : out STD_LOGIC_VECTOR (31 downto 0)
-        );
-end component rc;
 
 -----------------------------
 ------- SIGNALS -------------
@@ -184,7 +176,9 @@ SIGNAL s_loopfilter				: std_logic_vector(LOOPF_WIDTH-1 DOWNTO 0) := (others => 
 SIGNAL s_ftw_nco				: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
 signal s_nco_offset				: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
 
-signal s_rc						: std_logic_vector(31 downto 0);
+
+--signal s_freq					: real := 0.0;
+
 
 begin
 
@@ -203,9 +197,25 @@ begin
 	ADB_OE			<= '0';
 	ADB_SPI_CS		<= '1';
 
-	s_nco_offset <= x"36C8B439";		-- 10.7 MHz
+	s_nco_offset <= x"19999999";		-- 10.7 MHz
 	s_ftw_nco <= std_logic_vector(signed(s_nco_offset) + signed(s_loopfilter));
+
+	-- s_ftw_nco <= std_logic_vector(signed(s_nco_offset));
+
 	s_ftw_phasemod <= x"00000000"; 
+
+
+	g0: IF SIMULATION = 1 GENERATE
+	BEGIN
+		Debug: PROCESS (sys_clk)
+			variable v_freq : real := 0.0;
+		BEGIN
+			v_freq := real(to_integer(unsigned(s_ftw_nco))) * real(DDS_CLOCK) / 2**real(FTW_WIDTH);
+		END PROCESS Debug;
+	END GENERATE g0;
+
+
+	
 
 -------------------
 	PROCESS (sys_clk)
@@ -236,26 +246,34 @@ begin
 
 
 
-
-
+-- phase
+-- 3FFF == 90 deg ; 360/65535 = 0.00549324788281071183337148088808
+-- 1FFF == 45 deg
+-- 1555 == 30 deg.
+-- 0AAA == 15 deg.
+--
+-- phase detector output near zero when phase_i = 3FFF (90deg)
+-- 15 deg phase error: 0x3FFF - 0x0AAA = 0x3555
+-- 30 deg phase error: 0x3FFF - 0x1555 = 0x2AAA
+-- 45 deg phase error: 0x3FFF - 0x1FFF = 0x2000
 
 RF_IN : dds_synthesizer
 	GENERIC MAP (
-		ftw_width => 32
+		ftw_width => FTW_WIDTH
 	)
 	PORT MAP (
 		clk_i	=> sys_clk,
 		rst_i 	=> reset,
-		ftw_i	=> x"36C8B439",		-- 10.7 MHz
-		phase_i	=>  x"0000",
---		phase_i =>  phasemod16,
-		ampl_o 	=> s_rf_in
+		ftw_i	=> x"1999BB27", -- 5MHz + 100 Hz
+		phase_i	=>  x"2000",		
+		ampl_o 	=> s_rf_in			
+									
 	);
 	
 	
 VCOSin : dds_synthesizer
 	GENERIC MAP (
-		ftw_width => 32
+		ftw_width => FTW_WIDTH
 	)
 	PORT MAP (
 		clk_i	=> sys_clk,
@@ -268,7 +286,7 @@ VCOSin : dds_synthesizer
 
 VCOCos : dds_synthesizer
 	GENERIC MAP (
-		ftw_width => 32
+		ftw_width => FTW_WIDTH
 	)
 	PORT MAP (
 		clk_i	=> sys_clk,
@@ -281,7 +299,7 @@ VCOCos : dds_synthesizer
 	
 DDSPhaseMod : dds_synthesizer
 	GENERIC MAP (
-		ftw_width => 32
+		ftw_width => FTW_WIDTH
 	)
 	PORT MAP (
 		clk_i	=> sys_clk,
@@ -301,17 +319,6 @@ MixerSin : MultPhaseDet
 		SOUT 	=> s_mixer_sin
 	);
 
-
-s_rc <= std_logic_vector ( resize ( signed(s_mixer_sin), 32) );
-
-rc_i1 : rc
-	port map ( 	
-        i_clock		=> sys_clk,
-		i_reset		=> reset,
-		i_data_en	=> '1',
-		i_data		=> s_rc,
-		o_data 		=> open
-    );
 
 
 LPFSin : LPF2
@@ -355,23 +362,23 @@ LPFPLL : Lowpass
 
 	
 
-MixerCos : MultPhaseDet 
-		PORT MAP 
-		(
-			REF => s_rf_in,
-			VCO => s_vco_cos,
-			SOUT => s_mixer_cos
-		);
+-- MixerCos : MultPhaseDet 
+-- 		PORT MAP 
+-- 		(
+-- 			REF => s_rf_in,
+-- 			VCO => s_vco_cos,
+-- 			SOUT => s_mixer_cos
+-- 		);
 	
 	
-LPFCos : LPF2
-	PORT MAP (
-		clk 		=> sys_clk,
-		reset_n 	=> reset_n,
-		ast_sink_valid => '1',
-		ast_sink_data 	=> s_mixer_cos(27 DOWNTO 12),
-		ast_source_data => s_mixer_cos_fil
-	);
+-- LPFCos : LPF2
+-- 	PORT MAP (
+-- 		clk 		=> sys_clk,
+-- 		reset_n 	=> reset_n,
+-- 		ast_sink_valid => '1',
+-- 		ast_sink_data 	=> s_mixer_cos(27 DOWNTO 12),
+-- 		ast_source_data => s_mixer_cos_fil
+-- 	);
 	
 
 -- taninst1 : atan 

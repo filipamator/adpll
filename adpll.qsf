@@ -363,13 +363,14 @@ set_global_assignment -name FLOW_ENABLE_RTL_VIEWER ON
 
 
 
+set_global_assignment -name VHDL_FILE sine_lut_16_x_14.vhd
+set_global_assignment -name VHDL_FILE sample_avg.vhd
+set_global_assignment -name VHDL_FILE rc.vhd
+set_global_assignment -name VHDL_FILE MultPhaseDet.vhd
+set_global_assignment -name VHDL_FILE LPF2.vhd
+set_global_assignment -name QIP_FILE LPF2.qip
+set_global_assignment -name VHDL_FILE Lowpass.vhd
+set_global_assignment -name VHDL_FILE dds_synthesizer.vhd
 set_global_assignment -name VHDL_FILE adpll_top.vhd
 set_global_assignment -name QIP_FILE pll_sysclk.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name QIP_FILE TEST/lpf1.qip
-set_global_assignment -name SIP_FILE TEST/lpf1.sip
-set_global_assignment -name QIP_FILE MATH/int32_fp.qip
-set_global_assignment -name QIP_FILE fp_int32.qip
-set_global_assignment -name QIP_FILE math/fp_mult.qip
-set_global_assignment -name QIP_FILE fp_add.qip
-set_global_assignment -name QIP_FILE math/fp_sub.qip

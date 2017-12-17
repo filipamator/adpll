@@ -49,8 +49,8 @@ begin
 
 				-- 1569 z - 676.7
 
-				temp <= std_logic_vector("1011010101" * signed(CURRENT_INPUT) - "1010011101" * signed(LAST_INPUT) - signed(LAST_OUTPUT));
-			    --temp <=  std_logic_vector(x"0621" * signed(CURRENT_INPUT) - x"02A4" * signed(LAST_INPUT) - signed(LAST_OUTPUT));
+				-- temp <= std_logic_vector("1011010101" * signed(CURRENT_INPUT) - "1010011101" * signed(LAST_INPUT) - signed(LAST_OUTPUT));
+			    temp <=  std_logic_vector(x"5C" * signed(CURRENT_INPUT) - x"42" * signed(LAST_INPUT) + signed(LAST_OUTPUT));
 				
 				CURRENT_OUTPUT <= std_logic_vector ( resize(signed(temp),30) );
 

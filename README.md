@@ -2,13 +2,17 @@
 
 All digital PLL
 
-This project is a kind of exercises with PLLs and VHDL. The goal is to develop a working all digial (or all software) phase locked loop inside FPGA able to track external signal sampled by ADC. Filtered signal from loop filter will provide demodulated FM signal. The next step will be use such a  FM demodulator to build all software radio receiver (with some external components like mixer and band pass filter).
+This project is a kind of exercises with PLLs and VHDL. The goal is to develop a working all digial (or all software) phase locked loop inside FPGA able to track external signal sampled by ADC. Filtered signal from loop filter will provide demodulated FM signal. The next step will be to use such a  FM demodulator to build all software radio receiver (with some external components like mixer and band pass filter).
 
 
 Here are the results from the simulation in the Modelsim. 
-Reference oscillator frequency: 5_000_100 Hz
-VCO center frequency: 5_000_000 Hz
-Loop bandwidth: 50 kHz (Active PI filter)
+
+- Reference oscillator frequency: 5_000_100 Hz
+- VCO center frequency: 5_000_000 Hz
+- Loop bandwidth: 50 kHz (Active PI filter)
+- VCO Ko constant 50e6/2^32 = 0.011 Hz
+- Phase detector Kd constant is around 70000 1/rad (after filtering and decimation of the error signal)
+- Damping factor z=0.707
 
 PLL transfer function:
 

@@ -226,6 +226,7 @@ signal s_loopfilter_en			: std_logic;
 
 signal s_fmdemod				: std_logic_vector(LOOPF_WIDTH-1 DOWNTO 0) := (others => '0');
 signal s_fmdemod_en				: std_logic;
+signal s_audioout 				: std_logic_vector(31 downto 0);
 
 --signal s_freq					: real := 0.0;
 
@@ -257,6 +258,8 @@ begin
 
 	s_ftw_phasemod <=  std_logic_vector(to_unsigned(integer( 1000.0/DDS_STEP ), s_ftw_phasemod'length));
 
+
+	s_audioout <=  s_fmdemod & "00";
 
 	g0: IF SIMULATION = 1 GENERATE
 	BEGIN
@@ -473,9 +476,11 @@ sample_avg_i2 : sample_avg
 	);	
 
 
+
+
+
 dac_i2s_i1 : dac_i2s
 port map (
-
 	CLOCK_50		=> sys_clk,
     reset          	=> reset,
 	AUD_ADCDAT	    => AUD_ADCDAT,
@@ -486,8 +491,8 @@ port map (
 	AUD_XCK		    => AUD_XCK,
 	AUD_DACDAT	    => AUD_DACDAT,
 	I2C_SCLK		=> I2C_SCLK,
-	right_channel_audio_in	=> s_fmdemod & "00",
-	left_channel_audio_in 	=> s_fmdemod & "00",
+	right_channel_audio_in	=> s_audioout,
+	left_channel_audio_in 	=> s_audioout,
 	audio_in_available		=> s_fmdemod_en,
     audio_left      		=> open,
     audio_left_en   		=> open,

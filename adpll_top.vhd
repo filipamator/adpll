@@ -6,7 +6,7 @@ use IEEE.MATH_REAL.ALL;
 
 entity adpll_top is
 	GENERIC (
-		SIMULATION		: natural := 0;
+		SIMULATION		: natural := 1;
 		FTW_WIDTH    	: natural := 32;			-- 35
 		LOOPF_WIDTH		: natural := 30;			-- 30
 		DDS_CLOCK		: natural := 50_000_000		-- 50e6
@@ -16,7 +16,19 @@ entity adpll_top is
 				
 				SW 				: IN STD_LOGIC_VECTOR(17 DOWNTO 0);
 				KEY				: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-				
+
+				-- I2S
+
+				AUD_ADCDAT		: inout std_logic;
+				AUD_BCLK		: inout std_logic;
+				AUD_ADCLRCK		: inout std_logic;
+				AUD_DACLRCK		: inout std_logic;
+				I2C_SDAT		: inout std_logic;
+				AUD_XCK			: out std_logic;
+				AUD_DACDAT		: out std_logic;
+				I2C_SCLK		: out std_logic;
+
+
 				-- Clocks for ADC
 				FPGA_CLK_B_N	: OUT STD_LOGIC;
 				FPGA_CLK_B_P	: OUT STD_LOGIC;
@@ -136,16 +148,49 @@ component Lowpass is
 	Port ( 	
 		CLK 			 : in STD_LOGIC;
 		RST 			 : in STD_LOGIC;
-		FILTER_IN_EN : IN STD_LOGIC;
-		FILTER_IN 	 : in STD_LOGIC_VECTOR (17 downto 0);
-		FILTER_OUT 	 : out STD_LOGIC_VECTOR (LOOPF_WIDTH-1 downto 0));
+		FILTER_IN_EN 	: IN STD_LOGIC;
+		FILTER_IN 	 	: in STD_LOGIC_VECTOR (17 downto 0);
+		FILTER_OUT 	 	: out STD_LOGIC_VECTOR (LOOPF_WIDTH-1 downto 0);
+		FILTER_OUT_EN 	: out STD_LOGIC);
 end component Lowpass;
+
+component dac_i2s is
+port (
+
+	CLOCK_50		: in std_logic;
+    reset           : in std_logic;
+	AUD_ADCDAT	    : inout std_logic;
+	AUD_BCLK		: inout std_logic;
+	AUD_ADCLRCK	    : inout std_logic;
+	AUD_DACLRCK	    : inout std_logic;
+
+	I2C_SDAT		: inout std_logic;
+
+	AUD_XCK		    : out std_logic;
+	AUD_DACDAT	    : out std_logic;
+	I2C_SCLK		: out	std_logic;
+
+
+	right_channel_audio_in	: in std_logic_vector(31 downto 0);
+	left_channel_audio_in 	: in std_logic_vector(31 downto 0);
+	audio_in_available		: in std_logic;
+
+    audio_left          : out std_logic_vector(15 downto 0);
+    audio_left_en       : out std_logic;
+    audio_right         : out std_logic_vector(15 downto 0);
+    audio_right_en      : out std_logic
+
+
+);
+end component dac_i2s;
 
 
 -----------------------------
 ------- SIGNALS -------------
 -----------------------------
 
+
+constant DDS_STEP			: real := real(DDS_CLOCK) / 2**real(FTW_WIDTH);
 
 signal reset				: STD_LOGIC := '0';
 signal reset_n				: STD_LOGIC;
@@ -171,11 +216,16 @@ SIGNAL s_mixer_sin_fil_avg_en	: STD_LOGIC;
 
 SIGNAL s_phasemod				: STD_LOGIC_VECTOR(13 DOWNTO 0) := (others => '0');
 SIGNAL s_ftw_phasemod			: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
+SIGNAL s_ftw_rf_in			: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
+
 
 SIGNAL s_loopfilter				: std_logic_vector(LOOPF_WIDTH-1 DOWNTO 0) := (others => '0');
 SIGNAL s_ftw_nco				: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
 signal s_nco_offset				: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
+signal s_loopfilter_en			: std_logic;
 
+signal s_fmdemod				: std_logic_vector(LOOPF_WIDTH-1 DOWNTO 0) := (others => '0');
+signal s_fmdemod_en				: std_logic;
 
 --signal s_freq					: real := 0.0;
 
@@ -197,20 +247,25 @@ begin
 	ADB_OE			<= '0';
 	ADB_SPI_CS		<= '1';
 
-	s_nco_offset <= x"19999999";		-- 10.7 MHz
+	s_nco_offset <=  std_logic_vector(to_unsigned(integer( 10000000.0/DDS_STEP ), s_ftw_phasemod'length));
+	s_ftw_rf_in <= std_logic_vector(to_signed(integer( 10001000.0/DDS_STEP ), s_ftw_phasemod'length) + signed(s_phasemod) * 512); 
 	s_ftw_nco <= std_logic_vector(signed(s_nco_offset) + signed(s_loopfilter));
 
 	-- s_ftw_nco <= std_logic_vector(signed(s_nco_offset));
 
-	s_ftw_phasemod <= x"00000000"; 
+	-- s_ftw_phasemod <= x"00000000"; 
+
+	s_ftw_phasemod <=  std_logic_vector(to_unsigned(integer( 1000.0/DDS_STEP ), s_ftw_phasemod'length));
 
 
 	g0: IF SIMULATION = 1 GENERATE
 	BEGIN
 		Debug: PROCESS (sys_clk)
 			variable v_freq : real := 0.0;
+			variable v_freq_hz : integer := 0;
 		BEGIN
 			v_freq := real(to_integer(unsigned(s_ftw_nco))) * real(DDS_CLOCK) / 2**real(FTW_WIDTH);
+			v_freq_hz := integer(v_freq);
 		END PROCESS Debug;
 	END GENERATE g0;
 
@@ -264,7 +319,7 @@ RF_IN : dds_synthesizer
 	PORT MAP (
 		clk_i	=> sys_clk,
 		rst_i 	=> reset,
-		ftw_i	=> x"1999BB27", -- 5MHz + 100 Hz
+		ftw_i	=> s_ftw_rf_in, 
 		phase_i	=>  x"2000",		
 		ampl_o 	=> s_rf_in			
 									
@@ -357,7 +412,8 @@ LPFPLL : Lowpass
 		RST 			=> reset,
 		FILTER_IN_EN 	=> s_mixer_sin_fil_avg_en,
 		FILTER_IN 		=> s_mixer_sin_fil_avg,
-		FILTER_OUT 		=> s_loopfilter
+		FILTER_OUT 		=> s_loopfilter,
+		FILTER_OUT_EN	=> s_loopfilter_en
 	);
 
 	
@@ -402,6 +458,42 @@ pll_sysclk_i1 : pll_sysclk
 		locked	=> open
 	);
 
+sample_avg_i2 : sample_avg
+	GENERIC MAP(
+		d_width	=> LOOPF_WIDTH,
+    	stage 	=> 4			-- average over 2^6=64 samples
+	)
+	PORT map (
+		clk			=>	sys_clk,
+		data_in_en	=>	s_loopfilter_en,
+		reset_n		=> reset_n,
+		data_in		=> s_loopfilter,
+		data_out	=> s_fmdemod,
+		ce			=> s_fmdemod_en
+	);	
+
+
+dac_i2s_i1 : dac_i2s
+port map (
+
+	CLOCK_50		=> sys_clk,
+    reset          	=> reset,
+	AUD_ADCDAT	    => AUD_ADCDAT,
+	AUD_BCLK		=> AUD_BCLK,
+	AUD_ADCLRCK	    => AUD_ADCLRCK,
+	AUD_DACLRCK	    => AUD_ADCLRCK,
+	I2C_SDAT		=> I2C_SDAT,
+	AUD_XCK		    => AUD_XCK,
+	AUD_DACDAT	    => AUD_DACDAT,
+	I2C_SCLK		=> I2C_SCLK,
+	right_channel_audio_in	=> s_fmdemod & "00",
+	left_channel_audio_in 	=> s_fmdemod & "00",
+	audio_in_available		=> s_fmdemod_en,
+    audio_left      		=> open,
+    audio_left_en   		=> open,
+    audio_right				=> open,
+    audio_right_en			=> open
+);
 
 
 end Behavioral;

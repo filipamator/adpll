@@ -11,9 +11,11 @@ entity Lowpass is
 		);
 	Port ( 	CLK 			 : in STD_LOGIC;
 				RST 			 : in STD_LOGIC;
-				FILTER_IN_EN : IN STD_LOGIC;
-				FILTER_IN 	 : in STD_LOGIC_VECTOR (17 downto 0);
-				FILTER_OUT 	 : out STD_LOGIC_VECTOR (LOOPF_WIDTH-1 downto 0));
+				FILTER_IN_EN 	: IN STD_LOGIC;
+				FILTER_IN 	 	: in STD_LOGIC_VECTOR (17 downto 0);
+				
+				FILTER_OUT_EN	: out STD_LOGIC;
+				FILTER_OUT 	 	: out STD_LOGIC_VECTOR (LOOPF_WIDTH-1 downto 0));
 end Lowpass;
 
 architecture Behavioral of Lowpass is
@@ -53,8 +55,11 @@ begin
 			    temp <=  std_logic_vector(x"5C" * signed(CURRENT_INPUT) - x"42" * signed(LAST_INPUT) + signed(LAST_OUTPUT));
 				
 				CURRENT_OUTPUT <= std_logic_vector ( resize(signed(temp),30) );
+				FILTER_OUT_EN <= '1';
 
-		 END IF;
+			ELSE
+				FILTER_OUT_EN <= '0';
+			END IF;
 
 			
 			

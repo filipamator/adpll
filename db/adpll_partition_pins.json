@@ -2,7 +2,236 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "DA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_DCO",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ADB_D[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ADB_D[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ADB_D[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ADB_D[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ADB_D[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ADB_D[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ADB_D[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ADB_D[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ADB_D[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ADB_D[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ADB_D[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ADB_D[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ADB_D[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ADB_D[13]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

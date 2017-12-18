@@ -2,4 +2,64 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.719
+TNS   : -75.897
+
+Type  : Slow 1200mV 85C Model Hold 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.640
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ADA_DCO'
+Slack : -3.000
+TNS   : -38.980
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 9.706
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.819
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.269
+TNS   : -63.281
+
+Type  : Slow 1200mV 0C Model Hold 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.296
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ADA_DCO'
+Slack : -3.000
+TNS   : -38.980
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 9.692
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.799
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -1.124
+TNS   : -31.251
+
+Type  : Fast 1200mV 0C Model Hold 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.458
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ADA_DCO'
+Slack : -3.000
+TNS   : -32.600
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.400
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 9.792
+TNS   : 0.000
+
 ------------------------------------------------------------

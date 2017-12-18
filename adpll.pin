@@ -479,8 +479,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : G19       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : G20       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G21       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G22       :        :                   :         : 7         :                
-FPGA_CLK_A_P                 : G23       : bidir  : 2.5 V             :         : 6         : Y              
-FPGA_CLK_A_N                 : G24       : bidir  : 2.5 V             :         : 6         : Y              
+FPGA_CLK_A_P                 : G23       : output : 2.5 V             :         : 6         : Y              
+FPGA_CLK_A_N                 : G24       : output : 2.5 V             :         : 6         : Y              
 ADB_D[5]                     : G25       : input  : 2.5 V             :         : 6         : Y              
 ADB_D[4]                     : G26       : input  : 2.5 V             :         : 6         : Y              
 ADA_D[5]                     : G27       : input  : 2.5 V             :         : 6         : Y              
@@ -787,8 +787,8 @@ VCCINT                       : V19       : power  :                   : 1.2V    
 GND                          : V20       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V21       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V22       :        :                   :         : 5         :                
-FPGA_CLK_B_P                 : V23       : bidir  : 2.5 V             :         : 5         : Y              
-FPGA_CLK_B_N                 : V24       : bidir  : 2.5 V             :         : 5         : Y              
+FPGA_CLK_B_P                 : V23       : output : 2.5 V             :         : 5         : Y              
+FPGA_CLK_B_N                 : V24       : output : 2.5 V             :         : 5         : Y              
 DA[5]                        : V25       : output : 2.5 V             :         : 5         : Y              
 DA[4]                        : V26       : output : 2.5 V             :         : 5         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V27       :        :                   :         : 5         :                

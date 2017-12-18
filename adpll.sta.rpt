@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for adpll
-Tue Nov 21 14:39:15 2017
+Mon Dec 18 20:57:46 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -17,31 +17,43 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   9. Slow 1200mV 85C Model Recovery Summary
  10. Slow 1200mV 85C Model Removal Summary
  11. Slow 1200mV 85C Model Minimum Pulse Width Summary
- 12. Slow 1200mV 85C Model Metastability Summary
- 13. Slow 1200mV 0C Model Fmax Summary
- 14. Slow 1200mV 0C Model Setup Summary
- 15. Slow 1200mV 0C Model Hold Summary
- 16. Slow 1200mV 0C Model Recovery Summary
- 17. Slow 1200mV 0C Model Removal Summary
- 18. Slow 1200mV 0C Model Minimum Pulse Width Summary
- 19. Slow 1200mV 0C Model Metastability Summary
- 20. Fast 1200mV 0C Model Setup Summary
- 21. Fast 1200mV 0C Model Hold Summary
- 22. Fast 1200mV 0C Model Recovery Summary
- 23. Fast 1200mV 0C Model Removal Summary
- 24. Fast 1200mV 0C Model Minimum Pulse Width Summary
- 25. Fast 1200mV 0C Model Metastability Summary
- 26. Multicorner Timing Analysis Summary
- 27. Board Trace Model Assignments
- 28. Input Transition Times
- 29. Signal Integrity Metrics (Slow 1200mv 0c Model)
- 30. Signal Integrity Metrics (Slow 1200mv 85c Model)
- 31. Signal Integrity Metrics (Fast 1200mv 0c Model)
- 32. Clock Transfers
- 33. Report TCCS
- 34. Report RSKM
- 35. Unconstrained Paths Summary
- 36. TimeQuest Timing Analyzer Messages
+ 12. Slow 1200mV 85C Model Setup: 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'
+ 13. Slow 1200mV 85C Model Hold: 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'
+ 22. Slow 1200mV 0C Model Hold: 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'
+ 30. Fast 1200mV 0C Model Hold: 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. TimeQuest Timing Analyzer Messages
 
 
 
@@ -87,19 +99,26 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.1%      ;
+;     Processors 2-4         ;   0.5%      ;
 +----------------------------+-------------+
 
 
-----------
-; Clocks ;
-----------
-No clocks to report.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                                                                                             ;
++-----------------------------------------------------------+-----------+--------+------------+--------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+----------+-------------------------------------------------------------+---------------------------------------------------------------+
+; Clock Name                                                ; Type      ; Period ; Frequency  ; Rise   ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master   ; Source                                                      ; Targets                                                       ;
++-----------------------------------------------------------+-----------+--------+------------+--------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+----------+-------------------------------------------------------------+---------------------------------------------------------------+
+; ADA_DCO                                                   ; Base      ; 1.000  ; 1000.0 MHz ; 0.000  ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;          ;                                                             ; { ADA_DCO }                                                   ;
+; CLOCK_50                                                  ; Base      ; 20.000 ; 50.0 MHz   ; 0.000  ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;          ;                                                             ; { CLOCK_50 }                                                  ;
+; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; Generated ; 20.000 ; 50.0 MHz   ; 0.000  ; 10.000 ; 50.00      ; 1         ; 1           ;       ;        ;           ;            ; false    ; CLOCK_50 ; pll_sysclk_i1|altpll_component|auto_generated|pll1|inclk[0] ; { pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] } ;
+; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[2] ; Generated ; 20.000 ; 50.0 MHz   ; 10.000 ; 20.000 ; 50.00      ; 1         ; 1           ; 180.0 ;        ;           ;            ; false    ; CLOCK_50 ; pll_sysclk_i1|altpll_component|auto_generated|pll1|inclk[0] ; { pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[2] } ;
+; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[3] ; Generated ; 20.000 ; 50.0 MHz   ; 15.000 ; 25.000 ; 50.00      ; 1         ; 1           ; 270.0 ;        ;           ;            ; false    ; CLOCK_50 ; pll_sysclk_i1|altpll_component|auto_generated|pll1|inclk[0] ; { pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[3] } ;
++-----------------------------------------------------------+-----------+--------+------------+--------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+----------+-------------------------------------------------------------+---------------------------------------------------------------+
 
 
 --------------------------------------
@@ -114,16 +133,22 @@ No paths to report.
 HTML report is unavailable in plain text report export.
 
 
----------------------------------------
-; Slow 1200mV 85C Model Setup Summary ;
----------------------------------------
-No paths to report.
++------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                                                ;
++-----------------------------------------------------------+--------+---------------+
+; Clock                                                     ; Slack  ; End Point TNS ;
++-----------------------------------------------------------+--------+---------------+
+; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; -2.719 ; -75.897       ;
++-----------------------------------------------------------+--------+---------------+
 
 
---------------------------------------
-; Slow 1200mV 85C Model Hold Summary ;
---------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                                                ;
++-----------------------------------------------------------+-------+---------------+
+; Clock                                                     ; Slack ; End Point TNS ;
++-----------------------------------------------------------+-------+---------------+
+; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 2.640 ; 0.000         ;
++-----------------------------------------------------------+-------+---------------+
 
 
 ------------------------------------------
@@ -138,10 +163,87 @@ No paths to report.
 No paths to report.
 
 
------------------------------------------------------
-; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
------------------------------------------------------
-No paths to report.
++------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary                                  ;
++-----------------------------------------------------------+--------+---------------+
+; Clock                                                     ; Slack  ; End Point TNS ;
++-----------------------------------------------------------+--------+---------------+
+; ADA_DCO                                                   ; -3.000 ; -38.980       ;
+; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 9.706  ; 0.000         ;
+; CLOCK_50                                                  ; 9.819  ; 0.000         ;
++-----------------------------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'                                                                    ;
++--------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node        ; To Node     ; Launch Clock ; Latch Clock                                               ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
+; -2.719 ; s_adc_b_data[9]  ; DB[9]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.866     ; 0.791      ;
+; -2.718 ; s_adc_b_data[8]  ; DB[8]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.866     ; 0.790      ;
+; -2.718 ; s_adc_a_data[9]  ; DA[9]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.865     ; 0.791      ;
+; -2.717 ; s_adc_b_data[7]  ; DB[7]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.866     ; 0.789      ;
+; -2.717 ; s_adc_b_data[6]  ; DB[6]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.866     ; 0.789      ;
+; -2.717 ; s_adc_b_data[1]  ; DB[1]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.865     ; 0.790      ;
+; -2.717 ; s_adc_a_data[11] ; DA[11]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.866     ; 0.789      ;
+; -2.717 ; s_adc_a_data[8]  ; DA[8]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.865     ; 0.790      ;
+; -2.715 ; s_adc_b_data[2]  ; DB[2]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.864     ; 0.789      ;
+; -2.715 ; s_adc_a_data[1]  ; DA[1]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.863     ; 0.790      ;
+; -2.715 ; s_adc_a_data[0]  ; DA[0]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.863     ; 0.790      ;
+; -2.714 ; s_adc_a_data[3]  ; DA[3]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.863     ; 0.789      ;
+; -2.711 ; s_adc_a_data[5]  ; DA[5]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.859     ; 0.790      ;
+; -2.711 ; s_adc_a_data[4]  ; DA[4]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.858     ; 0.791      ;
+; -2.709 ; s_adc_a_data[13] ; DA[13]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.858     ; 0.789      ;
+; -2.709 ; s_adc_a_data[2]  ; DA[2]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.858     ; 0.789      ;
+; -2.708 ; s_adc_b_data[11] ; DB[11]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.856     ; 0.790      ;
+; -2.706 ; s_adc_b_data[10] ; DB[10]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.855     ; 0.789      ;
+; -2.706 ; s_adc_a_data[12] ; DA[12]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.855     ; 0.789      ;
+; -2.706 ; s_adc_a_data[10] ; DA[10]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.855     ; 0.789      ;
+; -2.705 ; s_adc_b_data[4]  ; DB[4]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.853     ; 0.790      ;
+; -2.705 ; s_adc_b_data[3]  ; DB[3]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.854     ; 0.789      ;
+; -2.705 ; s_adc_a_data[6]  ; DA[6]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.854     ; 0.789      ;
+; -2.704 ; s_adc_b_data[5]  ; DB[5]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.853     ; 0.789      ;
+; -2.704 ; s_adc_b_data[0]  ; DB[0]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.853     ; 0.789      ;
+; -2.704 ; s_adc_a_data[7]  ; DA[7]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.853     ; 0.789      ;
+; -2.703 ; s_adc_b_data[12] ; DB[12]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.851     ; 0.790      ;
+; -2.702 ; s_adc_b_data[13] ; DB[13]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.851     ; 0.789      ;
++--------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'                                                                    ;
++-------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node     ; Launch Clock ; Latch Clock                                               ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
+; 2.640 ; s_adc_b_data[13] ; DB[13]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.240     ; 0.696      ;
+; 2.640 ; s_adc_b_data[0]  ; DB[0]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.240     ; 0.696      ;
+; 2.641 ; s_adc_b_data[10] ; DB[10]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.241     ; 0.696      ;
+; 2.641 ; s_adc_b_data[5]  ; DB[5]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.241     ; 0.696      ;
+; 2.641 ; s_adc_a_data[10] ; DA[10]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.241     ; 0.696      ;
+; 2.641 ; s_adc_a_data[7]  ; DA[7]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.241     ; 0.696      ;
+; 2.641 ; s_adc_a_data[6]  ; DA[6]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.241     ; 0.696      ;
+; 2.642 ; s_adc_b_data[12] ; DB[12]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.241     ; 0.697      ;
+; 2.642 ; s_adc_b_data[4]  ; DB[4]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.241     ; 0.697      ;
+; 2.642 ; s_adc_b_data[3]  ; DB[3]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.242     ; 0.696      ;
+; 2.642 ; s_adc_a_data[12] ; DA[12]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.242     ; 0.696      ;
+; 2.643 ; s_adc_b_data[11] ; DB[11]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.242     ; 0.697      ;
+; 2.643 ; s_adc_a_data[13] ; DA[13]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.243     ; 0.696      ;
+; 2.644 ; s_adc_a_data[5]  ; DA[5]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.243     ; 0.697      ;
+; 2.644 ; s_adc_a_data[2]  ; DA[2]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.244     ; 0.696      ;
+; 2.645 ; s_adc_a_data[4]  ; DA[4]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.244     ; 0.697      ;
+; 2.647 ; s_adc_a_data[3]  ; DA[3]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.247     ; 0.696      ;
+; 2.648 ; s_adc_a_data[0]  ; DA[0]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.248     ; 0.696      ;
+; 2.649 ; s_adc_a_data[1]  ; DA[1]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.248     ; 0.697      ;
+; 2.652 ; s_adc_b_data[7]  ; DB[7]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.252     ; 0.696      ;
+; 2.652 ; s_adc_b_data[6]  ; DB[6]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.252     ; 0.696      ;
+; 2.654 ; s_adc_b_data[9]  ; DB[9]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.253     ; 0.697      ;
+; 2.654 ; s_adc_b_data[8]  ; DB[8]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.254     ; 0.696      ;
+; 2.654 ; s_adc_b_data[2]  ; DB[2]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.254     ; 0.696      ;
+; 2.654 ; s_adc_b_data[1]  ; DB[1]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.254     ; 0.696      ;
+; 2.654 ; s_adc_a_data[11] ; DA[11]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.254     ; 0.696      ;
+; 2.655 ; s_adc_a_data[9]  ; DA[9]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.254     ; 0.697      ;
+; 2.655 ; s_adc_a_data[8]  ; DA[8]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -2.254     ; 0.697      ;
++-------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
 
 
 -----------------------------------------------
@@ -156,16 +258,22 @@ No synchronizer chains to report.
 No paths to report.
 
 
---------------------------------------
-; Slow 1200mV 0C Model Setup Summary ;
---------------------------------------
-No paths to report.
++------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                                                 ;
++-----------------------------------------------------------+--------+---------------+
+; Clock                                                     ; Slack  ; End Point TNS ;
++-----------------------------------------------------------+--------+---------------+
+; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; -2.269 ; -63.281       ;
++-----------------------------------------------------------+--------+---------------+
 
 
--------------------------------------
-; Slow 1200mV 0C Model Hold Summary ;
--------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                                                 ;
++-----------------------------------------------------------+-------+---------------+
+; Clock                                                     ; Slack ; End Point TNS ;
++-----------------------------------------------------------+-------+---------------+
+; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 2.296 ; 0.000         ;
++-----------------------------------------------------------+-------+---------------+
 
 
 -----------------------------------------
@@ -180,10 +288,87 @@ No paths to report.
 No paths to report.
 
 
-----------------------------------------------------
-; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
-----------------------------------------------------
-No paths to report.
++------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary                                   ;
++-----------------------------------------------------------+--------+---------------+
+; Clock                                                     ; Slack  ; End Point TNS ;
++-----------------------------------------------------------+--------+---------------+
+; ADA_DCO                                                   ; -3.000 ; -38.980       ;
+; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 9.692  ; 0.000         ;
+; CLOCK_50                                                  ; 9.799  ; 0.000         ;
++-----------------------------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'                                                                     ;
++--------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node        ; To Node     ; Launch Clock ; Latch Clock                                               ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
+; -2.269 ; s_adc_b_data[9]  ; DB[9]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.496     ; 0.712      ;
+; -2.267 ; s_adc_b_data[8]  ; DB[8]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.495     ; 0.711      ;
+; -2.267 ; s_adc_a_data[9]  ; DA[9]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.494     ; 0.712      ;
+; -2.266 ; s_adc_b_data[7]  ; DB[7]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.495     ; 0.710      ;
+; -2.266 ; s_adc_b_data[6]  ; DB[6]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.495     ; 0.710      ;
+; -2.266 ; s_adc_a_data[11] ; DA[11]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.495     ; 0.710      ;
+; -2.266 ; s_adc_a_data[8]  ; DA[8]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.494     ; 0.711      ;
+; -2.265 ; s_adc_b_data[2]  ; DB[2]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.494     ; 0.710      ;
+; -2.265 ; s_adc_b_data[1]  ; DB[1]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.493     ; 0.711      ;
+; -2.264 ; s_adc_a_data[1]  ; DA[1]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.492     ; 0.711      ;
+; -2.264 ; s_adc_a_data[0]  ; DA[0]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.492     ; 0.711      ;
+; -2.263 ; s_adc_a_data[3]  ; DA[3]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.492     ; 0.710      ;
+; -2.262 ; s_adc_a_data[5]  ; DA[5]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.490     ; 0.711      ;
+; -2.262 ; s_adc_a_data[4]  ; DA[4]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.489     ; 0.712      ;
+; -2.260 ; s_adc_a_data[2]  ; DA[2]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.489     ; 0.710      ;
+; -2.259 ; s_adc_a_data[13] ; DA[13]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.487     ; 0.711      ;
+; -2.257 ; s_adc_b_data[11] ; DB[11]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.485     ; 0.711      ;
+; -2.256 ; s_adc_b_data[10] ; DB[10]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.485     ; 0.710      ;
+; -2.256 ; s_adc_a_data[10] ; DA[10]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.485     ; 0.710      ;
+; -2.255 ; s_adc_b_data[13] ; DB[13]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.483     ; 0.711      ;
+; -2.255 ; s_adc_b_data[12] ; DB[12]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.483     ; 0.711      ;
+; -2.255 ; s_adc_a_data[12] ; DA[12]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.484     ; 0.710      ;
+; -2.254 ; s_adc_b_data[3]  ; DB[3]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.483     ; 0.710      ;
+; -2.253 ; s_adc_b_data[4]  ; DB[4]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.481     ; 0.711      ;
+; -2.253 ; s_adc_a_data[6]  ; DA[6]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.482     ; 0.710      ;
+; -2.252 ; s_adc_b_data[5]  ; DB[5]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.481     ; 0.710      ;
+; -2.252 ; s_adc_b_data[0]  ; DB[0]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.481     ; 0.710      ;
+; -2.252 ; s_adc_a_data[7]  ; DA[7]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -2.481     ; 0.710      ;
++--------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'                                                                     ;
++-------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node     ; Launch Clock ; Latch Clock                                               ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
+; 2.296 ; s_adc_b_data[5]  ; DB[5]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.938     ; 0.639      ;
+; 2.296 ; s_adc_b_data[0]  ; DB[0]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.938     ; 0.639      ;
+; 2.296 ; s_adc_a_data[7]  ; DA[7]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.938     ; 0.639      ;
+; 2.297 ; s_adc_b_data[3]  ; DB[3]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.939     ; 0.639      ;
+; 2.297 ; s_adc_a_data[6]  ; DA[6]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.939     ; 0.639      ;
+; 2.298 ; s_adc_b_data[4]  ; DB[4]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.939     ; 0.640      ;
+; 2.298 ; s_adc_a_data[12] ; DA[12]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.940     ; 0.639      ;
+; 2.299 ; s_adc_b_data[11] ; DB[11]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.940     ; 0.640      ;
+; 2.299 ; s_adc_b_data[10] ; DB[10]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.941     ; 0.639      ;
+; 2.299 ; s_adc_a_data[10] ; DA[10]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.941     ; 0.639      ;
+; 2.301 ; s_adc_b_data[13] ; DB[13]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.942     ; 0.640      ;
+; 2.301 ; s_adc_b_data[12] ; DB[12]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.942     ; 0.640      ;
+; 2.301 ; s_adc_a_data[13] ; DA[13]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.942     ; 0.640      ;
+; 2.301 ; s_adc_a_data[2]  ; DA[2]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.943     ; 0.639      ;
+; 2.303 ; s_adc_a_data[5]  ; DA[5]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.944     ; 0.640      ;
+; 2.304 ; s_adc_a_data[4]  ; DA[4]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.944     ; 0.641      ;
+; 2.304 ; s_adc_a_data[3]  ; DA[3]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.946     ; 0.639      ;
+; 2.304 ; s_adc_a_data[1]  ; DA[1]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.945     ; 0.640      ;
+; 2.305 ; s_adc_a_data[0]  ; DA[0]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.946     ; 0.640      ;
+; 2.310 ; s_adc_b_data[7]  ; DB[7]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.952     ; 0.639      ;
+; 2.310 ; s_adc_b_data[6]  ; DB[6]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.952     ; 0.639      ;
+; 2.310 ; s_adc_a_data[11] ; DA[11]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.952     ; 0.639      ;
+; 2.311 ; s_adc_b_data[9]  ; DB[9]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.951     ; 0.641      ;
+; 2.311 ; s_adc_b_data[8]  ; DB[8]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.952     ; 0.640      ;
+; 2.311 ; s_adc_b_data[2]  ; DB[2]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.953     ; 0.639      ;
+; 2.311 ; s_adc_b_data[1]  ; DB[1]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.952     ; 0.640      ;
+; 2.311 ; s_adc_a_data[8]  ; DA[8]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.952     ; 0.640      ;
+; 2.312 ; s_adc_a_data[9]  ; DA[9]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.952     ; 0.641      ;
++-------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
 
 
 ----------------------------------------------
@@ -192,16 +377,22 @@ No paths to report.
 No synchronizer chains to report.
 
 
---------------------------------------
-; Fast 1200mV 0C Model Setup Summary ;
---------------------------------------
-No paths to report.
++------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                                                 ;
++-----------------------------------------------------------+--------+---------------+
+; Clock                                                     ; Slack  ; End Point TNS ;
++-----------------------------------------------------------+--------+---------------+
+; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; -1.124 ; -31.251       ;
++-----------------------------------------------------------+--------+---------------+
 
 
--------------------------------------
-; Fast 1200mV 0C Model Hold Summary ;
--------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                                                 ;
++-----------------------------------------------------------+-------+---------------+
+; Clock                                                     ; Slack ; End Point TNS ;
++-----------------------------------------------------------+-------+---------------+
+; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.458 ; 0.000         ;
++-----------------------------------------------------------+-------+---------------+
 
 
 -----------------------------------------
@@ -216,10 +407,87 @@ No paths to report.
 No paths to report.
 
 
-----------------------------------------------------
-; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
-----------------------------------------------------
-No paths to report.
++------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary                                   ;
++-----------------------------------------------------------+--------+---------------+
+; Clock                                                     ; Slack  ; End Point TNS ;
++-----------------------------------------------------------+--------+---------------+
+; ADA_DCO                                                   ; -3.000 ; -32.600       ;
+; CLOCK_50                                                  ; 9.400  ; 0.000         ;
+; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 9.792  ; 0.000         ;
++-----------------------------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'                                                                     ;
++--------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node        ; To Node     ; Launch Clock ; Latch Clock                                               ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
+; -1.124 ; s_adc_b_data[9]  ; DB[9]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.677     ; 0.374      ;
+; -1.123 ; s_adc_b_data[8]  ; DB[8]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.677     ; 0.373      ;
+; -1.122 ; s_adc_b_data[6]  ; DB[6]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.677     ; 0.372      ;
+; -1.122 ; s_adc_b_data[1]  ; DB[1]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.676     ; 0.373      ;
+; -1.122 ; s_adc_a_data[11] ; DA[11]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.677     ; 0.372      ;
+; -1.122 ; s_adc_a_data[9]  ; DA[9]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.675     ; 0.374      ;
+; -1.122 ; s_adc_a_data[8]  ; DA[8]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.675     ; 0.374      ;
+; -1.121 ; s_adc_b_data[7]  ; DB[7]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.676     ; 0.372      ;
+; -1.120 ; s_adc_b_data[2]  ; DB[2]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.675     ; 0.372      ;
+; -1.120 ; s_adc_a_data[1]  ; DA[1]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.673     ; 0.374      ;
+; -1.119 ; s_adc_b_data[12] ; DB[12]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.672     ; 0.374      ;
+; -1.119 ; s_adc_a_data[0]  ; DA[0]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.673     ; 0.373      ;
+; -1.118 ; s_adc_a_data[3]  ; DA[3]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.672     ; 0.373      ;
+; -1.117 ; s_adc_b_data[13] ; DB[13]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.671     ; 0.373      ;
+; -1.117 ; s_adc_a_data[5]  ; DA[5]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.670     ; 0.374      ;
+; -1.117 ; s_adc_a_data[4]  ; DA[4]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.670     ; 0.374      ;
+; -1.115 ; s_adc_a_data[2]  ; DA[2]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.670     ; 0.372      ;
+; -1.114 ; s_adc_a_data[13] ; DA[13]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.668     ; 0.373      ;
+; -1.113 ; s_adc_b_data[11] ; DB[11]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.666     ; 0.374      ;
+; -1.112 ; s_adc_b_data[10] ; DB[10]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.667     ; 0.372      ;
+; -1.111 ; s_adc_a_data[12] ; DA[12]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.666     ; 0.372      ;
+; -1.111 ; s_adc_a_data[10] ; DA[10]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.666     ; 0.372      ;
+; -1.110 ; s_adc_b_data[4]  ; DB[4]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.663     ; 0.374      ;
+; -1.110 ; s_adc_b_data[3]  ; DB[3]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.665     ; 0.372      ;
+; -1.109 ; s_adc_a_data[6]  ; DA[6]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.664     ; 0.372      ;
+; -1.107 ; s_adc_b_data[5]  ; DB[5]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.662     ; 0.372      ;
+; -1.107 ; s_adc_b_data[0]  ; DB[0]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.662     ; 0.372      ;
+; -1.107 ; s_adc_a_data[7]  ; DA[7]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 1.000        ; -1.662     ; 0.372      ;
++--------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]'                                                                     ;
++-------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node     ; Launch Clock ; Latch Clock                                               ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
+; 1.458 ; s_adc_b_data[5]  ; DB[5]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.338     ; 0.314      ;
+; 1.458 ; s_adc_b_data[0]  ; DB[0]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.338     ; 0.314      ;
+; 1.459 ; s_adc_b_data[4]  ; DB[4]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.338     ; 0.315      ;
+; 1.459 ; s_adc_b_data[3]  ; DB[3]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.339     ; 0.314      ;
+; 1.459 ; s_adc_a_data[7]  ; DA[7]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.339     ; 0.314      ;
+; 1.460 ; s_adc_a_data[6]  ; DA[6]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.340     ; 0.314      ;
+; 1.461 ; s_adc_b_data[10] ; DB[10]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.341     ; 0.314      ;
+; 1.461 ; s_adc_a_data[13] ; DA[13]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.341     ; 0.314      ;
+; 1.461 ; s_adc_a_data[12] ; DA[12]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.341     ; 0.314      ;
+; 1.461 ; s_adc_a_data[10] ; DA[10]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.341     ; 0.314      ;
+; 1.462 ; s_adc_b_data[11] ; DB[11]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.341     ; 0.315      ;
+; 1.463 ; s_adc_a_data[2]  ; DA[2]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.343     ; 0.314      ;
+; 1.464 ; s_adc_a_data[5]  ; DA[5]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.343     ; 0.315      ;
+; 1.465 ; s_adc_a_data[3]  ; DA[3]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.345     ; 0.314      ;
+; 1.465 ; s_adc_a_data[0]  ; DA[0]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.345     ; 0.314      ;
+; 1.466 ; s_adc_a_data[4]  ; DA[4]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.344     ; 0.316      ;
+; 1.466 ; s_adc_a_data[1]  ; DA[1]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.345     ; 0.315      ;
+; 1.469 ; s_adc_b_data[13] ; DB[13]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.349     ; 0.314      ;
+; 1.469 ; s_adc_b_data[12] ; DB[12]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.348     ; 0.315      ;
+; 1.472 ; s_adc_b_data[7]  ; DB[7]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.352     ; 0.314      ;
+; 1.472 ; s_adc_b_data[6]  ; DB[6]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.352     ; 0.314      ;
+; 1.472 ; s_adc_b_data[1]  ; DB[1]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.352     ; 0.314      ;
+; 1.473 ; s_adc_b_data[9]  ; DB[9]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.351     ; 0.316      ;
+; 1.473 ; s_adc_b_data[8]  ; DB[8]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.353     ; 0.314      ;
+; 1.473 ; s_adc_b_data[2]  ; DB[2]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.353     ; 0.314      ;
+; 1.473 ; s_adc_a_data[11] ; DA[11]~reg0 ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.353     ; 0.314      ;
+; 1.473 ; s_adc_a_data[8]  ; DA[8]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.352     ; 0.315      ;
+; 1.474 ; s_adc_a_data[9]  ; DA[9]~reg0  ; ADA_DCO      ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; -1.352     ; 0.316      ;
++-------+------------------+-------------+--------------+-----------------------------------------------------------+--------------+------------+------------+
 
 
 ----------------------------------------------
@@ -228,14 +496,20 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                        ;
-+------------------+-------+------+----------+---------+---------------------+
-; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
-+------------------+-------+------+----------+---------+---------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                     ;
++------------------------------------------------------------+---------+-------+----------+---------+---------------------+
+; Clock                                                      ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------------------------------------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack                                           ; -2.719  ; 1.458 ; N/A      ; N/A     ; -3.000              ;
+;  ADA_DCO                                                   ; N/A     ; N/A   ; N/A      ; N/A     ; -3.000              ;
+;  CLOCK_50                                                  ; N/A     ; N/A   ; N/A      ; N/A     ; 9.400               ;
+;  pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; -2.719  ; 1.458 ; N/A      ; N/A     ; 9.692               ;
+; Design-wide TNS                                            ; -75.897 ; 0.0   ; 0.0      ; 0.0     ; -38.98              ;
+;  ADA_DCO                                                   ; N/A     ; N/A   ; N/A      ; N/A     ; -38.980             ;
+;  CLOCK_50                                                  ; N/A     ; N/A   ; N/A      ; N/A     ; 0.000               ;
+;  pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; -75.897 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------------------------------------------------+---------+-------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -243,6 +517,10 @@ No synchronizer chains to report.
 +---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
 +---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; FPGA_CLK_B_N  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; FPGA_CLK_B_P  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; FPGA_CLK_A_N  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; FPGA_CLK_A_P  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ADA_OE        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ADB_OE        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ADA_SPI_CS    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -275,10 +553,6 @@ No synchronizer chains to report.
 ; DB[11]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; DB[12]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; DB[13]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; FPGA_CLK_B_N  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; FPGA_CLK_B_P  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; FPGA_CLK_A_N  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; FPGA_CLK_A_P  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; AD_SCLK       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; AD_SDIO       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -290,7 +564,6 @@ No synchronizer chains to report.
 +---------------------+--------------+-----------------+-----------------+
 ; Pin                 ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+--------------+-----------------+-----------------+
-; CLOCK_50            ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[0]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[1]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[2]               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
@@ -309,13 +582,18 @@ No synchronizer chains to report.
 ; SW[15]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[16]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[17]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; KEY[0]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; KEY[1]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; KEY[2]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; KEY[3]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; ADA_DCO             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ADB_DCO             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADA_OR              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADB_OR              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[0]              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; AD_SCLK             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; AD_SDIO             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; CLOCK_50            ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; ADA_D[0]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADA_DCO             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ADA_D[1]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ADA_D[2]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ADA_D[3]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -343,14 +621,6 @@ No synchronizer chains to report.
 ; ADB_D[11]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ADB_D[12]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ADB_D[13]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADA_OR              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADB_OR              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; FPGA_CLK_B_N        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; FPGA_CLK_B_P        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; FPGA_CLK_A_N        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; FPGA_CLK_A_P        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; AD_SCLK             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; AD_SDIO             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_ASDO_DATA1~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_DATA0~      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +---------------------+--------------+-----------------+-----------------+
@@ -361,6 +631,10 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; FPGA_CLK_B_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; FPGA_CLK_B_P  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; FPGA_CLK_A_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; FPGA_CLK_A_P  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
 ; ADA_OE        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
 ; ADB_OE        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
 ; ADA_SPI_CS    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
@@ -393,10 +667,6 @@ No synchronizer chains to report.
 ; DB[11]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
 ; DB[12]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
 ; DB[13]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
-; FPGA_CLK_B_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
-; FPGA_CLK_B_P  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
-; FPGA_CLK_A_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
-; FPGA_CLK_A_P  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
 ; AD_SCLK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
 ; AD_SDIO       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
@@ -408,6 +678,10 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; FPGA_CLK_B_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; FPGA_CLK_B_P  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; FPGA_CLK_A_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; FPGA_CLK_A_P  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
 ; ADA_OE        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
 ; ADB_OE        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
 ; ADA_SPI_CS    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
@@ -440,10 +714,6 @@ No synchronizer chains to report.
 ; DB[11]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
 ; DB[12]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
 ; DB[13]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
-; FPGA_CLK_B_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
-; FPGA_CLK_B_P  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
-; FPGA_CLK_A_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
-; FPGA_CLK_A_P  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
 ; AD_SCLK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
 ; AD_SDIO       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
@@ -455,6 +725,10 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; FPGA_CLK_B_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; FPGA_CLK_B_P  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; FPGA_CLK_A_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; FPGA_CLK_A_P  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
 ; ADA_OE        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
 ; ADB_OE        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
 ; ADA_SPI_CS    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
@@ -487,20 +761,30 @@ No synchronizer chains to report.
 ; DB[11]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
 ; DB[12]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
 ; DB[13]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
-; FPGA_CLK_B_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
-; FPGA_CLK_B_P  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
-; FPGA_CLK_A_N  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
-; FPGA_CLK_A_P  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
 ; AD_SCLK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
 ; AD_SDIO       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
--------------------
-; Clock Transfers ;
--------------------
-Nothing to report.
++--------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                    ;
++------------+-----------------------------------------------------------+----------+----------+----------+----------+
+; From Clock ; To Clock                                                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------------------------------------------------------+----------+----------+----------+----------+
+; ADA_DCO    ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 28       ; 0        ; 0        ; 0        ;
++------------+-----------------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                     ;
++------------+-----------------------------------------------------------+----------+----------+----------+----------+
+; From Clock ; To Clock                                                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------------------------------------------------------+----------+----------+----------+----------+
+; ADA_DCO    ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; 28       ; 0        ; 0        ; 0        ;
++------------+-----------------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
 ---------------
@@ -522,11 +806,176 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 0     ; 0    ;
-; Unconstrained Output Port Paths ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 28    ; 28   ;
+; Unconstrained Input Port Paths  ; 28    ; 28   ;
+; Unconstrained Output Ports      ; 32    ; 32   ;
+; Unconstrained Output Port Paths ; 32    ; 32   ;
 +---------------------------------+-------+------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                                            ;
++-----------------------------------------------------------+-----------------------------------------------------------+-----------+-------------+
+; Target                                                    ; Clock                                                     ; Type      ; Status      ;
++-----------------------------------------------------------+-----------------------------------------------------------+-----------+-------------+
+; ADA_DCO                                                   ; ADA_DCO                                                   ; Base      ; Constrained ;
+; CLOCK_50                                                  ; CLOCK_50                                                  ; Base      ; Constrained ;
+; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] ; Generated ; Constrained ;
+; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[2] ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[2] ; Generated ; Constrained ;
+; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[3] ; pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[3] ; Generated ; Constrained ;
++-----------------------------------------------------------+-----------------------------------------------------------+-----------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; ADA_D[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[1]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[2]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[3]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[4]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[5]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[6]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[7]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[8]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[9]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[10]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[11]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[12]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[13]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[1]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[2]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[3]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[4]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[5]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[6]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[7]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[8]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[9]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[10]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[11]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[12]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[13]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                           ;
++--------------+---------------------------------------------------------------------------------------+
+; Output Port  ; Comment                                                                               ;
++--------------+---------------------------------------------------------------------------------------+
+; DA[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[8]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[9]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[10]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[11]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[12]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[13]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[8]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[9]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[10]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[11]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[12]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[13]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; FPGA_CLK_A_N ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; FPGA_CLK_A_P ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; FPGA_CLK_B_N ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; FPGA_CLK_B_P ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; ADA_D[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[1]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[2]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[3]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[4]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[5]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[6]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[7]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[8]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[9]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[10]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[11]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[12]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADA_D[13]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[1]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[2]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[3]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[4]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[5]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[6]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[7]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[8]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[9]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[10]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[11]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[12]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADB_D[13]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                           ;
++--------------+---------------------------------------------------------------------------------------+
+; Output Port  ; Comment                                                                               ;
++--------------+---------------------------------------------------------------------------------------+
+; DA[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[8]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[9]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[10]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[11]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[12]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DA[13]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[8]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[9]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[10]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[11]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[12]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DB[13]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; FPGA_CLK_A_N ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; FPGA_CLK_A_P ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; FPGA_CLK_B_N ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; FPGA_CLK_B_P ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+---------------------------------------------------------------------------------------+
 
 
 +------------------------------------+
@@ -535,56 +984,94 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Tue Nov 21 14:39:12 2017
+    Info: Processing started: Mon Dec 18 20:57:43 2017
 Info: Command: quartus_sta adpll -c adpll
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'adpll.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
+Info (332110): Deriving PLL clocks
+    Info (332110): create_clock -period 20.000 -waveform {0.000 10.000} -name CLOCK_50 CLOCK_50
+    Info (332110): create_generated_clock -source {pll_sysclk_i1|altpll_component|auto_generated|pll1|inclk[0]} -duty_cycle 50.00 -name {pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]} {pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0]}
+    Info (332110): create_generated_clock -source {pll_sysclk_i1|altpll_component|auto_generated|pll1|inclk[0]} -phase 180.00 -duty_cycle 50.00 -name {pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[2]} {pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[2]}
+    Info (332110): create_generated_clock -source {pll_sysclk_i1|altpll_component|auto_generated|pll1|inclk[0]} -phase 270.00 -duty_cycle 50.00 -name {pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[3]} {pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[3]}
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name ADA_DCO ADA_DCO
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332159): No clocks to report
 Info: Analyzing Slow 1200mV 85C Model
 Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.719
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.719             -75.897 pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case hold slack is 2.640
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.640               0.000 pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -38.980 ADA_DCO 
+    Info (332119):     9.706               0.000 pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     9.819               0.000 CLOCK_50 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.269
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.269             -63.281 pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case hold slack is 2.296
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.296               0.000 pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -38.980 ADA_DCO 
+    Info (332119):     9.692               0.000 pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     9.799               0.000 CLOCK_50 
 Info: Analyzing Fast 1200mV 0C Model
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.124
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.124             -31.251 pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case hold slack is 1.458
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.458               0.000 pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
-Info (332101): Design is fully constrained for setup requirements
-Info (332101): Design is fully constrained for hold requirements
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -32.600 ADA_DCO 
+    Info (332119):     9.400               0.000 CLOCK_50 
+    Info (332119):     9.792               0.000 pll_sysclk_i1|altpll_component|auto_generated|pll1|clk[0] 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 732 megabytes
-    Info: Processing ended: Tue Nov 21 14:39:15 2017
+    Info: Peak virtual memory: 762 megabytes
+    Info: Processing ended: Mon Dec 18 20:57:46 2017
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

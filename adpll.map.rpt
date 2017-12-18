@@ -1,5 +1,5 @@
-Analysis & Elaboration report for adpll
-Sun Dec 17 12:57:57 2017
+Analysis & Synthesis report for adpll
+Mon Dec 18 20:57:17 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -7,42 +7,50 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration IP Cores Summary
-  5. Source assignments for LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst
-  6. Source assignments for LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core
-  7. Parameter Settings for User Entity Instance: Top-level Entity: |adpll_top
-  8. Parameter Settings for User Entity Instance: dds_synthesizer:RF_IN
-  9. Parameter Settings for User Entity Instance: dds_synthesizer:VCOSin
- 10. Parameter Settings for User Entity Instance: dds_synthesizer:VCOCos
- 11. Parameter Settings for User Entity Instance: dds_synthesizer:DDSPhaseMod
- 12. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst
- 13. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink
- 14. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_source_hpfir:source
- 15. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:d_u0_m0_wo0_compute_q_11
- 16. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:u0_m0_wo0_cma0_delay
- 17. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_roundsat_hpfir:\real_passthrough:gen_outp_blk:0:outp_blk
- 18. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1
- 19. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:0:REG0
- 20. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:1:REG0
- 21. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:2:REG0
- 22. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:3:REG0
- 23. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:4:REG0
- 24. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:5:REG0
- 25. Parameter Settings for User Entity Instance: Lowpass:LPFPLL
- 26. Parameter Settings for User Entity Instance: pll_sysclk:pll_sysclk_i1|altpll:altpll_component
- 27. altpll Parameter Settings by Entity Instance
- 28. Analysis & Elaboration Settings
- 29. Port Connectivity Checks: "pll_sysclk:pll_sysclk_i1"
- 30. Port Connectivity Checks: "sample_avg:sample_avg_i1"
- 31. Port Connectivity Checks: "LPF2:LPFSin"
- 32. Port Connectivity Checks: "MultPhaseDet:MixerSin"
- 33. Port Connectivity Checks: "dds_synthesizer:DDSPhaseMod"
- 34. Port Connectivity Checks: "dds_synthesizer:VCOCos"
- 35. Port Connectivity Checks: "dds_synthesizer:VCOSin"
- 36. Port Connectivity Checks: "dds_synthesizer:RF_IN"
- 37. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. State Machine - |adpll_top|LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Source assignments for LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst
+ 13. Source assignments for LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |adpll_top
+ 15. Parameter Settings for User Entity Instance: dds_synthesizer:RF_IN
+ 16. Parameter Settings for User Entity Instance: dds_synthesizer:VCOSin
+ 17. Parameter Settings for User Entity Instance: dds_synthesizer:VCOCos
+ 18. Parameter Settings for User Entity Instance: dds_synthesizer:DDSPhaseMod
+ 19. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst
+ 20. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink
+ 21. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_source_hpfir:source
+ 22. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:d_u0_m0_wo0_compute_q_11
+ 23. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:u0_m0_wo0_cma0_delay
+ 24. Parameter Settings for User Entity Instance: LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_roundsat_hpfir:\real_passthrough:gen_outp_blk:0:outp_blk
+ 25. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1
+ 26. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:0:REG0
+ 27. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:1:REG0
+ 28. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:2:REG0
+ 29. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:3:REG0
+ 30. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:4:REG0
+ 31. Parameter Settings for User Entity Instance: sample_avg:sample_avg_i1|average2:\GEN_REG:5:REG0
+ 32. Parameter Settings for User Entity Instance: Lowpass:LPFPLL
+ 33. Parameter Settings for User Entity Instance: pll_sysclk:pll_sysclk_i1|altpll:altpll_component
+ 34. altpll Parameter Settings by Entity Instance
+ 35. Port Connectivity Checks: "pll_sysclk:pll_sysclk_i1"
+ 36. Port Connectivity Checks: "sample_avg:sample_avg_i1"
+ 37. Port Connectivity Checks: "LPF2:LPFSin"
+ 38. Port Connectivity Checks: "MultPhaseDet:MixerSin"
+ 39. Port Connectivity Checks: "dds_synthesizer:DDSPhaseMod"
+ 40. Port Connectivity Checks: "dds_synthesizer:VCOCos"
+ 41. Port Connectivity Checks: "dds_synthesizer:VCOSin"
+ 42. Port Connectivity Checks: "dds_synthesizer:RF_IN"
+ 43. Post-Synthesis Netlist Statistics for Top Partition
+ 44. Elapsed Time Per Partition
+ 45. Analysis & Synthesis Messages
 
 
 
@@ -67,23 +75,112 @@ agreement for further details.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sun Dec 17 12:57:57 2017       ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 18 20:57:17 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; adpll                                       ;
 ; Top-level Entity Name              ; adpll_top                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 56                                          ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 56                                          ;
+; Total registers                    ; 56                                          ;
+; Total pins                         ; 93                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 1                                           ;
 +------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; adpll_top          ; adpll              ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                        ; All                ;                    ;
+; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
+; Verilog Show LMF Mapping Messages                                          ; Off                ;                    ;
+; Verilog Version                                                            ; SystemVerilog_2005 ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -95,20 +192,146 @@ agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++------------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                     ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                             ; Library ;
++------------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
+; sine_lut_16_x_14.vhd                                 ; yes             ; User VHDL File               ; D:/FPGA/adpll/sine_lut_16_x_14.vhd                                       ;         ;
+; sample_avg.vhd                                       ; yes             ; User VHDL File               ; D:/FPGA/adpll/sample_avg.vhd                                             ;         ;
+; MultPhaseDet.vhd                                     ; yes             ; User VHDL File               ; D:/FPGA/adpll/MultPhaseDet.vhd                                           ;         ;
+; LPF2.vhd                                             ; yes             ; User Wizard-Generated File   ; D:/FPGA/adpll/LPF2.vhd                                                   ;         ;
+; LPF2/dspba_library_package.vhd                       ; yes             ; User VHDL File               ; D:/FPGA/adpll/LPF2/dspba_library_package.vhd                             ; LPF2    ;
+; LPF2/dspba_library.vhd                               ; yes             ; User VHDL File               ; D:/FPGA/adpll/LPF2/dspba_library.vhd                                     ; LPF2    ;
+; LPF2/auk_dspip_math_pkg_hpfir.vhd                    ; yes             ; User VHDL File               ; D:/FPGA/adpll/LPF2/auk_dspip_math_pkg_hpfir.vhd                          ; LPF2    ;
+; LPF2/auk_dspip_lib_pkg_hpfir.vhd                     ; yes             ; User VHDL File               ; D:/FPGA/adpll/LPF2/auk_dspip_lib_pkg_hpfir.vhd                           ; LPF2    ;
+; LPF2/auk_dspip_avalon_streaming_controller_hpfir.vhd ; yes             ; User VHDL File               ; D:/FPGA/adpll/LPF2/auk_dspip_avalon_streaming_controller_hpfir.vhd       ; LPF2    ;
+; LPF2/auk_dspip_avalon_streaming_sink_hpfir.vhd       ; yes             ; User VHDL File               ; D:/FPGA/adpll/LPF2/auk_dspip_avalon_streaming_sink_hpfir.vhd             ; LPF2    ;
+; LPF2/auk_dspip_avalon_streaming_source_hpfir.vhd     ; yes             ; User VHDL File               ; D:/FPGA/adpll/LPF2/auk_dspip_avalon_streaming_source_hpfir.vhd           ; LPF2    ;
+; LPF2/auk_dspip_roundsat_hpfir.vhd                    ; yes             ; User VHDL File               ; D:/FPGA/adpll/LPF2/auk_dspip_roundsat_hpfir.vhd                          ; LPF2    ;
+; LPF2/altera_avalon_sc_fifo.v                         ; yes             ; User Verilog HDL File        ; D:/FPGA/adpll/LPF2/altera_avalon_sc_fifo.v                               ; LPF2    ;
+; LPF2/LPF2_0002_rtl_core.vhd                          ; yes             ; User VHDL File               ; D:/FPGA/adpll/LPF2/LPF2_0002_rtl_core.vhd                                ; LPF2    ;
+; LPF2/LPF2_0002_ast.vhd                               ; yes             ; User VHDL File               ; D:/FPGA/adpll/LPF2/LPF2_0002_ast.vhd                                     ; LPF2    ;
+; LPF2/LPF2_0002.vhd                                   ; yes             ; User VHDL File               ; D:/FPGA/adpll/LPF2/LPF2_0002.vhd                                         ; LPF2    ;
+; Lowpass.vhd                                          ; yes             ; User VHDL File               ; D:/FPGA/adpll/Lowpass.vhd                                                ;         ;
+; dds_synthesizer.vhd                                  ; yes             ; User VHDL File               ; D:/FPGA/adpll/dds_synthesizer.vhd                                        ;         ;
+; adpll_top.vhd                                        ; yes             ; User VHDL File               ; D:/FPGA/adpll/adpll_top.vhd                                              ;         ;
+; pll_sysclk.vhd                                       ; yes             ; User Wizard-Generated File   ; D:/FPGA/adpll/pll_sysclk.vhd                                             ;         ;
+; altpll.tdf                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altpll.tdf        ;         ;
+; aglobal161.inc                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/aglobal161.inc    ;         ;
+; stratix_pll.inc                                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
+; stratixii_pll.inc                                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/stratixii_pll.inc ;         ;
+; cycloneii_pll.inc                                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/cycloneii_pll.inc ;         ;
+; db/pll_sysclk_altpll.v                               ; yes             ; Auto-Generated Megafunction  ; D:/FPGA/adpll/db/pll_sysclk_altpll.v                                     ;         ;
++------------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                      ;
++---------------------------------------------+----------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                              ;
++---------------------------------------------+----------------------------------------------------------------------------------------------------+
+; Estimated Total logic elements              ; 56                                                                                                 ;
+;                                             ;                                                                                                    ;
+; Total combinational functions               ; 0                                                                                                  ;
+; Logic element usage by number of LUT inputs ;                                                                                                    ;
+;     -- 4 input functions                    ; 0                                                                                                  ;
+;     -- 3 input functions                    ; 0                                                                                                  ;
+;     -- <=2 input functions                  ; 0                                                                                                  ;
+;                                             ;                                                                                                    ;
+; Logic elements by mode                      ;                                                                                                    ;
+;     -- normal mode                          ; 0                                                                                                  ;
+;     -- arithmetic mode                      ; 0                                                                                                  ;
+;                                             ;                                                                                                    ;
+; Total registers                             ; 56                                                                                                 ;
+;     -- Dedicated logic registers            ; 56                                                                                                 ;
+;     -- I/O registers                        ; 0                                                                                                  ;
+;                                             ;                                                                                                    ;
+; I/O pins                                    ; 93                                                                                                 ;
+;                                             ;                                                                                                    ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                                                  ;
+;                                             ;                                                                                                    ;
+; Total PLLs                                  ; 1                                                                                                  ;
+;     -- PLLs                                 ; 1                                                                                                  ;
+;                                             ;                                                                                                    ;
+; Maximum fan-out node                        ; pll_sysclk:pll_sysclk_i1|altpll:altpll_component|pll_sysclk_altpll:auto_generated|wire_pll1_clk[0] ;
+; Maximum fan-out                             ; 33                                                                                                 ;
+; Total fan-out                               ; 241                                                                                                ;
+; Average fan-out                             ; 0.98                                                                                               ;
++---------------------------------------------+----------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                      ;
++---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Entity Name       ; Library Name ;
++---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+-------------------+--------------+
+; |adpll_top                                  ; 0 (0)               ; 56 (56)                   ; 0           ; 0            ; 0       ; 0         ; 93   ; 0            ; |adpll_top                                                                                   ; adpll_top         ; work         ;
+;    |pll_sysclk:pll_sysclk_i1|               ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adpll_top|pll_sysclk:pll_sysclk_i1                                                          ; pll_sysclk        ; work         ;
+;       |altpll:altpll_component|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adpll_top|pll_sysclk:pll_sysclk_i1|altpll:altpll_component                                  ; altpll            ; work         ;
+;          |pll_sysclk_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adpll_top|pll_sysclk:pll_sysclk_i1|altpll:altpll_component|pll_sysclk_altpll:auto_generated ; pll_sysclk_altpll ; work         ;
++---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
 +-----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration IP Cores Summary                                                                               ;
+; Analysis & Synthesis IP Cores Summary                                                                                 ;
 +--------+--------------+---------+--------------+--------------+-------------------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                     ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+-------------------------------------+-----------------+
 ; Altera ; ALTPLL       ; 16.1    ; N/A          ; N/A          ; |adpll_top|pll_sysclk:pll_sysclk_i1 ; pll_sysclk.vhd  ;
 +--------+--------------+---------+--------------+--------------+-------------------------------------+-----------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |adpll_top|LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state ;
++-------------------+-----------------+-------------------+-----------------+------------------+----------------------------------------------------+
+; Name              ; sink_state.end1 ; sink_state.st_err ; sink_state.run1 ; sink_state.stall ; sink_state.start                                   ;
++-------------------+-----------------+-------------------+-----------------+------------------+----------------------------------------------------+
+; sink_state.start  ; 0               ; 0                 ; 0               ; 0                ; 0                                                  ;
+; sink_state.stall  ; 0               ; 0                 ; 0               ; 1                ; 1                                                  ;
+; sink_state.run1   ; 0               ; 0                 ; 1               ; 0                ; 1                                                  ;
+; sink_state.st_err ; 0               ; 1                 ; 0               ; 0                ; 1                                                  ;
+; sink_state.end1   ; 1               ; 0                 ; 0               ; 0                ; 1                                                  ;
++-------------------+-----------------+-------------------+-----------------+------------------+----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                 ;
++-------------------------------------------------------------------------------------------------------------------------------+--------------------+
+; Register name                                                                                                                 ; Reason for Removal ;
++-------------------------------------------------------------------------------------------------------------------------------+--------------------+
+; LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state.start  ; Lost fanout        ;
+; LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state.stall  ; Lost fanout        ;
+; LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state.run1   ; Lost fanout        ;
+; LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state.st_err ; Lost fanout        ;
+; LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state.end1   ; Lost fanout        ;
+; Total Number of Removed Registers = 5                                                                                         ;                    ;
++-------------------------------------------------------------------------------------------------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 56    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
 
 
 +-----------------------------------------------------------------------------------------+
@@ -1080,95 +1303,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+--------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                      ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                     ; Setting            ; Default Value      ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; adpll_top          ; adpll              ;
-; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
-; Maximum processors allowed for parallel compilation                        ; All                ;                    ;
-; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
-; Verilog Show LMF Mapping Messages                                          ; Off                ;                    ;
-; Verilog Version                                                            ; SystemVerilog_2005 ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
-; Use smart compilation                                                      ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                                ; Off                ; Off                ;
-; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
-; Preserve fewer node names                                                  ; On                 ; On                 ;
-; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
-; State Machine Processing                                                   ; Auto               ; Auto               ;
-; Safe State Machine                                                         ; Off                ; Off                ;
-; Extract Verilog State Machines                                             ; On                 ; On                 ;
-; Extract VHDL State Machines                                                ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
-; Parallel Synthesis                                                         ; On                 ; On                 ;
-; DSP Block Balancing                                                        ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                 ; On                 ;
-; Power-Up Don't Care                                                        ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
-; Remove Duplicate Registers                                                 ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
-; Optimization Technique                                                     ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                         ; 70                 ; 70                 ;
-; Auto Carry Chains                                                          ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
-; Auto ROM Replacement                                                       ; On                 ; On                 ;
-; Auto RAM Replacement                                                       ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
-; Strict RAM Replacement                                                     ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
-; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                      ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
-; Report Parameter Settings                                                  ; On                 ; On                 ;
-; Report Source Assignments                                                  ; On                 ; On                 ;
-; Report Connectivity Checks                                                 ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
-; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                          ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
-; Clock MUX Protection                                                       ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
-; Block Design Naming                                                        ; Auto               ; Auto               ;
-; SDC constraint protection                                                  ; Off                ; Off                ;
-; Synthesis Effort                                                           ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-
-
 +------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "pll_sysclk:pll_sysclk_i1"                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1210,16 +1344,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dds_synthesizer:DDSPhaseMod"                                                           ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; ftw_i   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; phase_i ; Input  ; Info     ; Stuck at GND                                                                        ;
-; phase_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ampl_o  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dds_synthesizer:DDSPhaseMod"                                                                 ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ftw_i[11..7]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ftw_i[1..0]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ftw_i[31..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ftw_i[13..12] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ftw_i[6..4]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ftw_i[16]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ftw_i[15]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ftw_i[14]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ftw_i[3]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ftw_i[2]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; phase_i       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; phase_o       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ampl_o        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -1276,14 +1419,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 93                          ;
+; cycloneiii_ff         ; 56                          ;
+;     plain             ; 56                          ;
+; cycloneiii_io_obuf    ; 2                           ;
+; cycloneiii_lcell_comb ; 4                           ;
+;     normal            ; 4                           ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 2                           ;
+; cycloneiii_pll        ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.04                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sun Dec 17 12:57:46 2017
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off adpll -c adpll --analysis_and_elaboration
+    Info: Processing started: Mon Dec 18 20:57:02 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off adpll -c adpll
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 0 entities, in source file sine_lut_16_x_14.vhd
     Info (12022): Found design unit 1: sine_lut_pkg File: D:/FPGA/adpll/sine_lut_16_x_14.vhd Line: 11
@@ -1355,13 +1527,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file pll_sys
     Info (12022): Found design unit 1: pll_sysclk-SYN File: D:/FPGA/adpll/pll_sysclk.vhd Line: 56
     Info (12023): Found entity 1: pll_sysclk File: D:/FPGA/adpll/pll_sysclk.vhd Line: 43
 Info (12127): Elaborating entity "adpll_top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at adpll_top.vhd(154): object "sys_clk_90deg" assigned a value but never read File: D:/FPGA/adpll/adpll_top.vhd Line: 154
-Warning (10036): Verilog HDL or VHDL warning at adpll_top.vhd(163): object "s_vco_cos" assigned a value but never read File: D:/FPGA/adpll/adpll_top.vhd Line: 163
-Warning (10036): Verilog HDL or VHDL warning at adpll_top.vhd(172): object "s_phasemod" assigned a value but never read File: D:/FPGA/adpll/adpll_top.vhd Line: 172
-Warning (10492): VHDL Process Statement warning at adpll_top.vhd(241): signal "ADA_DCO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/FPGA/adpll/adpll_top.vhd Line: 241
-Info (12128): Elaborating entity "dds_synthesizer" for hierarchy "dds_synthesizer:RF_IN" File: D:/FPGA/adpll/adpll_top.vhd Line: 260
-Info (12128): Elaborating entity "MultPhaseDet" for hierarchy "MultPhaseDet:MixerSin" File: D:/FPGA/adpll/adpll_top.vhd Line: 314
-Info (12128): Elaborating entity "LPF2" for hierarchy "LPF2:LPFSin" File: D:/FPGA/adpll/adpll_top.vhd Line: 324
+Warning (10542): VHDL Variable Declaration warning at math_real_vhdl1993.vhd(2373): used initial value expression for variable "RECIPROCAL" because variable was never assigned a value File: c:/intelfpga_lite/16.1/quartus/libraries/vhdl/ieee/1993/math_real_vhdl1993.vhd Line: 2373
+Warning (10036): Verilog HDL or VHDL warning at adpll_top.vhd(156): object "sys_clk_90deg" assigned a value but never read File: D:/FPGA/adpll/adpll_top.vhd Line: 156
+Warning (10036): Verilog HDL or VHDL warning at adpll_top.vhd(165): object "s_vco_cos" assigned a value but never read File: D:/FPGA/adpll/adpll_top.vhd Line: 165
+Warning (10036): Verilog HDL or VHDL warning at adpll_top.vhd(174): object "s_phasemod" assigned a value but never read File: D:/FPGA/adpll/adpll_top.vhd Line: 174
+Warning (10492): VHDL Process Statement warning at adpll_top.vhd(245): signal "ADA_DCO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/FPGA/adpll/adpll_top.vhd Line: 245
+Info (12128): Elaborating entity "dds_synthesizer" for hierarchy "dds_synthesizer:RF_IN" File: D:/FPGA/adpll/adpll_top.vhd Line: 264
+Info (12128): Elaborating entity "MultPhaseDet" for hierarchy "MultPhaseDet:MixerSin" File: D:/FPGA/adpll/adpll_top.vhd Line: 318
+Info (12128): Elaborating entity "LPF2" for hierarchy "LPF2:LPFSin" File: D:/FPGA/adpll/adpll_top.vhd Line: 328
 Info (12128): Elaborating entity "LPF2_0002" for hierarchy "LPF2:LPFSin|LPF2_0002:lpf2_inst" File: D:/FPGA/adpll/LPF2.vhd Line: 40
 Warning (10036): Verilog HDL or VHDL warning at LPF2_0002.vhd(54): object "coeff_in_read_sig" assigned a value but never read File: D:/FPGA/adpll/LPF2/LPF2_0002.vhd Line: 54
 Info (12128): Elaborating entity "LPF2_0002_ast" for hierarchy "LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst" File: D:/FPGA/adpll/LPF2/LPF2_0002.vhd Line: 62
@@ -1373,10 +1546,10 @@ Info (12128): Elaborating entity "LPF2_0002_rtl_core" for hierarchy "LPF2:LPFSin
 Info (12128): Elaborating entity "dspba_delay" for hierarchy "LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:d_u0_m0_wo0_compute_q_11" File: D:/FPGA/adpll/LPF2/LPF2_0002_rtl_core.vhd Line: 131
 Info (12128): Elaborating entity "dspba_delay" for hierarchy "LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|LPF2_0002_rtl_core:\real_passthrough:hpfircore_core|dspba_delay:u0_m0_wo0_cma0_delay" File: D:/FPGA/adpll/LPF2/LPF2_0002_rtl_core.vhd Line: 344
 Info (12128): Elaborating entity "auk_dspip_roundsat_hpfir" for hierarchy "LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_roundsat_hpfir:\real_passthrough:gen_outp_blk:0:outp_blk" File: D:/FPGA/adpll/LPF2/LPF2_0002_ast.vhd Line: 244
-Info (12128): Elaborating entity "sample_avg" for hierarchy "sample_avg:sample_avg_i1" File: D:/FPGA/adpll/adpll_top.vhd Line: 335
+Info (12128): Elaborating entity "sample_avg" for hierarchy "sample_avg:sample_avg_i1" File: D:/FPGA/adpll/adpll_top.vhd Line: 339
 Info (12128): Elaborating entity "average2" for hierarchy "sample_avg:sample_avg_i1|average2:\GEN_REG:0:REG0" File: D:/FPGA/adpll/sample_avg.vhd Line: 56
-Info (12128): Elaborating entity "Lowpass" for hierarchy "Lowpass:LPFPLL" File: D:/FPGA/adpll/adpll_top.vhd Line: 351
-Info (12128): Elaborating entity "pll_sysclk" for hierarchy "pll_sysclk:pll_sysclk_i1" File: D:/FPGA/adpll/adpll_top.vhd Line: 395
+Info (12128): Elaborating entity "Lowpass" for hierarchy "Lowpass:LPFPLL" File: D:/FPGA/adpll/adpll_top.vhd Line: 355
+Info (12128): Elaborating entity "pll_sysclk" for hierarchy "pll_sysclk:pll_sysclk_i1" File: D:/FPGA/adpll/adpll_top.vhd Line: 399
 Info (12128): Elaborating entity "altpll" for hierarchy "pll_sysclk:pll_sysclk_i1|altpll:altpll_component" File: D:/FPGA/adpll/pll_sysclk.vhd Line: 163
 Info (12130): Elaborated megafunction instantiation "pll_sysclk:pll_sysclk_i1|altpll:altpll_component" File: D:/FPGA/adpll/pll_sysclk.vhd Line: 163
 Info (12133): Instantiated megafunction "pll_sysclk:pll_sysclk_i1|altpll:altpll_component" with the following parameter: File: D:/FPGA/adpll/pll_sysclk.vhd Line: 163
@@ -1449,11 +1622,58 @@ Info (12133): Instantiated megafunction "pll_sysclk:pll_sysclk_i1|altpll:altpll_
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_sysclk_altpll.v
     Info (12023): Found entity 1: pll_sysclk_altpll File: D:/FPGA/adpll/db/pll_sysclk_altpll.v Line: 30
-Info (12128): Elaborating entity "pll_sysclk_altpll" for hierarchy "pll_sysclk:pll_sysclk_i1|altpll:altpll_component|pll_sysclk_altpll:auto_generated" File: d:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 742 megabytes
-    Info: Processing ended: Sun Dec 17 12:57:57 2017
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:21
+Info (12128): Elaborating entity "pll_sysclk_altpll" for hierarchy "pll_sysclk:pll_sysclk_i1|altpll:altpll_component|pll_sysclk_altpll:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
+Warning (13032): The following tri-state nodes are fed by constants
+    Warning (13033): The pin "AD_SCLK" is fed by VCC File: D:/FPGA/adpll/adpll_top.vhd Line: 38
+    Warning (13033): The pin "AD_SDIO" is fed by GND File: D:/FPGA/adpll/adpll_top.vhd Line: 40
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "AD_SCLK~synth" File: D:/FPGA/adpll/adpll_top.vhd Line: 38
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ADA_OE" is stuck at GND File: D:/FPGA/adpll/adpll_top.vhd Line: 32
+    Warning (13410): Pin "ADB_OE" is stuck at GND File: D:/FPGA/adpll/adpll_top.vhd Line: 33
+    Warning (13410): Pin "ADA_SPI_CS" is stuck at VCC File: D:/FPGA/adpll/adpll_top.vhd Line: 42
+    Warning (13410): Pin "ADB_SPI_CS" is stuck at VCC File: D:/FPGA/adpll/adpll_top.vhd Line: 43
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Warning (15899): PLL "pll_sysclk:pll_sysclk_i1|altpll:altpll_component|pll_sysclk_altpll:auto_generated|pll1" has parameters clk1_multiply_by and clk1_divide_by specified but port CLK[1] is not connected File: D:/FPGA/adpll/db/pll_sysclk_altpll.v Line: 46
+Warning (21074): Design contains 25 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[1]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[2]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[3]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[4]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[5]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[6]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[7]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[8]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[9]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[10]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[11]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[12]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[13]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[14]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[15]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[16]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[17]" File: D:/FPGA/adpll/adpll_top.vhd Line: 17
+    Warning (15610): No output dependent on input pin "KEY[1]" File: D:/FPGA/adpll/adpll_top.vhd Line: 18
+    Warning (15610): No output dependent on input pin "KEY[2]" File: D:/FPGA/adpll/adpll_top.vhd Line: 18
+    Warning (15610): No output dependent on input pin "KEY[3]" File: D:/FPGA/adpll/adpll_top.vhd Line: 18
+    Warning (15610): No output dependent on input pin "ADB_DCO" File: D:/FPGA/adpll/adpll_top.vhd Line: 27
+    Warning (15610): No output dependent on input pin "ADA_OR" File: D:/FPGA/adpll/adpll_top.vhd Line: 35
+    Warning (15610): No output dependent on input pin "ADB_OR" File: D:/FPGA/adpll/adpll_top.vhd Line: 36
+    Warning (15610): No output dependent on input pin "KEY[0]" File: D:/FPGA/adpll/adpll_top.vhd Line: 18
+Info (21057): Implemented 150 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 55 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21060): Implemented 2 bidirectional pins
+    Info (21061): Implemented 56 logic cells
+    Info (21065): Implemented 1 PLLs
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 798 megabytes
+    Info: Processing ended: Mon Dec 18 20:57:17 2017
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:23
 
 

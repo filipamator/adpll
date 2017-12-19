@@ -1,4 +1,10 @@
 
+State Machine - |adpll_top|dac_i2s:dac_i2s_i1|avconf:avconf_i1|mSetup_ST
+Name mSetup_ST.0000 mSetup_ST.0010 mSetup_ST.0001 
+mSetup_ST.0000 0 0 0 
+mSetup_ST.0001 1 0 1 
+mSetup_ST.0010 1 1 0 
+
 State Machine - |adpll_top|LPF2:LPFSin|LPF2_0002:lpf2_inst|LPF2_0002_ast:LPF2_0002_ast_inst|auk_dspip_avalon_streaming_sink_hpfir:sink|sink_state
 Name sink_state.end1 sink_state.st_err sink_state.run1 sink_state.stall sink_state.start 
 sink_state.start 0 0 0 0 0 

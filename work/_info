@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/Filip/ss_tx
 Eadpll_top
-Z0 w1513639378
+Z0 w1513706005
 Z1 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
 Z2 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
 Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
@@ -22,13 +22,13 @@ Z9 8D:/FPGA/adpll/adpll_top.vhd
 Z10 FD:/FPGA/adpll/adpll_top.vhd
 l0
 L7
-VTkbaSRSHoD0Ye^za5OFG32
-!s100 L^5I8L7?8i5dXGBTnjW2<1
+V49KN3NMOJDoB1`k3cS<g>2
+!s100 9_ajoQd<<Pf@9aM8JXA4b2
 Z11 OV;C;10.5b;63
 32
-Z12 !s110 1513639383
+Z12 !s110 1513706011
 !i10b 1
-Z13 !s108 1513639383.000000
+Z13 !s108 1513706011.000000
 Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/adpll_top.vhd|
 Z15 !s107 D:/FPGA/adpll/adpll_top.vhd|
 !i113 1
@@ -42,11 +42,11 @@ R4
 R5
 R6
 R7
-DEx4 work 9 adpll_top 0 22 TkbaSRSHoD0Ye^za5OFG32
-l234
-L70
-V02[H=g]5<YP0`f=8Rk9_43
-!s100 IHo`3Qgk4mbYEeCHb_k;I1
+DEx4 work 9 adpll_top 0 22 49KN3NMOJDoB1`k3cS<g>2
+l253
+L72
+VbfAU=zLCg7h:@?N>AV>aJ0
+!s100 ^^h9;^Mj?N7j<dAeM00zn0
 R11
 32
 R12
@@ -146,7 +146,7 @@ R27
 R16
 R17
 valtera_avalon_sc_fifo
-Z28 !s110 1513639385
+Z28 !s110 1513706013
 !i10b 1
 !s100 4mK@em][G=j]om3zJIhOc0
 IV9K6`>WmjLChVIilXZ`iU0
@@ -160,14 +160,14 @@ Z30 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z31 !s108 1513639384.000000
+Z31 !s108 1513706013.000000
 !s107 D:/FPGA/adpll/LPF2_sim/altera_avalon_sc_fifo.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/FPGA/adpll/LPF2_sim/altera_avalon_sc_fifo.v|
 !i113 1
 Z32 o-work work
 Z33 tCvgOpt 0
 vAltera_UP_Audio_Bit_Counter
-Z34 !s110 1513639386
+Z34 !s110 1513706014
 !i10b 1
 !s100 0o^lS^IaZf6lc8;mFc89O3
 IDURU_EAZ_o[BHhafBWBGc2
@@ -181,7 +181,7 @@ R30
 r1
 !s85 0
 31
-Z37 !s108 1513639386.000000
+Z37 !s108 1513706014.000000
 !s107 D:/FPGA/adpll/i2s/Audio_Controller/Altera_UP_Audio_Bit_Counter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/FPGA/adpll/i2s/Audio_Controller/Altera_UP_Audio_Bit_Counter.v|
 !i113 1
@@ -211,7 +211,7 @@ R32
 R33
 n@altera_@u@p_@audio_@in_@deserializer
 vAltera_UP_Audio_Out_Serializer
-R34
+Z38 !s110 1513706015
 !i10b 1
 !s100 ^b>IEB6190omD0d_0TU]R0
 I>@oL=a6<Jio;_k]i1agIJ2
@@ -233,7 +233,7 @@ R32
 R33
 n@altera_@u@p_@audio_@out_@serializer
 vAltera_UP_Clock_Edge
-R34
+R38
 !i10b 1
 !s100 m;MP:OR1QP]f>i1a;Th_h0
 IT1=IkAYWEF1mKjb?92[322
@@ -247,7 +247,7 @@ R30
 r1
 !s85 0
 31
-R37
+Z39 !s108 1513706015.000000
 !s107 D:/FPGA/adpll/i2s/Audio_Controller/Altera_UP_Clock_Edge.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/FPGA/adpll/i2s/Audio_Controller/Altera_UP_Clock_Edge.v|
 !i113 1
@@ -255,7 +255,7 @@ R32
 R33
 n@altera_@u@p_@clock_@edge
 vAltera_UP_SYNC_FIFO
-R34
+R38
 !i10b 1
 !s100 ?S5>gdm0e84HSI=i?VPQ43
 II4kKmijVY54JzEdL0B::92
@@ -269,7 +269,7 @@ R30
 r1
 !s85 0
 31
-R37
+R39
 !s107 D:/FPGA/adpll/i2s/Audio_Controller/Altera_UP_SYNC_FIFO.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/FPGA/adpll/i2s/Audio_Controller/Altera_UP_SYNC_FIFO.v|
 !i113 1
@@ -277,7 +277,7 @@ R32
 R33
 n@altera_@u@p_@s@y@n@c_@f@i@f@o
 vAudio_Clock
-R34
+R38
 !i10b 1
 !s100 zMXi]?PGQWc4TB2kK;I9[2
 IaIfTmPCUjTIaEc2D?=gG:3
@@ -291,7 +291,7 @@ R30
 r1
 !s85 0
 31
-R37
+R39
 !s107 D:/FPGA/adpll/i2s/Audio_Controller/Audio_Clock.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/FPGA/adpll/i2s/Audio_Controller/Audio_Clock.v|
 !i113 1
@@ -299,7 +299,7 @@ R32
 R33
 n@audio_@clock
 vAudio_Controller
-R34
+R38
 !i10b 1
 !s100 IJaX49:L6AJE<@=;f8]0R1
 I`SY==H]Cn7@M]8^X3ZCd_3
@@ -313,7 +313,7 @@ R30
 r1
 !s85 0
 31
-R37
+R39
 !s107 D:/FPGA/adpll/i2s/Audio_Controller/Audio_Controller.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/FPGA/adpll/i2s/Audio_Controller/Audio_Controller.v|
 !i113 1
@@ -326,8 +326,8 @@ R3
 R6
 R7
 R8
-Z38 8D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd
-Z39 FD:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd
+Z40 8D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd
+Z41 FD:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd
 l0
 L41
 VZR^ZDg2SZVVcR31oo[=Pl3
@@ -337,8 +337,8 @@ R11
 R12
 !i10b 1
 R13
-Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd|
-Z41 !s107 D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd|
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd|
+Z43 !s107 D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd|
 !i113 1
 R16
 R17
@@ -356,40 +356,40 @@ R11
 R12
 !i10b 1
 R13
-R40
-R41
+R42
+R43
 !i113 1
 R16
 R17
 Eauk_dspip_avalon_streaming_sink_hpfir
 R18
-Z42 DPx9 altera_mf 20 altera_mf_components 0 22 m2K6F5NmQKkFhQa^^]15g3
-Z43 DPx4 work 24 auk_dspip_math_pkg_hpfir 0 22 PN=W:KSHbi=NI`=b16ZfT2
-Z44 DPx4 work 23 auk_dspip_lib_pkg_hpfir 0 22 63_fiUOkED34TV=dIL=MM3
+Z44 DPx9 altera_mf 20 altera_mf_components 0 22 m2K6F5NmQKkFhQa^^]15g3
+Z45 DPx4 work 24 auk_dspip_math_pkg_hpfir 0 22 PN=W:KSHbi=NI`=b16ZfT2
+Z46 DPx4 work 23 auk_dspip_lib_pkg_hpfir 0 22 63_fiUOkED34TV=dIL=MM3
 R5
 R6
 R7
 R8
-Z45 8D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd
-Z46 FD:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd
+Z47 8D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd
+Z48 FD:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd
 l0
 L56
 V2zXE_2GHE5]8Phl0`<[o20
 !s100 0WO5KznO2MM4IEKTLL4ea1
 R11
 32
-Z47 !s110 1513639384
+Z49 !s110 1513706012
 !i10b 1
-R31
-Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd|
-Z49 !s107 D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd|
+Z50 !s108 1513706012.000000
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd|
+Z52 !s107 D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd|
 !i113 1
 R16
 R17
 Artl
-R42
-R43
 R44
+R45
+R46
 R5
 R6
 R7
@@ -400,41 +400,41 @@ VLU][7a[?lIo_`zEl;Glm70
 !s100 aKlIFR2DezO>78LXQeZZW1
 R11
 32
-R47
-!i10b 1
-R31
-R48
 R49
+!i10b 1
+R50
+R51
+R52
 !i113 1
 R16
 R17
 Eauk_dspip_avalon_streaming_source_hpfir
 R18
-R43
-R42
+R45
+R44
 R5
 R6
 R7
 R8
-Z50 8D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd
-Z51 FD:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd
+Z53 8D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd
+Z54 FD:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd
 l0
 L70
 VPl8<knjk9aMIj@=RBnTS12
 !s100 z_E>RhDjTK@iSkAe6<CzM1
 R11
 32
-R47
+R49
 !i10b 1
-R31
-Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd|
-Z53 !s107 D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd|
+R50
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd|
+Z56 !s107 D:/FPGA/adpll/LPF2_sim/auk_dspip_avalon_streaming_source_hpfir.vhd|
 !i113 1
 R16
 R17
 Artl
-R43
-R42
+R45
+R44
 R5
 R6
 R7
@@ -445,16 +445,16 @@ Vk0ibUPclboNiadE[h4?PF3
 !s100 9_^:d_>A;JGb2ekO`XAiL1
 R11
 32
-R47
+R49
 !i10b 1
-R31
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R16
 R17
 Pauk_dspip_lib_pkg_hpfir
-R43
+R45
 R5
 R6
 R7
@@ -468,9 +468,9 @@ V63_fiUOkED34TV=dIL=MM3
 !s100 f?>LI6^Y:?0:4C>aOS6?X2
 R11
 32
-R47
+R49
 !i10b 1
-R31
+R50
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/auk_dspip_lib_pkg_hpfir.vhd|
 !s107 D:/FPGA/adpll/LPF2_sim/auk_dspip_lib_pkg_hpfir.vhd|
 !i113 1
@@ -482,8 +482,8 @@ R6
 R7
 R18
 R8
-Z54 8D:/FPGA/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd
-Z55 FD:/FPGA/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd
+Z57 8D:/FPGA/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd
+Z58 FD:/FPGA/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd
 l0
 L54
 VPN=W:KSHbi=NI`=b16ZfT2
@@ -491,16 +491,16 @@ VPN=W:KSHbi=NI`=b16ZfT2
 R11
 32
 b1
-R47
+R49
 !i10b 1
-R31
-Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd|
-Z57 !s107 D:/FPGA/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd|
+R50
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd|
+Z60 !s107 D:/FPGA/adpll/LPF2_sim/auk_dspip_math_pkg_hpfir.vhd|
 !i113 1
 R16
 R17
 Bbody
-R43
+R45
 R5
 R6
 R7
@@ -510,11 +510,11 @@ VbLE=UbkJ5_BG<g_kZ1R7<1
 !s100 EDZNSThdcYV1lkL7HbnIz0
 R11
 32
-R47
+R49
 !i10b 1
-R31
-R56
-R57
+R50
+R59
+R60
 !i113 1
 R16
 R17
@@ -524,19 +524,19 @@ R5
 R6
 R7
 R8
-Z58 8D:/FPGA/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd
-Z59 FD:/FPGA/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd
+Z61 8D:/FPGA/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd
+Z62 FD:/FPGA/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd
 l0
 L39
 VaQ4fk>P`?JJd;:h@cC^``3
 !s100 S`Ha]KjQXV0CDDgljgCX;0
 R11
 32
-R47
+R49
 !i10b 1
-R31
-Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd|
-Z61 !s107 D:/FPGA/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd|
+R50
+Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd|
+Z64 !s107 D:/FPGA/adpll/LPF2_sim/auk_dspip_roundsat_hpfir.vhd|
 !i113 1
 R16
 R17
@@ -551,16 +551,16 @@ VQ^:8iJn;5CMlAN6[98[WS3
 !s100 SAz6VWg0=:KiPPFk<lih43
 R11
 32
-R47
+R49
 !i10b 1
-R31
-R60
-R61
+R50
+R63
+R64
 !i113 1
 R16
 R17
 vavconf
-R34
+R38
 !i10b 1
 !s100 djMI^oJYZ[f;:_5<hDBQX1
 IXiZ[VkmXoll5aM231M>UV3
@@ -574,33 +574,33 @@ R30
 r1
 !s85 0
 31
-R37
+R39
 !s107 D:/FPGA/adpll/i2s/avconf/avconf.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/FPGA/adpll/i2s/avconf/avconf.v|
 !i113 1
 R32
 R33
 Eaverage2
-Z62 w1513514467
+Z65 w1513514467
 R3
 R2
 R5
 R6
 R7
 R8
-Z63 8D:/FPGA/adpll/sample_avg.vhd
-Z64 FD:/FPGA/adpll/sample_avg.vhd
+Z66 8D:/FPGA/adpll/sample_avg.vhd
+Z67 FD:/FPGA/adpll/sample_avg.vhd
 l0
 L80
 VK9iJM1DMf>VV:_11f``A<3
 !s100 kHIc@bi99T5:E`e^lj5LO2
 R11
 32
-Z65 !s110 1513639382
+Z68 !s110 1513706010
 !i10b 1
-Z66 !s108 1513639382.000000
-Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/sample_avg.vhd|
-Z68 !s107 D:/FPGA/adpll/sample_avg.vhd|
+Z69 !s108 1513706010.000000
+Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/sample_avg.vhd|
+Z71 !s107 D:/FPGA/adpll/sample_avg.vhd|
 !i113 1
 R16
 R17
@@ -617,42 +617,42 @@ VhXl>YVb[X8;gAI[D3T5aK1
 !s100 HORbYfehkeAIX@]gLYKe23
 R11
 32
-R65
-!i10b 1
-R66
-R67
 R68
+!i10b 1
+R69
+R70
+R71
 !i113 1
 R16
 R17
 Edac_i2s
-Z69 w1513634858
+Z72 w1513634858
 R5
 R3
-Z70 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z73 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R6
 R7
 R8
-Z71 8D:/FPGA/adpll/i2s/dac_i2s.vhd
-Z72 FD:/FPGA/adpll/i2s/dac_i2s.vhd
+Z74 8D:/FPGA/adpll/i2s/dac_i2s.vhd
+Z75 FD:/FPGA/adpll/i2s/dac_i2s.vhd
 l0
 L7
 VD20b`<b]h<e9`6TTJjL5l1
 !s100 6W50Ob35bI]X:>ZSc:aE?2
 R11
 32
-R28
+R34
 !i10b 1
-Z73 !s108 1513639385.000000
-Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/i2s/dac_i2s.vhd|
-Z75 !s107 D:/FPGA/adpll/i2s/dac_i2s.vhd|
+R37
+Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/i2s/dac_i2s.vhd|
+Z77 !s107 D:/FPGA/adpll/i2s/dac_i2s.vhd|
 !i113 1
 R16
 R17
 Artl
 R5
 R3
-R70
+R73
 R6
 R7
 DEx4 work 7 dac_i2s 0 22 D20b`<b]h<e9`6TTJjL5l1
@@ -662,11 +662,11 @@ Vi@ZcJ3W9QElMDL:eAb@FB3
 !s100 CEmJi69NcBz7EMG?MiL423
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R74
-R75
+R37
+R76
+R77
 !i113 1
 R16
 R17
@@ -674,13 +674,13 @@ Edds_synthesizer
 R18
 R2
 R4
-R70
+R73
 R3
 R6
 R7
 R8
-Z76 8D:/FPGA/adpll/dds_synthesizer.vhd
-Z77 FD:/FPGA/adpll/dds_synthesizer.vhd
+Z78 8D:/FPGA/adpll/dds_synthesizer.vhd
+Z79 FD:/FPGA/adpll/dds_synthesizer.vhd
 l0
 L52
 VC<C>D47DCB`la6VmBOl``3
@@ -690,15 +690,15 @@ R11
 R12
 !i10b 1
 R13
-Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/dds_synthesizer.vhd|
-Z79 !s107 D:/FPGA/adpll/dds_synthesizer.vhd|
+Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/dds_synthesizer.vhd|
+Z81 !s107 D:/FPGA/adpll/dds_synthesizer.vhd|
 !i113 1
 R16
 R17
 Adds_synthesizer_arch
 R2
 R4
-R70
+R73
 R3
 R6
 R7
@@ -712,22 +712,22 @@ R11
 R12
 !i10b 1
 R13
-R78
-R79
+R80
+R81
 !i113 1
 R16
 R17
 Pdds_synthesizer_pkg
 R2
 R4
-R70
+R73
 R3
 R6
 R7
 R18
 R8
-R76
-R77
+R78
+R79
 l0
 L25
 V5[hfaj=0aXEfNB^ZU>ZLF3
@@ -737,8 +737,8 @@ R11
 R12
 !i10b 1
 R13
-R78
-R79
+R80
+R81
 !i113 1
 R16
 R17
@@ -746,7 +746,7 @@ Bbody
 DPx4 work 19 dds_synthesizer_pkg 0 22 5[hfaj=0aXEfNB^ZU>ZLF3
 R2
 R4
-R70
+R73
 R3
 R6
 R7
@@ -759,35 +759,35 @@ R11
 R12
 !i10b 1
 R13
-R78
-R79
+R80
+R81
 !i113 1
 R16
 R17
 Edspba_delay
 R18
-Z80 DPx4 work 21 dspba_library_package 0 22 A2bDKJiV;=N=F0hTB[>gZ1
+Z82 DPx4 work 21 dspba_library_package 0 22 A2bDKJiV;=N=F0hTB[>gZ1
 R6
 R7
 R8
-Z81 8D:/FPGA/adpll/LPF2_sim/dspba_library.vhd
-Z82 FD:/FPGA/adpll/LPF2_sim/dspba_library.vhd
+Z83 8D:/FPGA/adpll/LPF2_sim/dspba_library.vhd
+Z84 FD:/FPGA/adpll/LPF2_sim/dspba_library.vhd
 l0
 L17
 V7<XHHG]54LUdPk9WY[Dnb2
 !s100 ^TiG3k=nd2oZ:zDO86VNb1
 R11
 32
-R47
+R49
 !i10b 1
-R31
-Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/dspba_library.vhd|
-Z84 !s107 D:/FPGA/adpll/LPF2_sim/dspba_library.vhd|
+R50
+Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/dspba_library.vhd|
+Z86 !s107 D:/FPGA/adpll/LPF2_sim/dspba_library.vhd|
 !i113 1
 R16
 R17
 Adelay
-R80
+R82
 R6
 R7
 DEx4 work 11 dspba_delay 0 22 7<XHHG]54LUdPk9WY[Dnb2
@@ -797,11 +797,11 @@ VBak>ZnmdG`JQCHmJdnQa?3
 !s100 j]g:M?2k]LeVG21D9S<fR1
 R11
 32
-R47
+R49
 !i10b 1
-R31
-R83
-R84
+R50
+R85
+R86
 !i113 1
 R16
 R17
@@ -818,9 +818,9 @@ VA2bDKJiV;=N=F0hTB[>gZ1
 !s100 Kkg3D5QbeHdNM2YFz@ZF=2
 R11
 32
-R47
+R49
 !i10b 1
-R31
+R50
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/dspba_library_package.vhd|
 !s107 D:/FPGA/adpll/LPF2_sim/dspba_library_package.vhd|
 !i113 1
@@ -828,29 +828,29 @@ R16
 R17
 Edspba_sync_reg
 R18
-R80
+R82
 R5
 R6
 R7
 R8
-R81
-R82
+R83
+R84
 l0
 L91
 VgX?[;OFRkY9GF;6MGAElW1
 !s100 LBWk;n`f_bk?X_QJICA5i3
 R11
 32
-R47
+R49
 !i10b 1
-R31
-R83
-R84
+R50
+R85
+R86
 !i113 1
 R16
 R17
 Async_reg
-R80
+R82
 R5
 R6
 R7
@@ -861,21 +861,21 @@ VkA9SfV2R;XI4VR]^lGIo[1
 !s100 EMlEXT<EU621V40LT:5fK3
 R11
 32
-R47
+R49
 !i10b 1
-R31
-R83
-R84
+R50
+R85
+R86
 !i113 1
 R16
 R17
 Efifo
-Z85 w1504561690
+Z87 w1504561690
 R6
 R7
 R8
-Z86 8D:/FPGA/adpll/i2s/fifo.vhd
-Z87 FD:/FPGA/adpll/i2s/fifo.vhd
+Z88 8D:/FPGA/adpll/i2s/fifo.vhd
+Z89 FD:/FPGA/adpll/i2s/fifo.vhd
 l0
 L43
 Vek:jYgmTIDFIT`QhUk_V31
@@ -885,8 +885,8 @@ R11
 R34
 !i10b 1
 R37
-Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/i2s/fifo.vhd|
-Z89 !s107 D:/FPGA/adpll/i2s/fifo.vhd|
+Z90 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/i2s/fifo.vhd|
+Z91 !s107 D:/FPGA/adpll/i2s/fifo.vhd|
 !i113 1
 R16
 R17
@@ -903,29 +903,29 @@ R11
 R34
 !i10b 1
 R37
-R88
-R89
+R90
+R91
 !i113 1
 R16
 R17
 Efp_add
-Z90 w1512426025
+Z92 w1512426025
 R6
 R7
 R8
-Z91 8D:/FPGA/adpll/math/fp_add.vhd
-Z92 FD:/FPGA/adpll/math/fp_add.vhd
+Z93 8D:/FPGA/adpll/math/fp_add.vhd
+Z94 FD:/FPGA/adpll/math/fp_add.vhd
 l0
 L4761
 V^ThGE<80N?82LImn>I39C2
 !s100 Rb1;IB6E@?P49=z]aeh??0
 R11
 32
-R28
+R34
 !i10b 1
-R73
-Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/math/fp_add.vhd|
-Z94 !s107 D:/FPGA/adpll/math/fp_add.vhd|
+R31
+Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/math/fp_add.vhd|
+Z96 !s107 D:/FPGA/adpll/math/fp_add.vhd|
 !i113 1
 R16
 R17
@@ -939,21 +939,21 @@ V1E70bLLGU@YbYeHzRX6gQ2
 !s100 FN]6:3[F2fRAak6]7b;;j2
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altbarrel_shift_35e
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
 L48
 V8U;nTkK^JeTXzlY0>F8kI0
@@ -962,9 +962,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -980,19 +980,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altbarrel_shift_olb
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
 L306
 V@ID@@c9bhBK5<;Y?F9VE63
@@ -1001,9 +1001,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1019,30 +1019,30 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altfp_add_sub_7jj
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
-Z95 L1536
+Z97 L1536
 V@60HES]eFWnY^K3kH:mhL2
 !s100 UCehYFZMh:NH18YD2hI<X1
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1051,26 +1051,26 @@ R6
 R7
 DEx4 work 24 fp_add_altfp_add_sub_7jj 0 22 @60HES]eFWnY^K3kH:mhL2
 l2938
-Z96 L1547
+Z98 L1547
 VFJI;KWf1?zI5QI0;@WUUN2
 !s100 UL2<`Td;S0zFYLADR^]PP0
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_3e8
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
 L549
 Voc5NlKSAZ:]S^k9P;`@9g2
@@ -1079,9 +1079,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1097,19 +1097,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_3v7
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
 L697
 VBQSBfgL5zaDo3V^eR@G0:0
@@ -1118,9 +1118,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1136,19 +1136,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_6e8
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
 L571
 VBJYPcJ>dWGG3QW[VVfaPf1
@@ -1157,9 +1157,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1175,19 +1175,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_6v7
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
 L717
 VMbm@YTMS]fDlK_U]bGNT;1
@@ -1196,9 +1196,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1214,19 +1214,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_be8
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
 L625
 VLCDHi=5KRJ6S^`_>1Z4EI3
@@ -1235,9 +1235,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1253,19 +1253,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_bv7
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
 L774
 V`zcb[aOMd<]Ch[9dfaSF:3
@@ -1274,9 +1274,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1292,30 +1292,30 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_e48
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
-Z97 L1470
+Z99 L1470
 VX>7ZAg?a@jm?E<0H=A9je3
 !s100 O0OVbE_2oXPof[@[3]L`Z2
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1323,38 +1323,38 @@ Artl
 R6
 R7
 DEx4 work 30 fp_add_altpriority_encoder_e48 0 22 X>7ZAg?a@jm?E<0H=A9je3
-Z98 l1502
-Z99 L1478
+Z100 l1502
+Z101 L1478
 VY?==j@5C@IgCaj5d:UM^g1
 !s100 d90P396SL6fefg28OVKUD1
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_f48
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
-Z100 L1407
+Z102 L1407
 V[fK<LlGJg4GZWFX7n;Ogn3
 !s100 B9If]7AK>l=CEX=6gFm]`2
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1362,38 +1362,38 @@ Artl
 R6
 R7
 DEx4 work 30 fp_add_altpriority_encoder_f48 0 22 [fK<LlGJg4GZWFX7n;Ogn3
-Z101 l1439
-Z102 L1415
+Z103 l1439
+Z104 L1415
 VG>PnR1AjE[MK^L9hL@zTO1
 !s100 Za2SecaV94g8U2d[6GCQ83
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_fj8
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
-Z103 L1187
+Z105 L1187
 VHLTCcXgf;9l@g@Ib>fRiU0
 !s100 [bBBUgW0OZUiMMA60M;S12
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1401,38 +1401,38 @@ Artl
 R6
 R7
 DEx4 work 30 fp_add_altpriority_encoder_fj8 0 22 HLTCcXgf;9l@g@Ib>fRiU0
-Z104 l1214
-Z105 L1196
+Z106 l1214
+Z107 L1196
 VB_^^_jLNo9l@QLAda>@ki1
 !s100 Mmm41>92ZKg@<;>E=g5Wc3
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_n28
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
-Z106 L1263
+Z108 L1263
 V_mg1<IB[hFcXdbT;EcNGR2
 !s100 H6lC?9^DV;Gmgi4gADJK72
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1440,38 +1440,38 @@ Artl
 R6
 R7
 DEx4 work 30 fp_add_altpriority_encoder_n28 0 22 _mg1<IB[hFcXdbT;EcNGR2
-Z107 l1275
-Z108 L1271
+Z109 l1275
+Z110 L1271
 V3z5Ue0^o0JW8Md67S5W:;2
 !s100 L]5]CX9m]L95WQ71EPz=l3
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_nh8
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
-Z109 L1047
+Z111 L1047
 VDbLJfWz8E?GGbOcGIRkeg3
 !s100 d=A>RVR=5NTPAQMGPnKm50
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1479,38 +1479,38 @@ Artl
 R6
 R7
 DEx4 work 30 fp_add_altpriority_encoder_nh8 0 22 DbLJfWz8E?GGbOcGIRkeg3
-Z110 l1060
-Z111 L1056
+Z112 l1060
+Z113 L1056
 VCe8X?UBOUCLgk6oHJNP540
 !s100 FOcGa>k4F:>TK=7B9]6GO3
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_q28
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
-Z112 L1287
+Z114 L1287
 VXdS^`TF;E]mn3z3S?m]DH0
 !s100 @LWfb06JIaDK`zoeH_AOa0
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1518,27 +1518,27 @@ Artl
 R6
 R7
 DEx4 work 30 fp_add_altpriority_encoder_q28 0 22 XdS^`TF;E]mn3z3S?m]DH0
-Z113 l1319
-Z114 L1295
+Z115 l1319
+Z116 L1295
 VcGYcZ`ZGF=V_niDz=@N@n2
 !s100 ?QT]fDCE3o;MZH@0a7Bge3
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_qb6
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
 L964
 V6ZQhF9V<?EP]9X9macHA91
@@ -1547,9 +1547,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1565,30 +1565,30 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_qh8
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
-Z115 L1073
+Z117 L1073
 VVbc4g`b3igLQP7@z9e<iV3
 !s100 MR6lMW;la0FJEKM76;Y9U2
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1596,27 +1596,27 @@ Artl
 R6
 R7
 DEx4 work 30 fp_add_altpriority_encoder_qh8 0 22 Vbc4g`b3igLQP7@z9e<iV3
-Z116 l1100
-Z117 L1082
+Z118 l1100
+Z119 L1082
 Vnf3V?^UB`Y?n^SMg>U9W23
 !s100 GSV`4_7ifHRfECRj6f]=D2
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_r08
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
 L837
 VQEQCJm6;94T;ZcG220]O70
@@ -1625,9 +1625,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1643,19 +1643,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_rf8
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
 L904
 Vdz0c6QnDa@>5QL5BLD3am1
@@ -1664,9 +1664,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1682,30 +1682,30 @@ R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_v28
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
-Z118 L1344
+Z120 L1344
 VR0=Z>oebK5z7?G:aFWC@U3
 !s100 nMOREKzVU92oR7]FgI5Y=3
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1713,38 +1713,38 @@ Artl
 R6
 R7
 DEx4 work 30 fp_add_altpriority_encoder_v28 0 22 R0=Z>oebK5z7?G:aFWC@U3
-Z119 l1376
-Z120 L1352
+Z121 l1376
+Z122 L1352
 Vi>:M_EmkWUT6L_E35K9D53
 !s100 ^eSGai5<7TKB6FMAKkE_O2
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_add_altpriority_encoder_vh8
-R90
+R92
 R6
 R7
 R8
-R91
-R92
+R93
+R94
 l0
-Z121 L1127
+Z123 L1127
 VI49Y0k3B=K`TH0XRdbjk>2
 !s100 :<g0nDB3TYC2bgG^VoG^k0
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
@@ -1752,38 +1752,38 @@ Artl
 R6
 R7
 DEx4 work 30 fp_add_altpriority_encoder_vh8 0 22 I49Y0k3B=K`TH0XRdbjk>2
-Z122 l1154
-Z123 L1136
+Z124 l1154
+Z125 L1136
 V@3ge9;8HS5gCM;@ajMT;:2
 !s100 N=j_IXf_o6Ac@fz7_ZBkb1
 R11
 32
 R28
 !i10b 1
-R73
-R93
-R94
+R31
+R95
+R96
 !i113 1
 R16
 R17
 Efp_mult
-Z124 w1512425866
+Z126 w1512425866
 R6
 R7
 R8
-Z125 8D:/FPGA/adpll/math/fp_mult.vhd
-Z126 FD:/FPGA/adpll/math/fp_mult.vhd
+Z127 8D:/FPGA/adpll/math/fp_mult.vhd
+Z128 FD:/FPGA/adpll/math/fp_mult.vhd
 l0
 L1422
 VEafG6H>P:g0KLSS<FBg1:3
 !s100 _eD;Uh^>n:LD]9dQh>=Wa0
 R11
 32
-R28
+R34
 !i10b 1
-R73
-Z127 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/math/fp_mult.vhd|
-Z128 !s107 D:/FPGA/adpll/math/fp_mult.vhd|
+R37
+Z129 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/math/fp_mult.vhd|
+Z130 !s107 D:/FPGA/adpll/math/fp_mult.vhd|
 !i113 1
 R16
 R17
@@ -1797,32 +1797,32 @@ V>mze]<QmYG^c0A35YXUH;1
 !s100 b9T:<]2]KO=bG]nKidM=51
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R127
-R128
+R37
+R129
+R130
 !i113 1
 R16
 R17
 Efp_mult_altfp_mult_v9o
-R124
+R126
 R6
 R7
 R8
-R125
-R126
+R127
+R128
 l0
 L47
 Vnc1m;igj]`az>_zA2XW6g2
 !s100 e>j@>zDf==?UndMO2@a=R0
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R127
-R128
+R37
+R129
+R130
 !i113 1
 R16
 R17
@@ -1836,32 +1836,32 @@ VFQLX0HZ?9F=CZz[W^z3OR3
 !s100 Y1ID3zI[NiHUN[Qflg?M:3
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R127
-R128
+R37
+R129
+R130
 !i113 1
 R16
 R17
 Efp_sub
-Z129 w1512429506
+Z131 w1512429506
 R6
 R7
 R8
-Z130 8D:/FPGA/adpll/math/fp_sub.vhd
-Z131 FD:/FPGA/adpll/math/fp_sub.vhd
+Z132 8D:/FPGA/adpll/math/fp_sub.vhd
+Z133 FD:/FPGA/adpll/math/fp_sub.vhd
 l0
 L4765
 VQKFbHaWodak9HmBlSR_Pe3
 !s100 2BoRBh4SF`:>AY;774[hQ2
 R11
 32
-R28
+R34
 !i10b 1
-R73
-Z132 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/math/fp_sub.vhd|
-Z133 !s107 D:/FPGA/adpll/math/fp_sub.vhd|
+R37
+Z134 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/math/fp_sub.vhd|
+Z135 !s107 D:/FPGA/adpll/math/fp_sub.vhd|
 !i113 1
 R16
 R17
@@ -1875,32 +1875,32 @@ VM0GCkAAF1Uk]gClCBO^d60
 !s100 Nh9;JV:o>7lO9KmkTKD1`0
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altbarrel_shift_35e
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
 L48
 VWl`kfN6<iXU<1_@7UJ[Y<2
 !s100 Q[42`bz>RN`:Ll0I2;[HO1
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -1914,32 +1914,32 @@ V;GeTe__V3j4LJFieg`e>C0
 !s100 aD6]N0[<LcAT^RhXOa[;X3
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altbarrel_shift_olb
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
 L306
 ViGI]i`B6;OJ_nAF7o>mbn3
 !s100 G<]1LdTi=Pj>C1Co75JFW0
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -1953,32 +1953,32 @@ V3=`5Ln[8QTkjGL6=RSc7a2
 !s100 PVJnFT`G9G6E5]0VdOX5S0
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altfp_add_sub_8kj
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
-R95
+R97
 VWYgGgS>lnC@8_NJPAO9L20
 !s100 CU6`YolVMP`n^PHQ6M9581
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -1987,37 +1987,37 @@ R6
 R7
 DEx4 work 24 fp_sub_altfp_add_sub_8kj 0 22 WYgGgS>lnC@8_NJPAO9L20
 l2940
-R96
+R98
 VZeE8dNF=_EiFQh>5cd=7M0
 !s100 E=fYEzXJ3^`<[91fY^25S1
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_3e8
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
 L549
 V?eX2Sz0@D]XUoQZlaOggj0
 !s100 CQQ6ZlC:bUA@:HE@>?A6L1
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2031,32 +2031,32 @@ V>nl3=?[n?aTX?^Z[2j>N62
 !s100 CP7gcIR[Hcm:g51UoXA0L2
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_3v7
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
 L697
 V;MjA<2]Uad?Kj@G?7QTBC2
 !s100 5V67dgAWbT7W3bRmOSCg=1
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2070,32 +2070,32 @@ VK57LCMO2BII?nh4lkU3Ej3
 !s100 =PVb>WTc9Oo0UdZ:m8bfh3
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_6e8
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
 L571
 Vce[SFT8aJH2<:<kF5zoGg2
 !s100 893I1`6b9FEm=eRkd9KF`3
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2109,32 +2109,32 @@ VT89O<A?=olh?_akkgbQOo0
 !s100 kT2@`7`eORb<zTn>N4Bz_0
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_6v7
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
 L717
 V`CGb@ERz[48SaNnbADd:L1
 !s100 9Y29CM]2;D>9fYOP^cPj71
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2148,32 +2148,32 @@ V>kf=dcAT]758ha<BX:Cgk3
 !s100 @mADfS1]:?NTgk_BD5XN@2
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_be8
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
 L625
 VUnzF8S1eZ?liB79bVB0F]1
 !s100 f=H8[F?I4I@F=PM=nTahg0
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2187,32 +2187,32 @@ ViT]ZPS<b7?lO87zc8j[Ig0
 !s100 ij8nl7C4fRJ_cimGHnnQg1
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_bv7
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
 L774
 VRhMA92QU1^=a8k_]Jo1c<1
 !s100 l:[oknnFfGJ4lF:Q5IzO92
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2226,32 +2226,32 @@ VLYHIm@J?@2^SVf?jGDW^U3
 !s100 S3l^4YLID@:COjg`9g]CB0
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_e48
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
-R97
+R99
 V24`1<lIH`K?UJcgU>E[m]2
 !s100 :`UCVhO3DARBZNIk4AVkh2
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2259,38 +2259,38 @@ Artl
 R6
 R7
 DEx4 work 30 fp_sub_altpriority_encoder_e48 0 22 24`1<lIH`K?UJcgU>E[m]2
-R98
-R99
+R100
+R101
 Vm;B]KXInQn4iNleiY?BFN2
 !s100 H@^:oIhH[Qg7=2M>;96>U0
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_f48
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
-R100
+R102
 VKmIRl9]bmfSggj9on0@Pa0
 !s100 FJN`YULRm;4<1mz<YkcRl2
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2298,38 +2298,38 @@ Artl
 R6
 R7
 DEx4 work 30 fp_sub_altpriority_encoder_f48 0 22 KmIRl9]bmfSggj9on0@Pa0
-R101
-R102
+R103
+R104
 VWKjES4h54K4cUgaFR^>hh2
 !s100 0YlRDLHaNb`j98n=64ZUe2
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_fj8
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
-R103
+R105
 VO3zmR=_l<V@6?M4?=Y<5c1
 !s100 fB5gR<2b[V>GdX24FFVG?0
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2337,38 +2337,38 @@ Artl
 R6
 R7
 DEx4 work 30 fp_sub_altpriority_encoder_fj8 0 22 O3zmR=_l<V@6?M4?=Y<5c1
-R104
-R105
+R106
+R107
 VOU6P9MQn3Xc34i8zJo:PW3
 !s100 MQc2Z4WEoPzUS6nflFS]O3
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_n28
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
-R106
+R108
 Vm]ofIC]AK=Wj`Gg8A:l?i3
 !s100 _bZgkES=Cc2Gl;n]NYPE[2
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2376,38 +2376,38 @@ Artl
 R6
 R7
 DEx4 work 30 fp_sub_altpriority_encoder_n28 0 22 m]ofIC]AK=Wj`Gg8A:l?i3
-R107
-R108
+R109
+R110
 V]`Yd>_oKD4B7ATN[;AMTT3
 !s100 az5Y0j8Ld<_6[Wnb=DlH62
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_nh8
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
-R109
+R111
 VOX6<50AXzEMLHlUFD7W4C2
 !s100 d=i]jL8A4>WL=aT95MPdN3
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2415,38 +2415,38 @@ Artl
 R6
 R7
 DEx4 work 30 fp_sub_altpriority_encoder_nh8 0 22 OX6<50AXzEMLHlUFD7W4C2
-R110
-R111
+R112
+R113
 Vl`?UkoZ9>j;5gXo:kMYKj1
 !s100 1AQ0Y>V8[zDDkc>C][G2T3
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_q28
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
-R112
+R114
 V3^SFU71L[1InZliYD6NC32
 !s100 Q@h5HE<P7^_Y4=h6o7Se_2
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2454,38 +2454,38 @@ Artl
 R6
 R7
 DEx4 work 30 fp_sub_altpriority_encoder_q28 0 22 3^SFU71L[1InZliYD6NC32
-R113
-R114
+R115
+R116
 VjIfg;Fcd<XRO6>i2DFP[30
 !s100 XAzJBeMVHN^[9Um[B87Fz2
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_qb6
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
 L964
 V7RU<X2XW2bV_E:6jPcgL:2
 !s100 DfzfZjjE@9G3PlB@`5Mcl1
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2499,32 +2499,32 @@ Vb_[8LgFnYS;@L?D[0^LHA2
 !s100 <2T?c<29h4Fe0F3?f8BEK0
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_qh8
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
-R115
+R117
 V=_2cnG3TaG8o_SXSJ39k@1
 !s100 37hFWk[Rg?B95b9^hMh2^2
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2532,38 +2532,38 @@ Artl
 R6
 R7
 DEx4 work 30 fp_sub_altpriority_encoder_qh8 0 22 =_2cnG3TaG8o_SXSJ39k@1
-R116
-R117
+R118
+R119
 VnGZDP?z1e`z=7P6Ph@zo:1
 !s100 z@8bUBIU=cTWIl19gl1z<2
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_r08
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
 L837
 VX[lH9Tg`Q8VH[]6P3YZnj1
 !s100 bU@6QD>P<M[h7Mo8DzAKE2
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2577,32 +2577,32 @@ VPXQj1?Yag?E3G8V?RXI=:2
 !s100 GWF51ShUNN1iA=A8aPGda3
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_rf8
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
 L904
 VWiiQcfFe_7mQ6bk;L`;VO3
 !s100 g2U3oNI_DR;EJ[h3^oREV0
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2616,32 +2616,32 @@ Vc0^ABz>JLzDbJQGWzXGMk2
 !s100 _llHM^lo;<[BNoYQ^5A541
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_v28
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
-R118
+R120
 Vek>fi:U3iWcY4JkWlcDJY3
 !s100 9JNEZb7nhb]89ZOJ@l@Bm3
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2649,38 +2649,38 @@ Artl
 R6
 R7
 DEx4 work 30 fp_sub_altpriority_encoder_v28 0 22 ek>fi:U3iWcY4JkWlcDJY3
-R119
-R120
+R121
+R122
 VlkI3eIUIiT0VIGOK@=2h40
 !s100 bU2KCZ_YJ1H[0D?W<745=1
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Efp_sub_altpriority_encoder_vh8
-R129
+R131
 R6
 R7
 R8
-R130
-R131
+R132
+R133
 l0
-R121
+R123
 VTe[9LFQ:?DPL_eciPXh1Q1
 !s100 <E?Y=:OW=QEBj`J=S[CWi2
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
@@ -2688,48 +2688,48 @@ Artl
 R6
 R7
 DEx4 work 30 fp_sub_altpriority_encoder_vh8 0 22 Te[9LFQ:?DPL_eciPXh1Q1
-R122
-R123
+R124
+R125
 V1IR]E>LV]8H006VD`C?Gd1
 !s100 kXLciPP0[FH3gcQ]TB9>`0
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R132
-R133
+R37
+R134
+R135
 !i113 1
 R16
 R17
 Egen48khz
-Z134 w1507492368
+Z136 w1507492368
 R5
 R3
-R70
+R73
 R6
 R7
 R8
-Z135 8D:/FPGA/adpll/i2s/gen48khz.vhd
-Z136 FD:/FPGA/adpll/i2s/gen48khz.vhd
+Z137 8D:/FPGA/adpll/i2s/gen48khz.vhd
+Z138 FD:/FPGA/adpll/i2s/gen48khz.vhd
 l0
 L6
 V02[RR3fS1@>=fHhe6GbFE0
 !s100 d15c@Y2nIOQ^7MY<_3RQO2
 R11
 32
-R28
+R34
 !i10b 1
-R73
-Z137 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/i2s/gen48khz.vhd|
-Z138 !s107 D:/FPGA/adpll/i2s/gen48khz.vhd|
+R37
+Z139 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/i2s/gen48khz.vhd|
+Z140 !s107 D:/FPGA/adpll/i2s/gen48khz.vhd|
 !i113 1
 R16
 R17
 Artl
 R5
 R3
-R70
+R73
 R6
 R7
 DEx4 work 8 gen48khz 0 22 02[RR3fS1@>=fHhe6GbFE0
@@ -2739,16 +2739,16 @@ Vo^@ZMZR=Q5P47UJ;]DYn22
 !s100 1A>LlC>=OIzC?MQ=h];1m3
 R11
 32
-R28
+R34
 !i10b 1
-R73
-R137
-R138
+R37
+R139
+R140
 !i113 1
 R16
 R17
 vI2C_Controller
-R34
+R38
 !i10b 1
 !s100 7;dORkQk<@DYn;ANe=9_<2
 I8NBnbj[N2LY:MP5;zEnIj1
@@ -2762,7 +2762,7 @@ R30
 r1
 !s85 0
 31
-R37
+R39
 !s107 D:/FPGA/adpll/i2s/avconf/I2C_Controller.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/FPGA/adpll/i2s/avconf/I2C_Controller.v|
 !i113 1
@@ -2770,12 +2770,12 @@ R32
 R33
 n@i2@c_@controller
 Eint32_fp
-Z139 w1512422145
+Z141 w1512422145
 R6
 R7
 R8
-Z140 8D:/FPGA/adpll/math/int32_fp.vhd
-Z141 FD:/FPGA/adpll/math/int32_fp.vhd
+Z142 8D:/FPGA/adpll/math/int32_fp.vhd
+Z143 FD:/FPGA/adpll/math/int32_fp.vhd
 l0
 L1440
 VVDl]7ecMigZo7omRi2ALB0
@@ -2784,9 +2784,9 @@ R11
 32
 R28
 !i10b 1
-R73
-Z142 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/math/int32_fp.vhd|
-Z143 !s107 D:/FPGA/adpll/math/int32_fp.vhd|
+R31
+Z144 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/math/int32_fp.vhd|
+Z145 !s107 D:/FPGA/adpll/math/int32_fp.vhd|
 !i113 1
 R16
 R17
@@ -2802,19 +2802,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
 Eint32_fp_altbarrel_shift_tvf
-R139
+R141
 R6
 R7
 R8
-R140
-R141
+R142
+R143
 l0
 L48
 V;B_V^JWA^N]IcN@15;Rk=0
@@ -2823,9 +2823,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
@@ -2841,19 +2841,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
 Eint32_fp_altfp_convert_nfn
-R139
+R141
 R6
 R7
 R8
-R140
-R141
+R142
+R143
 l0
 L844
 VbC@3]Wn>O9Tmh9T^B6iYS0
@@ -2862,9 +2862,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
@@ -2880,19 +2880,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
 Eint32_fp_altpriority_encoder_3e8
-R139
+R141
 R6
 R7
 R8
-R140
-R141
+R142
+R143
 l0
 L363
 V7>iY4ZjQ2iz=lLLIck@Ai1
@@ -2901,9 +2901,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
@@ -2919,19 +2919,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
 Eint32_fp_altpriority_encoder_3v7
-R139
+R141
 R6
 R7
 R8
-R140
-R141
+R142
+R143
 l0
 L575
 V5YJF;`O=O:e2o9A:2j`Zj0
@@ -2940,9 +2940,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
@@ -2958,19 +2958,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
 Eint32_fp_altpriority_encoder_6e8
-R139
+R141
 R6
 R7
 R8
-R140
-R141
+R142
+R143
 l0
 L385
 V447LQM=YdZ`RIQBZMID[B3
@@ -2979,9 +2979,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
@@ -2997,19 +2997,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
 Eint32_fp_altpriority_encoder_6v7
-R139
+R141
 R6
 R7
 R8
-R140
-R141
+R142
+R143
 l0
 L595
 VPF6E2O_B2mT3?:aim>nC51
@@ -3018,9 +3018,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
@@ -3036,19 +3036,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
 Eint32_fp_altpriority_encoder_be8
-R139
+R141
 R6
 R7
 R8
-R140
-R141
+R142
+R143
 l0
 L439
 VY@[Fc3O<3VXdCi0`kOJG13
@@ -3057,9 +3057,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
@@ -3075,19 +3075,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
 Eint32_fp_altpriority_encoder_bv7
-R139
+R141
 R6
 R7
 R8
-R140
-R141
+R142
+R143
 l0
 L652
 Vmo=B0W[XT5]^22z1CRH>53
@@ -3096,9 +3096,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
@@ -3114,19 +3114,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
 Eint32_fp_altpriority_encoder_qb6
-R139
+R141
 R6
 R7
 R8
-R140
-R141
+R142
+R143
 l0
 L778
 V6R`OOP]_9QlOU7M3kS;Lf1
@@ -3135,9 +3135,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
@@ -3153,19 +3153,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
 Eint32_fp_altpriority_encoder_r08
-R139
+R141
 R6
 R7
 R8
-R140
-R141
+R142
+R143
 l0
 L715
 VmQ<nN5=0XB7977C]G4OoD3
@@ -3174,9 +3174,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
@@ -3192,19 +3192,19 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
 Eint32_fp_altpriority_encoder_rf8
-R139
+R141
 R6
 R7
 R8
-R140
-R141
+R142
+R143
 l0
 L499
 VnOaL[KL[RF7d7CNC?54>I3
@@ -3213,9 +3213,9 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
@@ -3231,31 +3231,72 @@ R11
 32
 R28
 !i10b 1
-R73
-R142
-R143
+R31
+R144
+R145
 !i113 1
 R16
 R17
-Elowpass
-Z144 w1513636645
+Eloopfilter
+Z146 w1513701814
 R5
 R6
 R7
 R8
-Z145 8D:/FPGA/adpll/Lowpass.vhd
-Z146 FD:/FPGA/adpll/Lowpass.vhd
+Z147 8D:/FPGA/adpll/loopfilter.vhd
+Z148 FD:/FPGA/adpll/loopfilter.vhd
 l0
-L8
-V:;TN?BI87Z2a[VBUklPR81
-!s100 6RUTW23;04@:VX6Y9[Z3G1
+L6
+V??>niYcgkS4GGD<ZQRH;i2
+!s100 P:MHZfFm3kabSd9mENzRk1
 R11
 32
-R65
+R38
 !i10b 1
-R66
-Z147 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/Lowpass.vhd|
-Z148 !s107 D:/FPGA/adpll/Lowpass.vhd|
+R39
+Z149 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/loopfilter.vhd|
+Z150 !s107 D:/FPGA/adpll/loopfilter.vhd|
+!i113 1
+R16
+R17
+Artl
+R5
+R6
+R7
+Z151 DEx4 work 10 loopfilter 0 22 ??>niYcgkS4GGD<ZQRH;i2
+l23
+L19
+Z152 V21A3NBoaF=maNXS@Cd2@?1
+Z153 !s100 TQ8gJ137N99hBDR]Y8_AA2
+R11
+32
+R38
+!i10b 1
+R39
+R149
+R150
+!i113 1
+R16
+R17
+Elowpass
+Z154 w1513701169
+R5
+R6
+R7
+R8
+Z155 8D:/FPGA/adpll/Lowpass.vhd
+Z156 FD:/FPGA/adpll/Lowpass.vhd
+l0
+L6
+V>mYYbYe9g58C`]]e>HZX<3
+!s100 Hn=zj;M7S8?1=^;mbOjo`2
+R11
+32
+Z157 !s110 1513701172
+!i10b 1
+Z158 !s108 1513701172.000000
+Z159 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/Lowpass.vhd|
+Z160 !s107 D:/FPGA/adpll/Lowpass.vhd|
 !i113 1
 R16
 R17
@@ -3263,63 +3304,63 @@ Abehavioral
 R5
 R6
 R7
-DEx4 work 7 lowpass 0 22 :;TN?BI87Z2a[VBUklPR81
-l34
-L21
-V:HW6E=5Xg9V4e[@`GKol13
-!s100 O?KQ2RP80Zee656KFP_813
+DEx4 work 7 lowpass 0 22 >mYYbYe9g58C`]]e>HZX<3
+l31
+L19
+VBEHbOm:dA<hY^ZecU]MV]3
+!s100 LO4K^fR`o@gX5g8]_PKgD3
 R11
 32
-R65
+R157
 !i10b 1
-R66
-R147
-R148
+R158
+R159
+R160
 !i113 1
 R16
 R17
 Elpf2
 R18
-R43
+R45
 R5
-R44
+R46
 R6
 R7
 R8
-Z149 8D:/FPGA/adpll/LPF2_sim/LPF2.vhd
-Z150 FD:/FPGA/adpll/LPF2_sim/LPF2.vhd
+Z161 8D:/FPGA/adpll/LPF2_sim/LPF2.vhd
+Z162 FD:/FPGA/adpll/LPF2_sim/LPF2.vhd
 l0
 L19
 VVl2o]hWc4_V`Xf]jC^62:1
 !s100 `GgQ;kncDGK?BQ2XLC<I50
 R11
 32
-R47
+R28
 !i10b 1
 R31
-Z151 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/LPF2.vhd|
-Z152 !s107 D:/FPGA/adpll/LPF2_sim/LPF2.vhd|
+Z163 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/LPF2.vhd|
+Z164 !s107 D:/FPGA/adpll/LPF2_sim/LPF2.vhd|
 !i113 1
 R16
 R17
 Asyn
-R43
+R45
 R5
-R44
+R46
 R6
 R7
-Z153 DEx4 work 4 lpf2 0 22 Vl2o]hWc4_V`Xf]jC^62:1
+Z165 DEx4 work 4 lpf2 0 22 Vl2o]hWc4_V`Xf]jC^62:1
 l56
 L33
 V?HF<LmiWTKWo]R7j=@UfM3
 !s100 SeWXienI<3G1ME3[N[g4d1
 R11
 32
-R47
+R28
 !i10b 1
 R31
-R151
-R152
+R163
+R164
 !i113 1
 R16
 R17
@@ -3348,31 +3389,31 @@ w1493934638
 dC:/Filip/adpll
 Elpf2_ast
 R18
-R43
-R44
+R45
+R46
 R5
 R6
 R7
 R8
-Z154 8D:/FPGA/adpll/LPF2_sim/LPF2_ast.vhd
-Z155 FD:/FPGA/adpll/LPF2_sim/LPF2_ast.vhd
+Z166 8D:/FPGA/adpll/LPF2_sim/LPF2_ast.vhd
+Z167 FD:/FPGA/adpll/LPF2_sim/LPF2_ast.vhd
 l0
 L9
 VQW[>YU2P20dFWjHWQMU]O0
 !s100 lCS[9o]@3dFY7<Zla=QbN3
 R11
 32
-R47
+R28
 !i10b 1
 R31
-Z156 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/LPF2_ast.vhd|
-Z157 !s107 D:/FPGA/adpll/LPF2_sim/LPF2_ast.vhd|
+Z168 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/LPF2_ast.vhd|
+Z169 !s107 D:/FPGA/adpll/LPF2_sim/LPF2_ast.vhd|
 !i113 1
 R16
 R17
 Astruct
-R43
-R44
+R45
+R46
 R5
 R6
 R7
@@ -3383,46 +3424,46 @@ VdelglOWA2lME2Ca>A?X^J1
 !s100 fmbZ8PKC]_6e9@f>__MPn1
 R11
 32
-R47
+R28
 !i10b 1
 R31
-R156
-R157
+R168
+R169
 !i113 1
 R16
 R17
 Elpf2_rtl_core
 R18
-Z158 DPx3 lpm 14 lpm_components 0 22 0DgdZ0FA1O:[J5aQOXi891
-Z159 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3L]34bNSPL@[RD2AeKH]S3
-R42
-R80
+Z170 DPx3 lpm 14 lpm_components 0 22 0DgdZ0FA1O:[J5aQOXi891
+Z171 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3L]34bNSPL@[RD2AeKH]S3
+R44
+R82
 R1
 R5
 R6
 R7
 R8
-Z160 8D:/FPGA/adpll/LPF2_sim/LPF2_rtl_core.vhd
-Z161 FD:/FPGA/adpll/LPF2_sim/LPF2_rtl_core.vhd
+Z172 8D:/FPGA/adpll/LPF2_sim/LPF2_rtl_core.vhd
+Z173 FD:/FPGA/adpll/LPF2_sim/LPF2_rtl_core.vhd
 l0
 L36
 Vz]P^78@o3A?CFe?Tkf41E3
 !s100 ]Sj2fco0X>RMTQA?FXO=R1
 R11
 32
-R47
+R28
 !i10b 1
 R31
-Z162 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/LPF2_rtl_core.vhd|
-Z163 !s107 D:/FPGA/adpll/LPF2_sim/LPF2_rtl_core.vhd|
+Z174 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/LPF2_rtl_core.vhd|
+Z175 !s107 D:/FPGA/adpll/LPF2_sim/LPF2_rtl_core.vhd|
 !i113 1
 R16
 R17
 Anormal
-R158
-R159
-R42
-R80
+R170
+R171
+R44
+R82
 R1
 R5
 R6
@@ -3434,11 +3475,11 @@ V3<kk=5`jJHV>0ni8]A2082
 !s100 2D024iji:>XAb?hM=df>D0
 R11
 32
-R47
+R28
 !i10b 1
 R31
-R162
-R163
+R174
+R175
 !i113 1
 R16
 R17
@@ -3448,26 +3489,26 @@ R5
 R6
 R7
 R8
-Z164 8D:/FPGA/adpll/LPF2_sim/LPF2_tb.vhd
-Z165 FD:/FPGA/adpll/LPF2_sim/LPF2_tb.vhd
+Z176 8D:/FPGA/adpll/LPF2_sim/LPF2_tb.vhd
+Z177 FD:/FPGA/adpll/LPF2_sim/LPF2_tb.vhd
 l0
 L20
 VOLFBfY8E:eGda@EdmVmE20
 !s100 T@1T6;<<Of4]8UoiVKmkM1
 R11
 32
-Z166 !s110 1511651594
+Z178 !s110 1511651594
 !i10b 1
-Z167 !s108 1511651594.000000
-Z168 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/LPF2_tb.vhd|
-Z169 !s107 D:/FPGA/adpll/LPF2_sim/LPF2_tb.vhd|
+Z179 !s108 1511651594.000000
+Z180 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/LPF2_sim/LPF2_tb.vhd|
+Z181 !s107 D:/FPGA/adpll/LPF2_sim/LPF2_tb.vhd|
 !i113 1
 R16
 R17
 Artl
-R43
-R44
-R153
+R45
+R46
+R165
 R5
 R6
 R7
@@ -3478,11 +3519,11 @@ VnnGQb4nX^U9o:l`VaOgTF1
 !s100 M_[Q>?A4@BllgI1gkPE613
 R11
 32
-R166
+R178
 !i10b 1
-R167
-R168
-R169
+R179
+R180
+R181
 !i113 1
 R16
 R17
@@ -3493,19 +3534,19 @@ R3
 R6
 R7
 R8
-Z170 8D:/FPGA/adpll/MultPhaseDet.vhd
-Z171 FD:/FPGA/adpll/MultPhaseDet.vhd
+Z182 8D:/FPGA/adpll/MultPhaseDet.vhd
+Z183 FD:/FPGA/adpll/MultPhaseDet.vhd
 l0
 L8
 VM^FSzh`9^hBodFi9`hzTB2
 !s100 2GY?ER2J;8k>D?CJ0YYDn1
 R11
 32
-R65
+R68
 !i10b 1
-R66
-Z172 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/MultPhaseDet.vhd|
-Z173 !s107 D:/FPGA/adpll/MultPhaseDet.vhd|
+R69
+Z184 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/MultPhaseDet.vhd|
+Z185 !s107 D:/FPGA/adpll/MultPhaseDet.vhd|
 !i113 1
 R16
 R17
@@ -3521,32 +3562,71 @@ V^06m:jE@DOZO]K5fL1<DG0
 !s100 M8<6>^EbNgKk9iz5FIKcV0
 R11
 32
-R65
+R68
 !i10b 1
-R66
-R172
-R173
+R69
+R184
+R185
+!i113 1
+R16
+R17
+Epll_sma
+Z186 w1513693273
+R6
+R7
+R8
+Z187 8D:/FPGA/adpll/pll_sma.vhd
+Z188 FD:/FPGA/adpll/pll_sma.vhd
+l0
+L43
+VYQbQlSVb8PM[_60H@jT3;0
+!s100 @b9`@mgH03i51f]Zn^7MZ1
+R11
+32
+R38
+!i10b 1
+R39
+Z189 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/pll_sma.vhd|
+Z190 !s107 D:/FPGA/adpll/pll_sma.vhd|
+!i113 1
+R16
+R17
+Asyn
+R6
+R7
+DEx4 work 7 pll_sma 0 22 YQbQlSVb8PM[_60H@jT3;0
+l139
+L53
+VKTe=MjidDfJ08B^:I0T9U3
+!s100 40OFdZBXoLfDR^HU6efDR1
+R11
+32
+R38
+!i10b 1
+R39
+R189
+R190
 !i113 1
 R16
 R17
 Epll_sysclk
-Z174 w1511478742
+Z191 w1511478742
 R6
 R7
 R8
-Z175 8D:/FPGA/adpll/pll_sysclk.vhd
-Z176 FD:/FPGA/adpll/pll_sysclk.vhd
+Z192 8D:/FPGA/adpll/pll_sysclk.vhd
+Z193 FD:/FPGA/adpll/pll_sysclk.vhd
 l0
 L43
 VI@giCX8S?PA]Bi6kQVj=[2
 !s100 JFKcOLj9;HHFhkQiAJ6b^2
 R11
 32
-R65
+R68
 !i10b 1
-R66
-Z177 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/pll_sysclk.vhd|
-Z178 !s107 D:/FPGA/adpll/pll_sysclk.vhd|
+R69
+Z194 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/pll_sysclk.vhd|
+Z195 !s107 D:/FPGA/adpll/pll_sysclk.vhd|
 !i113 1
 R16
 R17
@@ -3560,22 +3640,22 @@ Vd0@fCl8B4lF^l?[G=ka7]3
 !s100 ]bVzZ_1^K3RTVL`TF_lLW3
 R11
 32
-R65
+R68
 !i10b 1
-R66
-R177
-R178
+R69
+R194
+R195
 !i113 1
 R16
 R17
 Erc
-Z179 w1512431098
+Z196 w1512431098
 R5
 R6
 R7
 R8
-Z180 8D:/FPGA/adpll/rc.vhd
-Z181 FD:/FPGA/adpll/rc.vhd
+Z197 8D:/FPGA/adpll/rc.vhd
+Z198 FD:/FPGA/adpll/rc.vhd
 l0
 L6
 VGaP_VN7H9Dhia5^j>6c?e2
@@ -3584,9 +3664,9 @@ R11
 32
 R28
 !i10b 1
-R73
-Z182 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/rc.vhd|
-Z183 !s107 D:/FPGA/adpll/rc.vhd|
+R31
+Z199 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/rc.vhd|
+Z200 !s107 D:/FPGA/adpll/rc.vhd|
 !i113 1
 R16
 R17
@@ -3603,33 +3683,33 @@ R11
 32
 R28
 !i10b 1
-R73
-R182
-R183
+R31
+R199
+R200
 !i113 1
 R16
 R17
 Esample_avg
-R62
+R65
 R3
 R2
 R5
 R6
 R7
 R8
-R63
-R64
+R66
+R67
 l0
 L7
 VMZ28BcE<LP39@F[WPXQUc3
 !s100 OCb@M1zLGd=;i9]gBFJaf2
 R11
 32
-R65
-!i10b 1
-R66
-R67
 R68
+!i10b 1
+R69
+R70
+R71
 !i113 1
 R16
 R17
@@ -3646,11 +3726,11 @@ VGe`4MF6bMHD2`UJJQ`?zU2
 !s100 NIWIc;m<eG<KbERP_[KQE0
 R11
 32
-R65
-!i10b 1
-R66
-R67
 R68
+!i10b 1
+R69
+R70
+R71
 !i113 1
 R16
 R17
@@ -3661,19 +3741,19 @@ R6
 R7
 R18
 R8
-Z184 8D:/FPGA/adpll/sine_lut_16_x_14.vhd
-Z185 FD:/FPGA/adpll/sine_lut_16_x_14.vhd
+Z201 8D:/FPGA/adpll/sine_lut_16_x_14.vhd
+Z202 FD:/FPGA/adpll/sine_lut_16_x_14.vhd
 l0
 L11
 VQ^AN>E>YT_mgO?_?`YQ^`0
 !s100 _dzO0z:Z;?helc9FVbGkW3
 R11
 32
-R12
+R68
 !i10b 1
-R66
-Z186 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/sine_lut_16_x_14.vhd|
-Z187 !s107 D:/FPGA/adpll/sine_lut_16_x_14.vhd|
+R69
+Z203 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/FPGA/adpll/sine_lut_16_x_14.vhd|
+Z204 !s107 D:/FPGA/adpll/sine_lut_16_x_14.vhd|
 !i113 1
 R16
 R17
@@ -3691,9 +3771,9 @@ R11
 32
 R12
 !i10b 1
-R66
-R186
-R187
+R69
+R203
+R204
 !i113 1
 R16
 R17

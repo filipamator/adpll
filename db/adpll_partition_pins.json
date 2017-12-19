@@ -4,6 +4,14 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "AUD_DACDAT",
+					"strict" : false
+				},
+				{
+					"name" : "I2C_SCLK",
+					"strict" : false
+				},
+				{
 					"name" : "DA[0]",
 					"strict" : false
 				},
@@ -116,11 +124,43 @@
 					"strict" : false
 				},
 				{
+					"name" : "AUD_BCLK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_ADCLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "I2C_SDAT",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				},
+				{
 					"name" : "ADA_D[0]",
 					"strict" : false
 				},
 				{
 					"name" : "ADA_DCO",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ADA_D[13]",
 					"strict" : false
 				},
 				{
@@ -157,22 +197,6 @@
 				},
 				{
 					"name" : "ADA_D[9]",
-					"strict" : false
-				},
-				{
-					"name" : "ADA_D[10]",
-					"strict" : false
-				},
-				{
-					"name" : "ADA_D[11]",
-					"strict" : false
-				},
-				{
-					"name" : "ADA_D[12]",
-					"strict" : false
-				},
-				{
-					"name" : "ADA_D[13]",
 					"strict" : false
 				},
 				{
@@ -229,6 +253,22 @@
 				},
 				{
 					"name" : "ADB_D[13]",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
 					"strict" : false
 				}
 			]

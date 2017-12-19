@@ -1,5 +1,5 @@
 Flow report for adpll
-Mon Dec 18 20:57:46 2017
+Tue Dec 19 15:32:02 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Dec 18 20:57:42 2017       ;
+; Flow Status                        ; Successful - Tue Dec 19 15:31:53 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; adpll                                       ;
 ; Top-level Entity Name              ; adpll_top                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 56 / 114,480 ( < 1 % )                      ;
-;     Total combinational functions  ; 0 / 114,480 ( 0 % )                         ;
-;     Dedicated logic registers      ; 56 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 56                                          ;
-; Total pins                         ; 93 / 529 ( 18 % )                           ;
+; Total logic elements               ; 2,615 / 114,480 ( 2 % )                     ;
+;     Total combinational functions  ; 1,936 / 114,480 ( 2 % )                     ;
+;     Dedicated logic registers      ; 2,100 / 114,480 ( 2 % )                     ;
+; Total registers                    ; 2100                                        ;
+; Total pins                         ; 102 / 529 ( 19 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
-; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
+; Total memory bits                  ; 278,784 / 3,981,312 ( 7 % )                 ;
+; Embedded Multiplier 9-bit elements ; 34 / 532 ( 6 % )                            ;
+; Total PLLs                         ; 3 / 4 ( 75 % )                              ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,45 +65,76 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/18/2017 20:57:03 ;
+; Start date & time ; 12/19/2017 15:30:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; adpll               ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 84440844399091.151362702301884         ; --            ; --          ; --         ;
-; ENABLE_SIGNALTAP                    ; Off                                    ; --            ; --          ; --         ;
-; FLOW_ENABLE_RTL_VIEWER              ; On                                     ; Off           ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; MISC_FILE                           ; LPF2.cmp                               ; --            ; --          ; --         ;
-; MISC_FILE                           ; pll_sysclk_inst.vhd                    ; --            ; --          ; --         ;
-; MISC_FILE                           ; pll_sysclk.cmp                         ; --            ; --          ; --         ;
-; MISC_FILE                           ; pll_sysclk.ppf                         ; --            ; --          ; --         ;
-; NUM_PARALLEL_PROCESSORS             ; All                                    ; --            ; --          ; --         ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --         ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; adpll_top   ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; adpll_top   ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; adpll_top   ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
-; SYNTHESIS_ONLY_QIP                  ; On                                     ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; adpll_top                              ; adpll         ; --          ; --         ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                                    ; --            ; --          ; eda_palace ;
-; USE_SIGNALTAP_FILE                  ; stp1.stp                               ; --            ; --          ; --         ;
-; VERILOG_INPUT_VERSION               ; SystemVerilog_2005                     ; Verilog_2001  ; --          ; --         ;
-; VERILOG_SHOW_LMF_MAPPING_MESSAGES   ; Off                                    ; --            ; --          ; --         ;
-; VHDL_INPUT_VERSION                  ; VHDL_2008                              ; VHDL_1993     ; --          ; --         ;
-; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                                    ; --            ; --          ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                               ;
++-------------------------------------+-----------------------------------------------------------------------------------------+---------------+-------------+------------------+
+; Assignment Name                     ; Value                                                                                   ; Default Value ; Entity Name ; Section Id       ;
++-------------------------------------+-----------------------------------------------------------------------------------------+---------------+-------------+------------------+
+; COMPILER_SIGNATURE_ID               ; 84440844399091.151369385801568                                                          ; --            ; --          ; --               ;
+; ENABLE_SIGNALTAP                    ; On                                                                                      ; --            ; --          ; --               ;
+; FLOW_ENABLE_RTL_VIEWER              ; On                                                                                      ; Off           ; --          ; --               ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                      ; --            ; --          ; --               ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                       ; --            ; --          ; --               ;
+; MISC_FILE                           ; LPF2.cmp                                                                                ; --            ; --          ; --               ;
+; MISC_FILE                           ; pll_sysclk_inst.vhd                                                                     ; --            ; --          ; --               ;
+; MISC_FILE                           ; pll_sysclk.cmp                                                                          ; --            ; --          ; --               ;
+; MISC_FILE                           ; pll_sysclk.ppf                                                                          ; --            ; --          ; --               ;
+; MISC_FILE                           ; pll_sma_inst.vhd                                                                        ; --            ; --          ; --               ;
+; MISC_FILE                           ; pll_sma.cmp                                                                             ; --            ; --          ; --               ;
+; MISC_FILE                           ; pll_sma.ppf                                                                             ; --            ; --          ; --               ;
+; NUM_PARALLEL_PROCESSORS             ; All                                                                                     ; --            ; --          ; --               ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                                                       ; --            ; --          ; --               ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                                                       ; --            ; --          ; --               ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                                              ; --            ; --          ; --               ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                                              ; --            ; --          ; --               ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                                  ; --            ; adpll_top   ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                                  ; --            ; adpll_top   ; Top              ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                                  ; --            ; adpll_top   ; Top              ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                     ; --            ; --          ; --               ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                   ; --            ; --          ; --               ;
+; SLD_FILE                            ; db/stp1_auto_stripped.stp                                                               ; --            ; --          ; --               ;
+; SLD_NODE_CREATOR_ID                 ; 110                                                                                     ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_ENTITY_NAME                ; sld_signaltap                                                                           ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_BLOCK_TYPE=AUTO                                                                 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_DATA_BITS=14                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_BITS=14                                                                     ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_BITS=14                                                           ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_INFO=805334528                                                                 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_POWER_UP_TRIGGER=0                                                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK=00000000000000000000000000000000000000000000000000000000000000000000 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK_LENGTH=68                                                            ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                           ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SEGMENT_SIZE=4096                                                                   ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ATTRIBUTE_MEM_MODE=OFF                                                              ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_FLOW_USE_GENERATED=0                                                          ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_BITS=11                                                                       ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_BUFFER_FULL_STOP=1                                                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_CURRENT_RESOURCE_WIDTH=1                                                            ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INCREMENTAL_ROUTING=1                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL=1                                                                     ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SAMPLE_DEPTH=4096                                                                   ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_IN_ENABLED=0                                                                ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_PIPELINE=0                                                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_PIPELINE=0                                                                      ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_COUNTER_PIPELINE=0                                                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,                                                    ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                            ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ENABLE_ADVANCED_TRIGGER=0                                                           ; --            ; --          ; auto_signaltap_0 ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                                      ; --            ; --          ; --               ;
+; TOP_LEVEL_ENTITY                    ; adpll_top                                                                               ; adpll         ; --          ; --               ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                                                                                     ; --            ; --          ; eda_palace       ;
+; USE_SIGNALTAP_FILE                  ; stp1.stp                                                                                ; --            ; --          ; --               ;
+; VERILOG_INPUT_VERSION               ; SystemVerilog_2005                                                                      ; Verilog_2001  ; --          ; --               ;
+; VERILOG_SHOW_LMF_MAPPING_MESSAGES   ; Off                                                                                     ; --            ; --          ; --               ;
+; VHDL_INPUT_VERSION                  ; VHDL_2008                                                                               ; VHDL_1993     ; --          ; --               ;
+; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                                                                                     ; --            ; --          ; --               ;
++-------------------------------------+-----------------------------------------------------------------------------------------+---------------+-------------+------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -111,11 +142,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 798 MB              ; 00:00:23                           ;
-; Fitter                    ; 00:00:19     ; 1.0                     ; 1606 MB             ; 00:00:15                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 602 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 762 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:38     ; --                      ; --                  ; 00:00:42                           ;
+; Analysis & Synthesis      ; 00:00:34     ; 1.0                     ; 846 MB              ; 00:00:50                           ;
+; Fitter                    ; 00:00:14     ; 1.0                     ; 1666 MB             ; 00:00:20                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 619 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.1                     ; 795 MB              ; 00:00:03                           ;
+; Total                     ; 00:00:59     ; --                      ; --                  ; 00:01:16                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

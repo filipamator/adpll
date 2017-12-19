@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Mon Dec 18 20:57:17 2017
+Analysis & Synthesis Status : Successful - Tue Dec 19 15:31:33 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : adpll
 Top-level Entity Name : adpll_top
 Family : Cyclone IV E
-Total logic elements : 56
-    Total combinational functions : 0
-    Dedicated logic registers : 56
-Total registers : 56
-Total pins : 93
+Total logic elements : 2,924
+    Total combinational functions : 1,933
+    Dedicated logic registers : 2,340
+Total registers : 2340
+Total pins : 102
 Total virtual pins : 0
-Total memory bits : 0
-Embedded Multiplier 9-bit elements : 0
-Total PLLs : 1
+Total memory bits : 278,784
+Embedded Multiplier 9-bit elements : 34
+Total PLLs : 3

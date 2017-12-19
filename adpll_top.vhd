@@ -29,6 +29,8 @@ entity adpll_top is
 				I2C_SCLK		: out std_logic;
 
 
+				SMA_PLL			: out std_logic;
+
 				-- Clocks for ADC
 				FPGA_CLK_B_N	: OUT STD_LOGIC;
 				FPGA_CLK_B_P	: OUT STD_LOGIC;
@@ -141,18 +143,18 @@ component sample_avg is
 	);	
 end component sample_avg;
 
-component Lowpass is
+component loopfilter is
 	GENERIC (
 		LOOPF_WIDTH  : natural
 		);
 	Port ( 	
-		CLK 			 : in STD_LOGIC;
-		RST 			 : in STD_LOGIC;
-		FILTER_IN_EN 	: IN STD_LOGIC;
-		FILTER_IN 	 	: in STD_LOGIC_VECTOR (17 downto 0);
-		FILTER_OUT 	 	: out STD_LOGIC_VECTOR (LOOPF_WIDTH-1 downto 0);
-		FILTER_OUT_EN 	: out STD_LOGIC);
-end component Lowpass;
+		i_clk			 	: in STD_LOGIC;
+		i_rst			 	: in STD_LOGIC;
+		i_filter_in_en 		: in STD_LOGIC;
+		i_filter_in	 		: in STD_LOGIC_VECTOR (17 downto 0);
+		o_filter_out_en		: out STD_LOGIC;
+		o_filter_out 	 	: out STD_LOGIC_VECTOR (LOOPF_WIDTH-1 downto 0));
+end component loopfilter;
 
 component dac_i2s is
 port (
@@ -185,6 +187,16 @@ port (
 end component dac_i2s;
 
 
+
+component pll_sma is
+	port
+	(
+		inclk0		: IN STD_LOGIC  := '0';
+		c0		: OUT STD_LOGIC ;
+		locked		: OUT STD_LOGIC 
+	);
+end component pll_sma;
+
 -----------------------------
 ------- SIGNALS -------------
 -----------------------------
@@ -204,6 +216,8 @@ SIGNAL s_adc_a_data			: STD_LOGIC_VECTOR(13 DOWNTO 0)  := (others => '0');
 SIGNAL s_adc_b_data			: STD_LOGIC_VECTOR(13 DOWNTO 0)  := (others => '0');
 	
 SIGNAL s_rf_in				: STD_LOGIC_VECTOR(13 DOWNTO 0) := (others => '0');
+SIGNAL s_rf_in_noise		: std_logic_vector(13 downto 0) := (others => '0');
+
 SIGNAL s_vco_sin			: STD_LOGIC_VECTOR(13 DOWNTO 0) := (others => '0');
 SIGNAL s_vco_cos			: STD_LOGIC_VECTOR(13 DOWNTO 0) := (others => '0');
 	
@@ -219,6 +233,8 @@ SIGNAL s_ftw_phasemod			: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => 
 SIGNAL s_ftw_rf_in			: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
 
 
+
+
 SIGNAL s_loopfilter				: std_logic_vector(LOOPF_WIDTH-1 DOWNTO 0) := (others => '0');
 SIGNAL s_ftw_nco				: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
 signal s_nco_offset				: std_logic_vector(FTW_WIDTH-1 downto 0)  := (others => '0');
@@ -227,6 +243,9 @@ signal s_loopfilter_en			: std_logic;
 signal s_fmdemod				: std_logic_vector(LOOPF_WIDTH-1 DOWNTO 0) := (others => '0');
 signal s_fmdemod_en				: std_logic;
 signal s_audioout 				: std_logic_vector(31 downto 0);
+
+
+signal s_rand_num 				: integer := 0;
 
 --signal s_freq					: real := 0.0;
 
@@ -248,18 +267,26 @@ begin
 	ADB_OE			<= '0';
 	ADB_SPI_CS		<= '1';
 
-	s_nco_offset <=  std_logic_vector(to_unsigned(integer( 10000000.0/DDS_STEP ), s_ftw_phasemod'length));
-	s_ftw_rf_in <= std_logic_vector(to_signed(integer( 10001000.0/DDS_STEP ), s_ftw_phasemod'length) + signed(s_phasemod) * 512); 
+	-- NCO offset
+	s_nco_offset <=  std_logic_vector(to_unsigned(integer( 5000000.0/DDS_STEP ), s_nco_offset'length));
+	
+	-- Local source of RF_IN signal
+	-- s_ftw_rf_in <= std_logic_vector(to_signed(integer( 5001000.0/DDS_STEP ), s_ftw_rf_in'length) + signed(s_phasemod) * 512); 
+	with s_phasemod(13) select s_ftw_rf_in <=
+										std_logic_vector(to_signed(integer( 4990000.0/DDS_STEP ), s_ftw_rf_in'length))	when '0',
+										std_logic_vector(to_signed(integer( 5010000.0/DDS_STEP ), s_ftw_rf_in'length))	when others;
+
+
+
 	s_ftw_nco <= std_logic_vector(signed(s_nco_offset) + signed(s_loopfilter));
-
-	-- s_ftw_nco <= std_logic_vector(signed(s_nco_offset));
-
-	-- s_ftw_phasemod <= x"00000000"; 
-
-	s_ftw_phasemod <=  std_logic_vector(to_unsigned(integer( 1000.0/DDS_STEP ), s_ftw_phasemod'length));
-
-
+	s_ftw_phasemod <=  std_logic_vector(to_unsigned(integer( 5000.0/DDS_STEP ), s_ftw_phasemod'length));
 	s_audioout <=  s_fmdemod & "00";
+
+
+	s_rf_in_noise <= std_logic_vector(signed(s_rf_in)/2 + to_signed(s_rand_num,10));
+
+
+
 
 	g0: IF SIMULATION = 1 GENERATE
 	BEGIN
@@ -271,6 +298,21 @@ begin
 			v_freq_hz := integer(v_freq);
 		END PROCESS Debug;
 	END GENERATE g0;
+
+
+	g1: IF SIMULATION = 1 GENERATE
+	BEGIN
+		process
+    		variable seed1, seed2: positive;               -- seed values for random generator
+    		variable rand: real;   -- random real-number value in range 0 to 1.0  
+    		variable range_of_rand : real := 1000.0;    -- the range of random values created will be 0 to +1000.
+		begin
+    			uniform(seed1, seed2, rand);   -- generate random number
+    			s_rand_num <= integer(rand*range_of_rand);  -- rescale to 0..1000, convert integer part 
+    			wait for 10 ns;
+				end process;
+	END GENERATE g1;
+
 
 
 	
@@ -372,7 +414,7 @@ DDSPhaseMod : dds_synthesizer
 MixerSin : MultPhaseDet 
 	PORT MAP 
 	(
-		REF 	=> s_rf_in,
+		REF 	=> s_rf_in_noise,
 		VCO 	=> s_vco_sin,
 		SOUT 	=> s_mixer_sin
 	);
@@ -406,17 +448,17 @@ sample_avg_i1 : sample_avg
 
 	
 	
-LPFPLL : Lowpass 
+loopfilter_i1 : loopfilter 
 	GENERIC MAP (
 		LOOPF_WIDTH => LOOPF_WIDTH
 	)
 	PORT MAP (
-		CLK 			=> sys_clk,
-		RST 			=> reset,
-		FILTER_IN_EN 	=> s_mixer_sin_fil_avg_en,
-		FILTER_IN 		=> s_mixer_sin_fil_avg,
-		FILTER_OUT 		=> s_loopfilter,
-		FILTER_OUT_EN	=> s_loopfilter_en
+		i_clk 			=> sys_clk,
+		i_rst 			=> reset,
+		i_filter_in_en	=> s_mixer_sin_fil_avg_en,
+		i_filter_in 	=> s_mixer_sin_fil_avg,
+		o_filter_out	=> s_loopfilter,
+		o_filter_out_en	=> s_loopfilter_en
 	);
 
 	
@@ -479,26 +521,37 @@ sample_avg_i2 : sample_avg
 
 
 
-dac_i2s_i1 : dac_i2s
-port map (
-	CLOCK_50		=> sys_clk,
-    reset          	=> reset,
-	AUD_ADCDAT	    => AUD_ADCDAT,
-	AUD_BCLK		=> AUD_BCLK,
-	AUD_ADCLRCK	    => AUD_ADCLRCK,
-	AUD_DACLRCK	    => AUD_ADCLRCK,
-	I2C_SDAT		=> I2C_SDAT,
-	AUD_XCK		    => AUD_XCK,
-	AUD_DACDAT	    => AUD_DACDAT,
-	I2C_SCLK		=> I2C_SCLK,
-	right_channel_audio_in	=> s_audioout,
-	left_channel_audio_in 	=> s_audioout,
-	audio_in_available		=> s_fmdemod_en,
-    audio_left      		=> open,
-    audio_left_en   		=> open,
-    audio_right				=> open,
-    audio_right_en			=> open
+-- dac_i2s_i1 : dac_i2s
+-- port map (
+-- 	CLOCK_50		=> sys_clk,
+--     reset          	=> reset,
+-- 	AUD_ADCDAT	    => AUD_ADCDAT,
+-- 	AUD_BCLK		=> AUD_BCLK,
+-- 	AUD_ADCLRCK	    => AUD_ADCLRCK,
+-- 	AUD_DACLRCK	    => AUD_ADCLRCK,
+-- 	I2C_SDAT		=> I2C_SDAT,
+-- 	AUD_XCK		    => AUD_XCK,
+-- 	AUD_DACDAT	    => AUD_DACDAT,
+-- 	I2C_SCLK		=> I2C_SCLK,
+-- 	right_channel_audio_in	=> s_audioout,
+-- 	left_channel_audio_in 	=> s_audioout,
+-- 	audio_in_available		=> s_fmdemod_en,
+--     audio_left      		=> open,
+--     audio_left_en   		=> open,
+--     audio_right				=> open,
+--     audio_right_en			=> open
+-- );
+
+
+
+pll_sma_i1 : pll_sma
+PORT MAP (
+		inclk0	 => CLOCK_50,
+		c0	 => SMA_PLL,
+		locked	 => open
 );
+
+
 
 
 end Behavioral;

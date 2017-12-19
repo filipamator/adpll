@@ -36,11 +36,19 @@ Signals from top:
 As you see after 100us PLL is locked at the reference frequency. 
 
 
-
-
 Here is the structure of the design (RTL preview from Quartus):
 
 ![Simulation](https://raw.githubusercontent.com/filipamator/adpll/master/RTL_PREVIEW.png)
+
+
+The PLL can be used to demodulate FSK signals. Here the frequency of the REF signal was modulated by sqare wave (5 MHz +/- 10 kHz) and some amplitude noise was added as well. 
+
+![Simulation](https://raw.githubusercontent.com/filipamator/adpll/master/fsk2.png)
+
+When the VCO is forced to follow frequency of the REF signal the output from the loopfilter reflects frequency of the VCO (yellow trace) and maybe used to recover an original modulation signal (magenta waveform). The PLL is trying to minimize an error signal (phase difference) thus cyan trace is close to zero.
+
+
+![Simulation](https://raw.githubusercontent.com/filipamator/adpll/master/fsk1.png)
 
 
 
